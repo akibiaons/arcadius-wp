@@ -7,7 +7,7 @@ function ProductListing () {
     useEffect(() => {
       const fetchProducts = async () => {
         try {
-          const response = await axios.get('http://localhost:1337/api/product-models');
+          const response = await axios.get('http://localhost:1337/api/product-models?populate=*');
           setProducts(response.data.data);
         } catch (error) {
             console.error('Error fetching product data', error);
@@ -18,16 +18,16 @@ function ProductListing () {
     },[]);
 
     return (
-      <div>
-        {products.map((product) => (
-          <div key={product.id}>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Price: ${product.price}</p>
-            <img src={product.image} alt={product.title} />
+      <>
+        {products?.map((product) => (
+          <div className='h-screen' key={product.id}>
+            <h2>{product.attributes.title}</h2>
+            <p>{product.attributes.description}</p>
+            <p>Price: ${product.attributes.price}</p>
+            <img src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`} alt='warfare' className='h-[50%]'/>
           </div>
         ))};
-      </div>
+      </>
     );
 };
 
