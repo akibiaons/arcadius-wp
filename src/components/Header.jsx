@@ -10,7 +10,7 @@ export default function Header() {
         <div> {/* Parent container of the ul and li */}
           <ul className='flex justify-between'>
             <li className='cursor-pointer'>
-              Arcadius WP
+              <Link>Arcadius WP</Link>
             </li>
             <li className='cursor-pointer' >
               H.I.V.E Program

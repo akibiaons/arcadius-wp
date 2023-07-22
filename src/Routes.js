@@ -6,17 +6,19 @@ import Hive from './components/Hive';
 import AirSecurity from './components/AirSecurity';
 import MaritimeSecurity from './components/MaritimeSecurity';
 import Hiring from './Pages/Hiring';
+import Header from './components/Header';
 
 function ReactRoutes() {
     return (
       <Router>
+        <Header/>
         <Routes>
-          <Route path="/" component={<Home />} />
-          <Route path="/product" component={<Product />} />
-          <Route path="/hive" component={<Hive />}/>
-          <Route path="/air-security" component={<AirSecurity />}/>
-          <Route path="/maritime-security" component={<MaritimeSecurity />}/>
-          <Route path="/hiring" component={<Hiring />}/>
+          <Route path="/" element={<Home />}  />
+          <Route path="/product" element={<Product />} />
+          <Route path="/hive" element={<Hive />}/>
+          <Route path="/air-security" element={<AirSecurity />}/>
+          <Route path="/maritime-security" element={<MaritimeSecurity />}/>
+          <Route path="/hiring" element={<Hiring />}/>
         </Routes>
       </Router>
     );
