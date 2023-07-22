@@ -1,28 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useNavigate, Link, useLocation } from "react-router-dom";
+
 
 
 export default function Header() {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  function isRouteActive(route) {
+    return location.pathname === route;
+  }
 
   return (
     <>
       <div className="container mx-auto"> {/*Parent container*/}
         <div> {/* Parent container of the ul and li */}
           <ul className='flex justify-between'>
-            <li className='cursor-pointer'>
-              <Link>Arcadius WP</Link>
+            <li className=''>
+              <Link onClick={() => navigate("/")}>Arcadius WP</Link>
             </li>
-            <li className='cursor-pointer' >
-              H.I.V.E Program
+            <li className='' >
+              <Link onClick={() => navigate("/hive")}>H.I.V.E Program</Link>
             </li>
-            <li className='cursor-pointer'>
-              Air Security
+            <li className=''>
+              <Link onClick={() => navigate("/air-security")}>Air Security</Link>
             </li>
-            <li className='cursor-pointer'>
-              Maritime Security
+            <li className=''>
+              <Link onClick={() => navigate("/maritime-security")}>Maritime Security</Link>
             </li>
-            <li className='cursor-pointer'>
-              We're Hiring
+            <li className=''>
+              <Link onClick={() => navigate("/hiring")}>We're Hiring</Link> 
             </li>           
           </ul>
         </div>

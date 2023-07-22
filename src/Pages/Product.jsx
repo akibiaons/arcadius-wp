@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import ProductListing from '../ProductListing';
 
-export default function Pages() {
+export default function Product() {
   return (
-    <div>Pages</div>
+    <div className='my-20'>
+      <ProductListing />
+    </div>
   )
 }
