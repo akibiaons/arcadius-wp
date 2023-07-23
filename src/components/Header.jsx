@@ -10,7 +10,7 @@ export default function Header() {
     <>
       <div className="mx-auto"> {/* Not putting at mx-auto makes the index.js background pop off */}
         <div>
-          <ul className="cursor-pointer grid grid-cols-5 bg-black text-white">   
+          <ul className="cursor-pointer grid grid-cols-5 bg-transparent text-black">   
             <p className="cursor-pointer"><Link to="/">Anduril</Link></p>
             <li>
               <Link to="/hive">H.I.V.E Program</Link>
