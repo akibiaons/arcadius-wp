@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div className="container mx-auto">
       <div>
-        <ul className='flex justify-between'>
+        <ul className='flex justify-between border-solid py-5'>
           <li>
             <Link to="/">Arcadius WP</Link>
           </li>
@@ -21,10 +21,10 @@ export default function Header() {
                 onMouseLeave={() => setIsOpen(false)}  
               >
                 <li className="px-4 py-3">
-                  <Link to="/hive/submenu1" className="text-gray-700 hover:text-gray-900">Submenu 1</Link>
+                  <Link to="/hive/submenu1" className="text-gray-700 hover:text-gray-900 cursor-pointer">Command & Control</Link>
                 </li>
                 <li className="px-4 py-3">
-                  <Link to="/hive/submenu2" className="text-gray-700 hover:text-gray-900">Submenu 2</Link>
+                  <Link to="/hive/submenu2" className="text-gray-700 hover:text-gray-900 cursor-pointer">Mission Autonomy</Link>
                 </li>
               </ul>
             )}
