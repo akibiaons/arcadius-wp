@@ -13,7 +13,7 @@ import Hiring from './Pages/Hiring';
 function App() {
   return (
     <>
-      <Header />
+      <Header className="bg-transparent opacity-0"/>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />

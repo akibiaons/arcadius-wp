@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div className="container mx-auto">
       <div>
-        <ul className='flex justify-between border-solid py-5 bg-transparent'>
+        <ul className='relative z-10 flex justify-between py-5 bg-transparent'>
           <li>
             <Link to="/">Arcadius WP</Link>
           </li>
