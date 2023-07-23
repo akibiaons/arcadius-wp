@@ -8,21 +8,21 @@ export default function Header() {
 
   return (
     <>
-      <div className="container mx-auto">
+      <div className="mx-auto"> {/* Not putting at mx-auto makes the index.js background pop off */}
         <div>
-          <p className="cursor-pointer">Anduril</p>
-          <ul className="cursor-pointer">   
+          <ul className="cursor-pointer grid grid-cols-5 bg-black text-white">   
+            <p className="cursor-pointer"><Link to="/">Anduril</Link></p>
             <li>
-              <Link>H.I.V.E Program</Link>
+              <Link to="/hive">H.I.V.E Program</Link>
             </li>
             <li>
-              <Link>Air Security</Link>
+              <Link to="air-security">Air Security</Link>
             </li>
             <li>
-              <Link>Maritime Security</Link>
+              <Link to="maritime-security">Maritime Security</Link>
             </li>
             <li>
-              <Link>We're Hiring</Link>
+              <Link to="were-hiring">We're Hiring</Link>
             </li>
           </ul>
         </div>
