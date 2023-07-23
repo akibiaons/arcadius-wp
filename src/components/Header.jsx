@@ -6,15 +6,15 @@ export default function Header() {
 
   return (
     <div className="container mx-auto">
-      <div>
-        <ul className='relative z-10 flex justify-between py-5 bg-transparent'>
-          <li>
-            <Link to="/">Arcadius WP</Link>
+      <div className="text-white">
+        <ul className='relative z-10 flex justify-between bg-transparent border-b-2 border-r-2 border-l-2'>
+          <li className="text-lg border-r-2 pr-10 py-10">
+            <Link to="/">Anduril WP</Link>
           </li>
           <li className="relative group"
             onMouseEnter={() => setIsOpen(true)}
           >
-            <Link to="/hive" className="inline-block">H.I.V.E Program</Link>
+            <Link to="/hive" className="inline-block py-10">H.I.V.E Program</Link>
             {isOpen && (
               <ul 
                 className="absolute left-0 mt-1 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50"
@@ -30,13 +30,13 @@ export default function Header() {
             )}
           </li>
           <li>
-            <Link to="/air-security">Air Security</Link>
+            <Link to="/air-security" className="inline-block py-10">Air Security</Link>
           </li>
           <li>
-            <Link to="/maritime-security">Maritime Security</Link>
+            <Link to="/maritime-security" className="inline-block py-10">Maritime Security</Link>
           </li>
           <li>
-            <Link to="hiring">We're Hiring</Link> 
+            <Link to="hiring" className="inline-block py-10">We're Hiring</Link> 
           </li>           
         </ul>
       </div>
