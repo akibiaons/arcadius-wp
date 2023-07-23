@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div className="container mx-auto">
       <div>
-        <ul className='flex justify-between border-solid py-5'>
+        <ul className='flex justify-between border-solid py-5 bg-transparent'>
           <li>
             <Link to="/">Arcadius WP</Link>
           </li>
@@ -17,7 +17,7 @@ export default function Header() {
             <Link to="/hive" className="inline-block">H.I.V.E Program</Link>
             {isOpen && (
               <ul 
-                className="absolute left-0 mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50"
+                className="absolute left-0 mt-1 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50"
                 onMouseLeave={() => setIsOpen(false)}  
               >
                 <li className="px-4 py-3">
