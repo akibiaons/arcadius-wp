@@ -10,7 +10,7 @@ export default function Header() {
   }
 
   const mobileMenu = isMobileMenuOpen ? (
-    <div className="absolute top-0 right-0 h-screen w-64 bg-gray-100 p-8 lg:hidden">
+    <div className="absolute top-0 right-0 h-screen w-64 bg-gray-100 p-8 sm:hidden">
       <button onClick={toggleMobileMenu} className="mb-8">Close Menu</button>
       <ul>
         <li><Link to="/">Home</Link></li>
@@ -25,9 +25,9 @@ export default function Header() {
   return (
     <div className="container mx-auto">
       <div className="text-white">
-        <button onClick={toggleMobileMenu} className="md:hidden">Menu</button>
+        <button onClick={toggleMobileMenu} className="md:hidden block">Menu</button>
         {mobileMenu}
-        <ul className='relative z-10 flex justify-between bg-transparent border-b-2 border-r-2 border-l-2'>
+        <ul className='relative z-10 justify-between bg-transparent border-b-2 border-r-2 border-l-2 hidden md:flex'>
           <li className="text-lg border-r-2 pr-10 py-10">
             <Link to="/">Anduril</Link>
           </li>
