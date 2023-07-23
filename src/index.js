@@ -8,9 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className='bg-transparent'> {/* For some stupid reason this has to be set to the same color to match the navbar color */}
-        <App />
-      </div>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
