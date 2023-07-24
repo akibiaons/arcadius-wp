@@ -3,31 +3,56 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  }
-
-  const mobileMenu = isMobileMenuOpen ? (
-    <div className="absolute top-0 right-0 h-screen w-64 bg-gray-100 p-8 sm:hidden">
-      <button onClick={toggleMobileMenu} className="mb-8">Close Menu</button>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/hive">H.I.V.E Program</Link></li>
-        <li><Link to="/air-security">Air Security</Link></li>
-        <li><Link to="/maritime-security">Maritime Security</Link></li>
-        <li><Link to="hiring">We're Hiring</Link></li>
-      </ul>
-    </div>
-  ) : null;
 
   return (
-    <div className="container mx-auto">
-      <div className="text-white">
-        <button onClick={toggleMobileMenu} className="md:hidden block">Menu</button>
-        {mobileMenu}
-        <ul className='relative z-10 justify-between bg-transparent border-b-2 border-r-2 border-l-2 hidden md:flex'>
+    <div>
+      <div className="flex justify-between items-center">
+        <p
+          className="z-10 relative lg:hidden text-white"
+        >
+          <Link 
+            to="/" 
+            className="text-4xl"
+          >
+            Anduril
+          </Link>
+        </p>      
+      <div 
+        className="text-white flex justify-end"
+      >
+        <div 
+          className="z-10 relative"
+        >
+          <button
+            type="button"
+            className="text-white p-2 lg:hidden z-10 relative"
+            onClick={() => setIsOpen(true)}
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor" 
+              className="h-6 w-6"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M4 6h16M4 12h16m-7 6h7" 
+              />
+            </svg>
+          </button>
+        </div>
+        <ul 
+          className={`grid grid-flow-row gap-4 lg:flex lg:justify-between lg:gap-0 ${setIsOpen ? "block" : "hidden"} lg:block`}
+        >
+        </ul>
+      </div>
+    </div>
+
+      <div>
+        <ul className='z-10 relative justify-between bg-transparent border-b-2 border-r-2 border-l-2 hidden md:flex'>
           <li className="text-lg border-r-2 pr-10 py-10">
             <Link to="/">Anduril</Link>
           </li>
