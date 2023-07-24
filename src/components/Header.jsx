@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
 
   return (
     <div>
@@ -25,8 +26,9 @@ export default function Header() {
         >
           <button
             type="button"
-            className="text-white p-2 lg:hidden z-10 relative"
-            onClick={() => setIsOpen(true)}
+            className="text-white p-2 lg:hidden z-10 relative transform transition-transform duration-500"
+            onClick={() => setIsOpen(!isOpen)}
+            style={{ transform: isOpen ? "rotate(270deg)" : "rotate(0deg)" }}
           >
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -47,10 +49,10 @@ export default function Header() {
         <ul 
           className={`grid grid-flow-row gap-4 lg:flex lg:justify-between lg:gap-0 ${setIsOpen ? "block" : "hidden"} lg:block`}
         >
+          <li></li>
         </ul>
       </div>
     </div>
-
       <div>
         <ul className='z-10 relative justify-between bg-transparent border-b-2 border-r-2 border-l-2 hidden md:flex'>
           <li className="text-lg border-r-2 pr-10 py-10">
