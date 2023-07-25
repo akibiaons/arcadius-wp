@@ -8,8 +8,8 @@ export default function Header() {
     <>
       <div className="block lg:hidden">
         {/* This will show on mobile and tablets */}
-        <div className="grid grid-cols-2">
-          <p className="z-10 relative text-white">
+        <div className="flex justify-between items-center relative z-10 bg-black p-4">
+          <p className="text-white">
             <Link to="/" className="text-4xl">
               Anduril
             </Link>
@@ -41,11 +41,13 @@ export default function Header() {
               </button>
             </div>
             <ul
-              className={`grid grid-rows-2 gap-4 z-10 bg-black h-screen w-full ${
-                isOpen ? "block" : "hidden"
+              className={`absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white ${
+                isOpen ? "translate-y-0 opacity-100" : "opacity-0"
               }`}
             >
-              <li className="text-white">Something should drop under</li>
+              <li className="p-4 border-b border-white">
+                Something should drop under
+              </li>
             </ul>
           </div>
         </div>
