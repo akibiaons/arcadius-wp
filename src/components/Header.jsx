@@ -8,7 +8,13 @@ export default function Header() {
     <>
       <div className="block lg:hidden">
         {/* This will show on mobile and tablets */}
-        <div className="flex justify-between items-center relative z-10 bg-black p-4">
+        <div
+          className={`flex justify-between items-center relative z-10 p-4 ${
+            isOpen
+              ? "bg-black ease-in-out transition"
+              : "bg-transparent ease-in-out transition"
+          }`}
+        >
           <p className="text-white">
             <Link to="/" className="text-4xl">
               Anduril
