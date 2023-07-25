@@ -7,9 +7,8 @@ export default function Header() {
   return (
     <>
       <div className="block lg:hidden">
-        {" "}
         {/* This will show on mobile and tablets */}
-        <div className="flex justify-between items-center">
+        <div className="grid grid-cols-2">
           <p className="z-10 relative text-white">
             <Link to="/" className="text-4xl">
               Anduril
@@ -19,8 +18,8 @@ export default function Header() {
             <div className="z-10">
               <button
                 type="button"
-                className="text-white p-2 z-10 relative transform transition-transform duration-500"
                 onClick={() => setIsOpen(!isOpen)}
+                className="text-white p-2 z-10 relative transform transition-transform duration-500"
                 style={{
                   transform: isOpen ? "rotate(270deg)" : "rotate(0deg)",
                 }}
@@ -42,13 +41,11 @@ export default function Header() {
               </button>
             </div>
             <ul
-              className={`grid grid-flow-row gap-4 z-10 relative ${
+              className={`grid grid-rows-2 gap-4 z-10 bg-black h-screen w-full ${
                 isOpen ? "block" : "hidden"
               }`}
             >
-              <li className="text-white bg-black">
-                Something should drop under
-              </li>
+              <li className="text-white">Something should drop under</li>
             </ul>
           </div>
         </div>
