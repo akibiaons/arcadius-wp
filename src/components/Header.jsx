@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [isSubMenu2Open, setIsSubMenu2Open] = useState(false);
+  const [isSubMenu3Open, setIsSubMenu3Open] = useState(false);
+  const [isSubMenu4Open, setIsSubMenu4Open] = useState(false);
+  const [isSubMenu5Open, setIsSubMenu5Open] = useState(false);
+  const [isSubMenu6Open, setIsSubMenu6Open] = useState(false);
+  const [isSubMenu7Open, setIsSubMenu7Open] = useState(false);
+  const [isSubMenu8Open, setIsSubMenu8Open] = useState(false);
 
   return (
     <>
@@ -55,6 +62,7 @@ export default function Header() {
                 }`}
               >
                 <div className="z-10 flex justify-between">
+                  {/* DIV of submenu 1 "Lattice Solutions" */}
                   <li className="p-4 border-b border-gray-500">
                     Lattice Solutions
                   </li>
@@ -84,16 +92,18 @@ export default function Header() {
                     </svg>
                   </button>
                 </div>
+                {/*End of div 1 lattice solutions */}
+                {/* Start of div 2 Force Protections */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">
                     Force Protection
                   </li>
                   <button
                     type="button"
-                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    onClick={() => setIsSubMenu2Open(!isSubMenu2Open)}
                     className="text-white p-2 z-10 relative transform transition-transform duration-500"
                     style={{
-                      transform: isSubMenuOpen
+                      transform: isSubMenu2Open
                         ? "rotate(45deg)"
                         : "rotate(0deg)",
                     }}
@@ -114,14 +124,16 @@ export default function Header() {
                     </svg>
                   </button>
                 </div>
+                {/* End of div 2 For force protection */}
+                {/* Start of div 3 Air Systems */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">Air Systems</li>
                   <button
                     type="button"
-                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    onClick={() => setIsSubMenu3Open(!isSubMenu3Open)}
                     className="text-white p-2 z-10 relative transform transition-transform duration-500"
                     style={{
-                      transform: isSubMenuOpen
+                      transform: isSubMenu3Open
                         ? "rotate(45deg)"
                         : "rotate(0deg)",
                     }}
@@ -142,16 +154,18 @@ export default function Header() {
                     </svg>
                   </button>
                 </div>
+                {/* End of div 3 Air Systems */}
+                {/* Start of div 4 underwater vehicles */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">
                     Underwater Vehicles
                   </li>
                   <button
                     type="button"
-                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    onClick={() => setIsSubMenu4Open(!isSubMenu4Open)}
                     className="text-white p-2 z-10 relative transform transition-transform duration-500"
                     style={{
-                      transform: isSubMenuOpen
+                      transform: isSubMenu4Open
                         ? "rotate(45deg)"
                         : "rotate(0deg)",
                     }}
@@ -172,14 +186,16 @@ export default function Header() {
                     </svg>
                   </button>
                 </div>
+                {/* End of div 4 for underwater vehicles */}
+                {/* Start of div 5 we're hiring */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">We're Hiring</li>
                   <button
                     type="button"
-                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    onClick={() => setIsSubMenu5Open(!isSubMenu5Open)}
                     className="text-white p-2 z-10 relative transform transition-transform duration-500"
                     style={{
-                      transform: isSubMenuOpen
+                      transform: isSubMenu5Open
                         ? "rotate(45deg)"
                         : "rotate(0deg)",
                     }}
@@ -200,14 +216,16 @@ export default function Header() {
                     </svg>
                   </button>
                 </div>
+                {/* End of div 5 for we're hiring */}
+                {/* Start of div 6 for Mission sections */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">Mission</li>
                   <button
                     type="button"
-                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    onClick={() => setIsSubMenu6Open(!isSubMenu6Open)}
                     className="text-white p-2 z-10 relative transform transition-transform duration-500"
                     style={{
-                      transform: isSubMenuOpen
+                      transform: isSubMenu6Open
                         ? "rotate(45deg)"
                         : "rotate(0deg)",
                     }}
@@ -228,14 +246,16 @@ export default function Header() {
                     </svg>
                   </button>
                 </div>
+                {/* End of div 6 for Mission */}
+                {/* Start of div 7 for Newsroom */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">Newsroom</li>
                   <button
                     type="button"
-                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    onClick={() => setIsSubMenu7Open(!isSubMenu7Open)}
                     className="text-white p-2 z-10 relative transform transition-transform duration-500"
                     style={{
-                      transform: isSubMenuOpen
+                      transform: isSubMenu7Open
                         ? "rotate(45deg)"
                         : "rotate(0deg)",
                     }}
@@ -256,14 +276,16 @@ export default function Header() {
                     </svg>
                   </button>
                 </div>
+                {/* End of div 7 for newsroom */}
+                {/* End of div 8 for media */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">Media</li>
                   <button
                     type="button"
-                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    onClick={() => setIsSubMenu8Open(!isSubMenu8Open)}
                     className="text-white p-2 z-10 relative transform transition-transform duration-500"
                     style={{
-                      transform: isSubMenuOpen
+                      transform: isSubMenu8Open
                         ? "rotate(45deg)"
                         : "rotate(0deg)",
                     }}
