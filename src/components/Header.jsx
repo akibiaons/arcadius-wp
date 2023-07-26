@@ -56,7 +56,6 @@ export default function Header() {
             </div>
             <div>
               {/* THE START OF THE SUB MENUS */}
-              {/* Also don't forget the typography for the dropdown menu !!!!!! */}
               <ul
                 className={`absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white ${
                   isOpen ? "translate-y-0 opacity-100" : "opacity-0"
@@ -64,7 +63,7 @@ export default function Header() {
               >
                 <div className="z-10 flex justify-between">
                   {/* DIV of submenu 1 "Lattice Solutions" */}
-                  <li className="p-4 border-b border-gray-500">
+                  <li className="text-xl p-4 border-b border-gray-500">
                     Lattice Solutions
                     {isSubMenuOpen && (
                       <ul className="">
@@ -102,7 +101,7 @@ export default function Header() {
                 {/*End of div 1 lattice solutions */}
                 {/* Start of div 2 Force Protections */}
                 <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">
+                  <li className="text-xl p-4 border-b border-gray-500">
                     Force Protection
                     {isSubMenu2Open && (
                       <ul className="">
@@ -140,7 +139,7 @@ export default function Header() {
                 </div>
                 {/* End of div 2 For force protection */}
                 {/* Start of div 3 Air Systems */}
-                <div className="z-10 flex justify-between">
+                <div className="text-xl z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">
                     Air Systems
                     {isSubMenu3Open && (
@@ -179,7 +178,7 @@ export default function Header() {
                 {/* End of div 3 Air Systems */}
                 {/* Start of div 4 underwater vehicles */}
                 <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">
+                  <li className="text-xl p-4 border-b border-gray-500">
                     Underwater Vehicles
                     {isSubMenu4Open && (
                       <ul className="">
@@ -216,7 +215,7 @@ export default function Header() {
                 {/* End of div 4 for underwater vehicles */}
                 {/* Start of div 5 we're hiring */}
                 <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">
+                  <li className="text-xl p-4 border-b border-gray-500">
                     We're Hiring
                     {isSubMenu5Open && (
                       <ul className="">
@@ -254,17 +253,23 @@ export default function Header() {
                 {/* End of div 5 for we're hiring */}
                 {/* Start of div 6 for Mission sections */}
                 <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">Mission</li>
+                  <li className="text-xl p-4 border-b border-gray-500">
+                    Mission
+                  </li>
                 </div>
                 {/* End of div 6 for Mission */}
                 {/* Start of div 7 for Newsroom */}
                 <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">Newsroom</li>
+                  <li className="text-xl p-4 border-b border-gray-500">
+                    Newsroom
+                  </li>
                 </div>
                 {/* End of div 7 for newsroom */}
                 {/* End of div 8 for media */}
                 <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">Media</li>
+                  <li className="text-xl p-4 border-b border-gray-500">
+                    Media
+                  </li>
                 </div>
               </ul>
             </div>
