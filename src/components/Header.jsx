@@ -56,6 +56,7 @@ export default function Header() {
             </div>
             <div>
               {/* THE START OF THE SUB MENUS */}
+              {/* Also don't forget the typography for the dropdown menu !!!!!! */}
               <ul
                 className={`absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white ${
                   isOpen ? "translate-y-0 opacity-100" : "opacity-0"
@@ -65,6 +66,12 @@ export default function Header() {
                   {/* DIV of submenu 1 "Lattice Solutions" */}
                   <li className="p-4 border-b border-gray-500">
                     Lattice Solutions
+                    {isSubMenuOpen && (
+                      <ul className="">
+                        <li>Command & Control</li>
+                        <li>Mission Autonomy</li>
+                      </ul>
+                    )}
                   </li>
                   <button
                     type="button"
@@ -97,6 +104,13 @@ export default function Header() {
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">
                     Force Protection
+                    {isSubMenu2Open && (
+                      <ul className="">
+                        <li>Counter UAS</li>
+                        <li>Counter Intrusion</li>
+                        <li>Maritime Counter Intrusion</li>
+                      </ul>
+                    )}
                   </li>
                   <button
                     type="button"
@@ -127,7 +141,15 @@ export default function Header() {
                 {/* End of div 2 For force protection */}
                 {/* Start of div 3 Air Systems */}
                 <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">Air Systems</li>
+                  <li className="p-4 border-b border-gray-500">
+                    Air Systems
+                    {isSubMenu3Open && (
+                      <ul className="">
+                        <li>Ghost</li>
+                        <li>Altius</li>
+                      </ul>
+                    )}
+                  </li>
                   <button
                     type="button"
                     onClick={() => setIsSubMenu3Open(!isSubMenu3Open)}
@@ -159,6 +181,11 @@ export default function Header() {
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">
                     Underwater Vehicles
+                    {isSubMenu4Open && (
+                      <ul className="">
+                        <li>Dive-LD</li>
+                      </ul>
+                    )}
                   </li>
                   <button
                     type="button"
@@ -189,7 +216,15 @@ export default function Header() {
                 {/* End of div 4 for underwater vehicles */}
                 {/* Start of div 5 we're hiring */}
                 <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">We're Hiring</li>
+                  <li className="p-4 border-b border-gray-500">
+                    We're Hiring
+                    {isSubMenu5Open && (
+                      <ul className="">
+                        <li>Careers</li>
+                        <li>Open Positions</li>
+                      </ul>
+                    )}
+                  </li>
                   <button
                     type="button"
                     onClick={() => setIsSubMenu5Open(!isSubMenu5Open)}
@@ -220,91 +255,16 @@ export default function Header() {
                 {/* Start of div 6 for Mission sections */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">Mission</li>
-                  <button
-                    type="button"
-                    onClick={() => setIsSubMenu6Open(!isSubMenu6Open)}
-                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
-                    style={{
-                      transform: isSubMenu6Open
-                        ? "rotate(45deg)"
-                        : "rotate(0deg)",
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      className="h-8 w-8"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      />
-                    </svg>
-                  </button>
                 </div>
                 {/* End of div 6 for Mission */}
                 {/* Start of div 7 for Newsroom */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">Newsroom</li>
-                  <button
-                    type="button"
-                    onClick={() => setIsSubMenu7Open(!isSubMenu7Open)}
-                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
-                    style={{
-                      transform: isSubMenu7Open
-                        ? "rotate(45deg)"
-                        : "rotate(0deg)",
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      className="h-8 w-8"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      />
-                    </svg>
-                  </button>
                 </div>
                 {/* End of div 7 for newsroom */}
                 {/* End of div 8 for media */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">Media</li>
-                  <button
-                    type="button"
-                    onClick={() => setIsSubMenu8Open(!isSubMenu8Open)}
-                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
-                    style={{
-                      transform: isSubMenu8Open
-                        ? "rotate(45deg)"
-                        : "rotate(0deg)",
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      className="h-8 w-8"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      />
-                    </svg>
-                  </button>
                 </div>
               </ul>
             </div>
@@ -314,7 +274,6 @@ export default function Header() {
       </div>
 
       <div className="hidden lg:block">
-        {" "}
         {/* This will show on laptops and desktops */}
         <ul className="z-10 relative justify-between bg-transparent border-b-2 border-r-2 border-l-2 flex">
           <li className="text-lg border-r-2 pr-10 py-10">
