@@ -48,28 +48,245 @@ export default function Header() {
               </button>
             </div>
             <div>
+              {/* THE START OF THE SUB MENUS */}
               <ul
                 className={`absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white ${
                   isOpen ? "translate-y-0 opacity-100" : "opacity-0"
                 }`}
               >
-                <li className="p-4 border-b border-gray-500">
-                  Lattice Solutions
-                </li>
-                {/* Dont forget a subtle darker gray underline seperating systems */}
-                <li className="p-4 border-b border-gray-500">
-                  Force Protection
-                </li>
-                <li className="p-4 border-b border-gray-500">Air Systems</li>
-                <li className="p-4 border-b border-gray-500">
-                  Underwater Vehicles
-                </li>
-                <li className="p-4 border-b border-gray-500">We're Hiring</li>
-                <li className="p-4 border-b border-gray-500">Mission</li>
-                <li className="p-4 border-b border-gray-500">Newsroom</li>
-                <li className="p-4 border-b border-gray-500">Media</li>
+                <div className="z-10 flex justify-between">
+                  <li className="p-4 border-b border-gray-500">
+                    Lattice Solutions
+                  </li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="z-10 flex justify-between">
+                  <li className="p-4 border-b border-gray-500">
+                    Force Protection
+                  </li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="z-10 flex justify-between">
+                  <li className="p-4 border-b border-gray-500">Air Systems</li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="z-10 flex justify-between">
+                  <li className="p-4 border-b border-gray-500">
+                    Underwater Vehicles
+                  </li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="z-10 flex justify-between">
+                  <li className="p-4 border-b border-gray-500">We're Hiring</li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="z-10 flex justify-between">
+                  <li className="p-4 border-b border-gray-500">Mission</li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="z-10 flex justify-between">
+                  <li className="p-4 border-b border-gray-500">Newsroom</li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="z-10 flex justify-between">
+                  <li className="p-4 border-b border-gray-500">Media</li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </ul>
             </div>
+            {/* THE END OF THE SUB MENU DROP DOWNS ON MOBILE */}
           </div>
         </div>
       </div>
