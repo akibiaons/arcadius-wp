@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   return (
     <>
@@ -46,15 +47,29 @@ export default function Header() {
                 </svg>
               </button>
             </div>
-            <ul
-              className={`absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white ${
-                isOpen ? "translate-y-0 opacity-100" : "opacity-0"
-              }`}
-            >
-              <li className="p-4 border-b border-white">
-                Something should drop under
-              </li>
-            </ul>
+            <div>
+              <ul
+                className={`absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white ${
+                  isOpen ? "translate-y-0 opacity-100" : "opacity-0"
+                }`}
+              >
+                <li className="p-4 border-b border-gray-500">
+                  Lattice Solutions
+                </li>
+                {/* Dont forget a subtle darker gray underline seperating systems */}
+                <li className="p-4 border-b border-gray-500">
+                  Force Protection
+                </li>
+                <li className="p-4 border-b border-gray-500">Air Systems</li>
+                <li className="p-4 border-b border-gray-500">
+                  Underwater Vehicles
+                </li>
+                <li className="p-4 border-b border-gray-500">We're Hiring</li>
+                <li className="p-4 border-b border-gray-500">Mission</li>
+                <li className="p-4 border-b border-gray-500">Newsroom</li>
+                <li className="p-4 border-b border-gray-500">Media</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
