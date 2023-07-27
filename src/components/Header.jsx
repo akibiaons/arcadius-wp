@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  {
+    /*Below is the state and substates for desktop and larger screens */
+  }
   const [isOpen, setIsOpen] = useState(false);
+  const [isDMenu1Open, setIsDMenu1Open] = useState(false);
+
+  {
+    /* Below are the states for mobile devices... */
+  }
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isSubMenu2Open, setIsSubMenu2Open] = useState(false);
   const [isSubMenu3Open, setIsSubMenu3Open] = useState(false);
   const [isSubMenu4Open, setIsSubMenu4Open] = useState(false);
   const [isSubMenu5Open, setIsSubMenu5Open] = useState(false);
-  const [isSubMenu6Open, setIsSubMenu6Open] = useState(false);
-  const [isSubMenu7Open, setIsSubMenu7Open] = useState(false);
-  const [isSubMenu8Open, setIsSubMenu8Open] = useState(false);
 
   return (
     <>
@@ -316,17 +321,44 @@ export default function Header() {
           </div>
         </div>
       </div>
-
+      {/* Below is the start of the navbar menu for desktop and larger thn tablet screens */}
       <div className="hidden lg:block">
+        {/* We need this <div> above for the responsiveness */}
         {/* This will show on laptops and desktops */}
-        <ul className="z-10 relative justify-between bg-transparent border-b-2 border-r-2 border-l-2 flex">
-          <li className="text-lg border-r-2 pr-10 py-10">
+        <ul className="z-10 relative flex justify-between bg-transparent border-b-2 border-r-2 border-l-2 text-white">
+          {/* The <ul> above is the parent for the <li>Logo</li> and other <li>Links</li> */}
+          <li className="text-lg font-bold uppercase border-r-2 self-center p-10 py-10 transition-all duration-500 ease-in transform hover:bg-gray-400 cursor-pointer">
             <Link to="/">Anduril</Link>
           </li>
           <li className="relative group" onMouseEnter={() => setIsOpen(true)}>
-            <Link to="/hive" className="inline-block py-10">
-              H.I.V.E Program
-            </Link>
+            <p className="flex justify-center">
+              <Link to="/hive" className="inline-block py-10">
+                Lattice Solutions
+              </Link>
+              <button
+                type="button"
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                style={{
+                  transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="h-8 w-8"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+              </button>
+            </p>
             {isOpen && (
               <ul
                 className="absolute left-0 mt-1 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50"
@@ -353,16 +385,24 @@ export default function Header() {
           </li>
           <li>
             <Link to="/air-security" className="inline-block py-10">
-              Air Security
+              Force Protection
             </Link>
           </li>
           <li>
             <Link to="/maritime-security" className="inline-block py-10">
-              Maritime Security
+              Air Systems
             </Link>
           </li>
           <li>
-            <Link to="hiring" className="inline-block py-10 border-l-2">
+            <Link to="/maritime-security" className="inline-block py-10">
+              Underwater Vehicles
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/hiring"
+              className="inline-block p-10 py-10 border-l-2 self-center"
+            >
               We're Hiring
             </Link>
           </li>
