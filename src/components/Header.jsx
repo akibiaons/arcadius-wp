@@ -61,50 +61,45 @@ export default function Header() {
                   isOpen ? "translate-y-0" : "translate-y-0 opacity-0"
                 }`}
               >
-                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative w-full">
+                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
                   <div>
-                    <div className="flex items-center ">
-                      <p className="text-xl">Lattice Solutions</p>
-                      <button
-                        type="button"
-                        onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
-                        className="text-white p-2 z-10 relative transform transition-transform duration-500"
-                        style={{
-                          transform: isSubMenuOpen
-                            ? "rotate(45deg)"
-                            : "rotate(0deg)",
-                        }}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          className="h-8 w-8"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-
-                    <div style={{ overflow: "hidden" }}>
-                      <ul
-                        className={`transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
-                          isSubMenuOpen
-                            ? "translate-y-0 opacity-100"
-                            : "translate-y-full opacity-0"
-                        }`}
-                      >
-                        <li>Command & Control</li>
-                        <li>Mission Autonomy</li>
-                      </ul>
-                    </div>
+                    <p className="text-xl">Lattice Solutions</p>
+                    <ul
+                      className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
+                        isSubMenu2Open
+                          ? "max-h-[500px] opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <li>Command & Control</li>
+                      <li>Mission Autonomy</li>
+                    </ul>
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenu2Open(!isSubMenu2Open)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenu2Open
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
                 </div>
                 {/*End of div 1 lattice solutions */}
                 {/* Start of div 2 Force Protections */}
