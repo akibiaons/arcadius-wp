@@ -61,26 +61,30 @@ export default function Header() {
                   isOpen ? "translate-y-0" : "translate-y-0 opacity-0"
                 }`}
               >
-                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                <div
+                  className={`flex justify-between items-center p-4 border-b border-gray-500 relative ${
+                    isSubMenuOpen ? "mb-16" : ""
+                  }`}
+                >
                   <div>
                     <p className="text-xl">Lattice Solutions</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
-                        isSubMenu2Open
-                          ? "max-h-[500px] opacity-100"
+                        isSubMenuOpen
+                          ? "flex flex-col max-h-[600px] opacity-100 border-b border-gray-500 mt-4 pl-4"
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li>Command & Control</li>
-                      <li>Mission Autonomy</li>
+                      <li className="mb-4">Command & Control</li>
+                      <li className="mb-4">Mission Autonomy</li>
                     </ul>
                   </div>
                   <button
                     type="button"
-                    onClick={() => setIsSubMenu2Open(!isSubMenu2Open)}
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
                     className="text-white p-2 z-10 relative transform transition-transform duration-500"
                     style={{
-                      transform: isSubMenu2Open
+                      transform: isSubMenuOpen
                         ? "rotate(45deg)"
                         : "rotate(0deg)",
                     }}
@@ -103,19 +107,23 @@ export default function Header() {
                 </div>
                 {/*End of div 1 lattice solutions */}
                 {/* Start of div 2 Force Protections */}
-                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                <div
+                  className={`flex justify-between items-center p-4 border-b border-gray-500 relative ${
+                    isSubMenu2Open ? "mb-28" : ""
+                  }`}
+                >
                   <div>
                     <p className="text-xl">Force Protection</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenu2Open
-                          ? "max-h-[500px] opacity-100"
+                          ? "flex flex-col max-h-[600px] opacity-100 border-b border-gray-500 mt-4 pl-4"
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li>Counter UAS</li>
-                      <li>Counter Intrusion</li>
-                      <li>Maritime Counter Intrusion</li>
+                      <li className="mb-4">Counter UAS</li>
+                      <li className="mb-4">Counter Intrusion</li>
+                      <li className="mb-4">Maritime Counter Intrusion</li>
                     </ul>
                   </div>
                   <button
@@ -146,18 +154,22 @@ export default function Header() {
                 </div>
                 {/* End of div 2 For force protection */}
                 {/* Start of div 3 Air Systems */}
-                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                <div
+                  className={`flex justify-between items-center p-4 border-b border-gray-500 relative ${
+                    isSubMenu3Open ? "mb-16" : ""
+                  }`}
+                >
                   <div>
                     <p className="text-xl">Air Systems</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenu3Open
-                          ? "max-h-[500px] opacity-100"
+                          ? "flex flex-col max-h-[600px] opacity-100 border-b border-gray-500 mt-4 pl-4"
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li>Ghost</li>
-                      <li>ALTIUS</li>
+                      <li className="mb-4">Ghost</li>
+                      <li className="mb-4">ALTIUS</li>
                     </ul>
                   </div>
                   <button
@@ -188,17 +200,21 @@ export default function Header() {
                 </div>
                 {/* End of div 3 Air Systems */}
                 {/* Start of div 4 underwater vehicles */}
-                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                <div
+                  className={`flex justify-between items-center p-4 border-b border-gray-500 relative ${
+                    isSubMenu4Open ? "mb-8" : ""
+                  }`}
+                >
                   <div>
                     <p className="text-xl">Underwater Vehicles</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenu4Open
-                          ? "max-h-[500px] opacity-100"
+                          ? "flex flex-col max-h-[600px] opacity-100 border-b border-gray-500 mt-4 pl-4"
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li>Dive-LD</li>
+                      <li className="mb-4">Dive-LD</li>
                     </ul>
                   </div>
                   <button
@@ -229,18 +245,22 @@ export default function Header() {
                 </div>
                 {/* End of div 4 for underwater vehicles */}
                 {/* Start of div 5 we're hiring */}
-                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                <div
+                  className={`flex justify-between items-center p-4 border-b border-gray-500 relative ${
+                    isSubMenu5Open ? "mb-16" : ""
+                  }`}
+                >
                   <div>
                     <p className="text-xl">We're Hiring</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenu5Open
-                          ? "max-h-[500px] opacity-100"
+                          ? "flex flex-col max-h-[600px] opacity-100 border-b border-gray-500 mt-4 pl-4"
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li>Careers</li>
-                      <li>Open Positions</li>
+                      <li className="mb-4">Careers</li>
+                      <li className="mb-4">Open Positions</li>
                     </ul>
                   </div>
                   <button
