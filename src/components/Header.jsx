@@ -63,58 +63,58 @@ export default function Header() {
               >
                 <div className="z-10 flex justify-between">
                   {/* DIV of submenu 1 "Lattice Solutions" */}
-                  <li className="flex justify-between p-4 border-b border-gray-500">
+                  <li className="p-4 border-b border-gray-500">
                     <p className="text-xl">Lattice Solutions</p>
-                    <button
-                      type="button"
-                      onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
-                      className="text-white p-2 z-10 relative transform transition-transform duration-500"
-                      style={{
-                        transform: isSubMenuOpen
-                          ? "rotate(45deg)"
-                          : "rotate(0deg)",
-                      }}
+                    {isSubMenuOpen && (
+                      <ul>
+                        <li>Command & Control</li>
+                        <li>Mission Autonomy</li>
+                      </ul>
+                    )}
+                  </li>
+                  <button
+                    type="button"
+                    onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                    style={{
+                      transform: isSubMenuOpen
+                        ? "rotate(45deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="h-8 w-8"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        className="h-8 w-8"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                        />
-                      </svg>
-                    </button>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                {/*End of div 1 lattice solutions */}
+                {/* Start of div 2 Force Protections */}
+                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                  <div>
+                    <p className="text-xl">Force Protection</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
-                        isSubMenuOpen
+                        isSubMenu2Open
                           ? "max-h-[500px] opacity-100"
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li>Command & Control</li>
-                      <li>Mission Autonomy</li>
+                      <li>Counter UAS</li>
+                      <li>Counter Intrusion</li>
+                      <li>Maritime Counter Intrusion</li>
                     </ul>
-                  </li>
-                </div>
-                {/*End of div 1 lattice solutions */}
-                {/* Start of div 2 Force Protections */}
-                <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">
-                    <p className="text-xl">Force Protection</p>
-                    {isSubMenu2Open && (
-                      <ul className="">
-                        <li>Counter UAS</li>
-                        <li>Counter Intrusion</li>
-                        <li>Maritime Counter Intrusion</li>
-                      </ul>
-                    )}
-                  </li>
+                  </div>
                   <button
                     type="button"
                     onClick={() => setIsSubMenu2Open(!isSubMenu2Open)}
