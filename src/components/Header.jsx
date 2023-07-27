@@ -61,17 +61,20 @@ export default function Header() {
                   isOpen ? "translate-y-0 opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="z-10 flex justify-between">
-                  {/* DIV of submenu 1 "Lattice Solutions" */}
-                  <li className="p-4 border-b border-gray-500">
+                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                  <div>
                     <p className="text-xl">Lattice Solutions</p>
-                    {isSubMenuOpen && (
-                      <ul>
-                        <li>Command & Control</li>
-                        <li>Mission Autonomy</li>
-                      </ul>
-                    )}
-                  </li>
+                    <ul
+                      className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
+                        isSubMenuOpen
+                          ? "max-h-[500px] opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <li>Command & Control</li>
+                      <li>Mission Autonomy</li>
+                    </ul>
+                  </div>
                   <button
                     type="button"
                     onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
@@ -143,16 +146,20 @@ export default function Header() {
                 </div>
                 {/* End of div 2 For force protection */}
                 {/* Start of div 3 Air Systems */}
-                <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">
+                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                  <div>
                     <p className="text-xl">Air Systems</p>
-                    {isSubMenu3Open && (
-                      <ul className="">
-                        <li>Ghost</li>
-                        <li>Altius</li>
-                      </ul>
-                    )}
-                  </li>
+                    <ul
+                      className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
+                        isSubMenu3Open
+                          ? "max-h-[500px] opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <li>Ghost</li>
+                      <li>ALTIUS</li>
+                    </ul>
+                  </div>
                   <button
                     type="button"
                     onClick={() => setIsSubMenu3Open(!isSubMenu3Open)}
@@ -181,15 +188,19 @@ export default function Header() {
                 </div>
                 {/* End of div 3 Air Systems */}
                 {/* Start of div 4 underwater vehicles */}
-                <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">
+                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                  <div>
                     <p className="text-xl">Underwater Vehicles</p>
-                    {isSubMenu4Open && (
-                      <ul className="">
-                        <li>Dive-LD</li>
-                      </ul>
-                    )}
-                  </li>
+                    <ul
+                      className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
+                        isSubMenu4Open
+                          ? "max-h-[500px] opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <li>Dive-LD</li>
+                    </ul>
+                  </div>
                   <button
                     type="button"
                     onClick={() => setIsSubMenu4Open(!isSubMenu4Open)}
@@ -218,16 +229,20 @@ export default function Header() {
                 </div>
                 {/* End of div 4 for underwater vehicles */}
                 {/* Start of div 5 we're hiring */}
-                <div className="z-10 flex justify-between">
-                  <li className="p-4 border-b border-gray-500">
+                <div className="flex justify-between items-center p-4 border-b border-gray-500 relative">
+                  <div>
                     <p className="text-xl">We're Hiring</p>
-                    {isSubMenu5Open && (
-                      <ul className="">
-                        <li>Careers</li>
-                        <li>Open Positions</li>
-                      </ul>
-                    )}
-                  </li>
+                    <ul
+                      className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
+                        isSubMenu5Open
+                          ? "max-h-[500px] opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <li>Careers</li>
+                      <li>Open Positions</li>
+                    </ul>
+                  </div>
                   <button
                     type="button"
                     onClick={() => setIsSubMenu5Open(!isSubMenu5Open)}
