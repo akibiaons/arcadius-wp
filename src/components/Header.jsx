@@ -338,7 +338,11 @@ export default function Header() {
           <li className="text-lg font-bold uppercase border-r-2 self-center p-10 py-10 transition-all duration-500 ease-in transform hover:bg-gray-400 cursor-pointer">
             <Link to="/">Anduril</Link>
           </li>
-          <li className="relative group">
+          <li
+            className="relative group"
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+          >
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
                 Lattice Solutions
@@ -370,7 +374,6 @@ export default function Header() {
             {isOpen && (
               <ul
                 className="fixed bg-black mt-2"
-                onMouseLeave={() => setIsOpen(false)}
                 style={{ width: "100vw", left: 0 }}
               >
                 <li className="px-4 py-3">
@@ -392,7 +395,11 @@ export default function Header() {
               </ul>
             )}
           </li>
-          <li className="relative group" onMouseEnter={() => setIsOpen2(true)}>
+          <li
+            className="relative group"
+            onMouseEnter={() => setIsOpen2(true)}
+            onMouseLeave={() => setIsOpen2(false)}
+          >
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
                 Force Protection
@@ -424,7 +431,6 @@ export default function Header() {
             {isOpen2 && (
               <ul
                 className="fixed bg-black mt-2"
-                onMouseLeave={() => setIsOpen2(false)}
                 style={{ width: "100vw", left: 0 }}
               >
                 <li className="px-4 py-3">
@@ -454,7 +460,11 @@ export default function Header() {
               </ul>
             )}
           </li>
-          <li className="relative group" onMouseEnter={() => setIsOpen3(true)}>
+          <li
+            className="relative group"
+            onMouseEnter={() => setIsOpen3(true)}
+            onMouseLeave={() => setIsOpen3(false)}
+          >
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
                 Air Systems
@@ -486,7 +496,6 @@ export default function Header() {
             {isOpen3 && (
               <ul
                 className="fixed bg-black mt-2"
-                onMouseLeave={() => setIsOpen3(false)}
                 style={{ width: "100vw", left: 0 }}
               >
                 <li className="px-4 py-3">
@@ -508,7 +517,11 @@ export default function Header() {
               </ul>
             )}
           </li>
-          <li className="relative group" onMouseEnter={() => setIsOpen4(true)}>
+          <li
+            className="relative group"
+            onMouseEnter={() => setIsOpen4(true)}
+            onMouseLeave={() => setIsOpen4(false)}
+          >
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
                 Underwater Vehicles
@@ -540,7 +553,6 @@ export default function Header() {
             {isOpen4 && (
               <ul
                 className="fixed bg-black mt-2"
-                onMouseLeave={() => setIsOpen4(false)}
                 style={{ width: "100vw", left: 0 }}
               >
                 <li className="px-4 py-3">
