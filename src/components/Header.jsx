@@ -350,7 +350,7 @@ export default function Header() {
               setIsOpen(true);
             }}
             onMouseLeave={() => {
-              const id = setTimeout(() => setIsOpen(false), 900);
+              const id = setTimeout(() => setIsOpen(false), 600);
               setTimeoutId(id);
             }}
           >
@@ -414,7 +414,7 @@ export default function Header() {
               setIsOpen2(true);
             }}
             onMouseLeave={() => {
-              const id = setTimeout(() => setIsOpen2(false), 900);
+              const id = setTimeout(() => setIsOpen2(false), 600);
               setTimeoutId2(id);
             }}
           >
@@ -486,7 +486,7 @@ export default function Header() {
               setIsOpen3(true);
             }}
             onMouseLeave={() => {
-              const id = setTimeout(() => setIsOpen3(false), 900);
+              const id = setTimeout(() => setIsOpen3(false), 600);
               setTimeoutId3(id);
             }}
           >
@@ -550,7 +550,7 @@ export default function Header() {
               setIsOpen4(true);
             }}
             onMouseLeave={() => {
-              const id = setTimeout(() => setIsOpen4(false), 900);
+              const id = setTimeout(() => setIsOpen4(false), 600);
               setTimeoutId4(id);
             }}
           >
