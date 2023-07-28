@@ -325,7 +325,11 @@ export default function Header() {
       <div className="hidden lg:block">
         {/* We need this <div> above for the responsiveness */}
         {/* This will show on laptops and desktops */}
-        <ul className="z-10 relative flex justify-between bg-transparent border-b-2 border-r-2 border-l-2 text-white">
+        <ul
+          className={`z-10 relative flex justify-between border-b-2 border-r-2 border-l-2 text-white ${
+            isOpen ? "bg-black" : "bg-transparent"
+          }`}
+        >
           {/* The <ul> above is the parent for the <li>Logo</li> and other <li>Links</li> */}
           <li className="text-lg font-bold uppercase border-r-2 self-center p-10 py-10 transition-all duration-500 ease-in transform hover:bg-gray-400 cursor-pointer">
             <Link to="/">Anduril</Link>
@@ -361,8 +365,9 @@ export default function Header() {
             </p>
             {isOpen && (
               <ul
-                className="absolute left-0 mt-1 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50"
+                className="fixed bg-black mt-2"
                 onMouseLeave={() => setIsOpen(false)}
+                style={{ width: "100vw", left: 0 }}
               >
                 <li className="px-4 py-3">
                   <Link
