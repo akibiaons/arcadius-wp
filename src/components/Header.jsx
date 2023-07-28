@@ -9,6 +9,10 @@ export default function Header() {
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
+  const [timeoutId2, setTimeoutId2] = useState(null);
+  const [timeoutId3, setTimeoutId3] = useState(null);
+  const [timeoutId4, setTimeoutId4] = useState(null);
 
   {
     /* Below are the states for mobile devices... */
@@ -340,8 +344,15 @@ export default function Header() {
           </li>
           <li
             className="relative group"
-            onMouseEnter={() => setIsOpen(true)}
-            onMouseLeave={() => setIsOpen(false)}
+            onMouseEnter={() => {
+              // Clear the timeout if it is active...
+              if (timeoutId) clearTimeout(timeoutId);
+              setIsOpen(true);
+            }}
+            onMouseLeave={() => {
+              const id = setTimeout(() => setIsOpen(false), 900);
+              setTimeoutId(id);
+            }}
           >
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
@@ -397,8 +408,15 @@ export default function Header() {
           </li>
           <li
             className="relative group"
-            onMouseEnter={() => setIsOpen2(true)}
-            onMouseLeave={() => setIsOpen2(false)}
+            onMouseEnter={() => {
+              // Clear the timeout if it is active...
+              if (timeoutId2) clearTimeout(timeoutId2);
+              setIsOpen2(true);
+            }}
+            onMouseLeave={() => {
+              const id = setTimeout(() => setIsOpen2(false), 900);
+              setTimeoutId2(id);
+            }}
           >
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
@@ -462,8 +480,15 @@ export default function Header() {
           </li>
           <li
             className="relative group"
-            onMouseEnter={() => setIsOpen3(true)}
-            onMouseLeave={() => setIsOpen3(false)}
+            onMouseEnter={() => {
+              // Clear the timeout if it is active...
+              if (timeoutId3) clearTimeout(timeoutId3);
+              setIsOpen3(true);
+            }}
+            onMouseLeave={() => {
+              const id = setTimeout(() => setIsOpen3(false), 900);
+              setTimeoutId3(id);
+            }}
           >
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
@@ -519,8 +544,15 @@ export default function Header() {
           </li>
           <li
             className="relative group"
-            onMouseEnter={() => setIsOpen4(true)}
-            onMouseLeave={() => setIsOpen4(false)}
+            onMouseEnter={() => {
+              // Clear the timeout if it is active...
+              if (timeoutId4) clearTimeout(timeoutId4);
+              setIsOpen4(true);
+            }}
+            onMouseLeave={() => {
+              const id = setTimeout(() => setIsOpen4(false), 900);
+              setTimeoutId4(id);
+            }}
           >
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
