@@ -6,7 +6,9 @@ export default function Header() {
     /*Below is the state and substates for desktop and larger screens */
   }
   const [isOpen, setIsOpen] = useState(false);
-  const [isDMenu1Open, setIsDMenu1Open] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
 
   {
     /* Below are the states for mobile devices... */
@@ -327,14 +329,16 @@ export default function Header() {
         {/* This will show on laptops and desktops */}
         <ul
           className={`z-10 relative flex justify-between border-b-2 border-r-2 border-l-2 text-white ${
-            isOpen ? "bg-black" : "bg-transparent"
+            isOpen || isOpen2 || isOpen3 || isOpen4
+              ? "bg-black"
+              : "bg-transparent"
           }`}
         >
           {/* The <ul> above is the parent for the <li>Logo</li> and other <li>Links</li> */}
           <li className="text-lg font-bold uppercase border-r-2 self-center p-10 py-10 transition-all duration-500 ease-in transform hover:bg-gray-400 cursor-pointer">
             <Link to="/">Anduril</Link>
           </li>
-          <li className="relative group" onMouseEnter={() => setIsOpen(true)}>
+          <li className="relative group">
             <p className="flex justify-center">
               <Link to="/hive" className="inline-block py-10">
                 Lattice Solutions
@@ -388,25 +392,172 @@ export default function Header() {
               </ul>
             )}
           </li>
-          <li>
-            <Link to="/air-security" className="inline-block py-10">
-              Force Protection
-            </Link>
+          <li className="relative group" onMouseEnter={() => setIsOpen2(true)}>
+            <p className="flex justify-center">
+              <Link to="/hive" className="inline-block py-10">
+                Force Protection
+              </Link>
+              <button
+                type="button"
+                onClick={() => setIsOpen2(!isOpen2)}
+                className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                style={{
+                  transform: isOpen2 ? "rotate(45deg)" : "rotate(0deg)",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="h-8 w-8"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+              </button>
+            </p>
+            {isOpen2 && (
+              <ul
+                className="fixed bg-black mt-2"
+                onMouseLeave={() => setIsOpen2(false)}
+                style={{ width: "100vw", left: 0 }}
+              >
+                <li className="px-4 py-3">
+                  <Link
+                    to="/hive/submenu1"
+                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                  >
+                    Counter UAS
+                  </Link>
+                </li>
+                <li className="px-4 py-3">
+                  <Link
+                    to="/hive/submenu2"
+                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                  >
+                    Counter Intrusion
+                  </Link>
+                </li>
+                <li className="px-4 py-3">
+                  <Link
+                    to="/hive/submenu2"
+                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                  >
+                    Maritime Counter Intrusion
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
-          <li>
-            <Link to="/maritime-security" className="inline-block py-10">
-              Air Systems
-            </Link>
+          <li className="relative group" onMouseEnter={() => setIsOpen3(true)}>
+            <p className="flex justify-center">
+              <Link to="/hive" className="inline-block py-10">
+                Air Systems
+              </Link>
+              <button
+                type="button"
+                onClick={() => setIsOpen3(!isOpen3)}
+                className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                style={{
+                  transform: isOpen3 ? "rotate(45deg)" : "rotate(0deg)",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="h-8 w-8"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+              </button>
+            </p>
+            {isOpen3 && (
+              <ul
+                className="fixed bg-black mt-2"
+                onMouseLeave={() => setIsOpen3(false)}
+                style={{ width: "100vw", left: 0 }}
+              >
+                <li className="px-4 py-3">
+                  <Link
+                    to="/hive/submenu1"
+                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                  >
+                    Ghost
+                  </Link>
+                </li>
+                <li className="px-4 py-3">
+                  <Link
+                    to="/hive/submenu2"
+                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                  >
+                    ALTIUS
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
-          <li>
-            <Link to="/maritime-security" className="inline-block py-10">
-              Underwater Vehicles
-            </Link>
+          <li className="relative group" onMouseEnter={() => setIsOpen4(true)}>
+            <p className="flex justify-center">
+              <Link to="/hive" className="inline-block py-10">
+                Underwater Vehicles
+              </Link>
+              <button
+                type="button"
+                onClick={() => setIsOpen4(!isOpen4)}
+                className="text-white p-2 z-10 relative transform transition-transform duration-500"
+                style={{
+                  transform: isOpen4 ? "rotate(45deg)" : "rotate(0deg)",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="h-8 w-8"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+              </button>
+            </p>
+            {isOpen4 && (
+              <ul
+                className="fixed bg-black mt-2"
+                onMouseLeave={() => setIsOpen4(false)}
+                style={{ width: "100vw", left: 0 }}
+              >
+                <li className="px-4 py-3">
+                  <Link
+                    to="/hive/submenu1"
+                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                  >
+                    Dive-LD
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <Link
               to="/hiring"
-              className="inline-block p-10 py-10 border-l-2 self-center"
+              className="inline-block p-10 py-10 border-l-2 self-center transition-all duration-500 ease-in transform hover:underline hover:bg-black"
             >
               We're Hiring
             </Link>
