@@ -356,7 +356,7 @@ export default function Header() {
           >
             <p className="flex justify-center">
               <Link
-                to="/hive"
+                onClick={() => setIsOpen(!isOpen)}
                 className="inline-block py-10 hover:underline transition-underline duration-900"
                 style={{
                   textDecoration: isOpen ? "underline" : "none",
@@ -390,25 +390,28 @@ export default function Header() {
             </p>
             {isOpen && (
               <ul
-                className="fixed bg-black mt-2"
+                className="fixed grid grid-cols-2 bg-black mt-2" /* I added grid and two cols with an empty div to create that description space for laptop and desktop versions */
                 style={{ width: "100vw", left: 0 }}
               >
-                <li className="px-4 py-3">
-                  <Link
-                    to="/hive/submenu1"
-                    className="text-white hover:underline cursor-pointer"
-                  >
-                    Command & Control
-                  </Link>
-                </li>
-                <li className="px-4 py-3">
-                  <Link
-                    to="/hive/submenu2"
-                    className="text-white hover:underline cursor-pointer"
-                  >
-                    Mission Autonomy
-                  </Link>
-                </li>
+                <div className="border-r-2 flex flex-col items-start pl-10">
+                  <li className="px-4 py-10">
+                    <Link
+                      to=""
+                      className="text-white text-xl hover:underline cursor-pointer"
+                    >
+                      Command & Control
+                    </Link>
+                  </li>
+                  <li className="px-4 py-8 mb-4">
+                    <Link
+                      to=""
+                      className="text-white text-xl hover:underline cursor-pointer"
+                    >
+                      Mission Autonomy
+                    </Link>
+                  </li>
+                </div>
+                <div className="empty-box w-full"></div>
               </ul>
             )}
           </li>
@@ -426,7 +429,7 @@ export default function Header() {
           >
             <p className="flex justify-center">
               <Link
-                to="/hive"
+                onClick={() => setIsOpen2(!isOpen2)}
                 className="inline-block py-10"
                 style={{
                   textDecoration: isOpen2 ? "underline" : "none",
@@ -460,36 +463,36 @@ export default function Header() {
             </p>
             {isOpen2 && (
               <ul
-                className="fixed bg-black mt-2"
+                className="fixed grid grid-cols-2 bg-black mt-2" /* I added grid and two cols with an empty div to create that description space for laptop and desktop versions */
                 style={{ width: "100vw", left: 0 }}
               >
-                <li className="px-4 py-3">
-                  <Link
-                    to="/hive/submenu1"
-                    className="text-white hover:underline cursor-pointer"
-                    style={{
-                      textDecoration: isOpen3 ? "underline" : "none",
-                    }}
-                  >
-                    Counter UAS
-                  </Link>
-                </li>
-                <li className="px-4 py-3">
-                  <Link
-                    to="/hive/submenu2"
-                    className="text-white hover:underline cursor-pointer"
-                  >
-                    Counter Intrusion
-                  </Link>
-                </li>
-                <li className="px-4 py-3">
-                  <Link
-                    to="/hive/submenu2"
-                    className="text-white hover:underline cursor-pointer"
-                  >
-                    Maritime Counter Intrusion
-                  </Link>
-                </li>
+                <div className="border-r-2 flex flex-col items-start ml-10">
+                  <li className="px-4 py-10">
+                    <Link
+                      to=""
+                      className="text-white text-xl hover:underline cursor-pointer"
+                    >
+                      Counter UAS
+                    </Link>
+                  </li>
+                  <li className="px-4 py-8 mb-4">
+                    <Link
+                      to=""
+                      className="text-white text-xl hover:underline cursor-pointer"
+                    >
+                      Counter Intrusion
+                    </Link>
+                  </li>
+                  <li className="px-4 py-8 mb-4">
+                    <Link
+                      to=""
+                      className="text-white text-xl hover:underline cursor-pointer"
+                    >
+                      Maritime Counter Intrusion
+                    </Link>
+                  </li>
+                </div>
+                <div className="empty-box w-full"></div>
               </ul>
             )}
           </li>
@@ -507,7 +510,7 @@ export default function Header() {
           >
             <p className="flex justify-center">
               <Link
-                to="/hive"
+                onClick={() => setIsOpen3(!isOpen3)}
                 className="inline-block py-10"
                 style={{
                   textDecoration: isOpen3 ? "underline" : "none",
@@ -541,25 +544,28 @@ export default function Header() {
             </p>
             {isOpen3 && (
               <ul
-                className="fixed bg-black mt-2"
+                className="fixed grid grid-cols-2 bg-black mt-2" /* I added grid and two cols with an empty div to create that description space for laptop and desktop versions */
                 style={{ width: "100vw", left: 0 }}
               >
-                <li className="px-4 py-3">
-                  <Link
-                    to="/hive/submenu1"
-                    className="text-white hover:underline cursor-pointer"
-                  >
-                    Ghost
-                  </Link>
-                </li>
-                <li className="px-4 py-3">
-                  <Link
-                    to="/hive/submenu2"
-                    className="text-white hover:underline cursor-pointer"
-                  >
-                    ALTIUS
-                  </Link>
-                </li>
+                <div className="border-r-2 flex flex-col items-start pl-10">
+                  <li className="px-4 py-10">
+                    <Link
+                      to=""
+                      className="text-white text-xl hover:underline cursor-pointer"
+                    >
+                      Ghost
+                    </Link>
+                  </li>
+                  <li className="px-4 py-8 mb-4">
+                    <Link
+                      to=""
+                      className="text-white text-xl hover:underline cursor-pointer"
+                    >
+                      ALTIUS
+                    </Link>
+                  </li>
+                </div>
+                <div className="empty-box w-full"></div>
               </ul>
             )}
           </li>
@@ -577,7 +583,7 @@ export default function Header() {
           >
             <p className="flex justify-center">
               <Link
-                to="/hive"
+                onClick={() => setIsOpen4(!isOpen4)}
                 className="inline-block py-10"
                 style={{
                   textDecoration: isOpen4 ? "underline" : "none",
@@ -611,23 +617,26 @@ export default function Header() {
             </p>
             {isOpen4 && (
               <ul
-                className="fixed bg-black mt-2"
+                className="fixed grid grid-cols-2 bg-black mt-2" /* I added grid and two cols with an empty div to create that description space for laptop and desktop versions */
                 style={{ width: "100vw", left: 0 }}
               >
-                <li className="px-4 py-3">
-                  <Link
-                    to="/hive/submenu1"
-                    className="text-white hover:underline cursor-pointer"
-                  >
-                    Dive-LD
-                  </Link>
-                </li>
+                <div className="border-r-2 flex flex-col items-start pl-10">
+                  <li className="px-4 py-10">
+                    <Link
+                      to=""
+                      className="text-white text-xl hover:underline cursor-pointer"
+                    >
+                      Dive-LD
+                    </Link>
+                  </li>
+                </div>
+                <div className="empty-box w-full"></div>
               </ul>
             )}
           </li>
           <li>
             <Link
-              to="/hiring"
+              to=""
               className="inline-block p-10 py-10 border-l-2 self-center transition-all duration-500 ease-in transform hover:underline hover:bg-black"
             >
               We're Hiring
