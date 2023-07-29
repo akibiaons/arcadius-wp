@@ -355,7 +355,13 @@ export default function Header() {
             }}
           >
             <p className="flex justify-center">
-              <Link to="/hive" className="inline-block py-10">
+              <Link
+                to="/hive"
+                className="inline-block py-10 hover:underline transition-underline duration-900"
+                style={{
+                  textDecoration: isOpen ? "underline" : "none",
+                }}
+              >
                 Lattice Solutions
               </Link>
               <button
@@ -390,7 +396,7 @@ export default function Header() {
                 <li className="px-4 py-3">
                   <Link
                     to="/hive/submenu1"
-                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                    className="text-white hover:underline cursor-pointer"
                   >
                     Command & Control
                   </Link>
@@ -398,7 +404,7 @@ export default function Header() {
                 <li className="px-4 py-3">
                   <Link
                     to="/hive/submenu2"
-                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                    className="text-white hover:underline cursor-pointer"
                   >
                     Mission Autonomy
                   </Link>
@@ -414,12 +420,18 @@ export default function Header() {
               setIsOpen2(true);
             }}
             onMouseLeave={() => {
-              const id = setTimeout(() => setIsOpen2(false), 600);
+              const id = setTimeout(() => setIsOpen2(false), 500);
               setTimeoutId2(id);
             }}
           >
             <p className="flex justify-center">
-              <Link to="/hive" className="inline-block py-10">
+              <Link
+                to="/hive"
+                className="inline-block py-10"
+                style={{
+                  textDecoration: isOpen2 ? "underline" : "none",
+                }}
+              >
                 Force Protection
               </Link>
               <button
@@ -454,7 +466,10 @@ export default function Header() {
                 <li className="px-4 py-3">
                   <Link
                     to="/hive/submenu1"
-                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                    className="text-white hover:underline cursor-pointer"
+                    style={{
+                      textDecoration: isOpen3 ? "underline" : "none",
+                    }}
                   >
                     Counter UAS
                   </Link>
@@ -462,7 +477,7 @@ export default function Header() {
                 <li className="px-4 py-3">
                   <Link
                     to="/hive/submenu2"
-                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                    className="text-white hover:underline cursor-pointer"
                   >
                     Counter Intrusion
                   </Link>
@@ -470,7 +485,7 @@ export default function Header() {
                 <li className="px-4 py-3">
                   <Link
                     to="/hive/submenu2"
-                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                    className="text-white hover:underline cursor-pointer"
                   >
                     Maritime Counter Intrusion
                   </Link>
@@ -491,7 +506,13 @@ export default function Header() {
             }}
           >
             <p className="flex justify-center">
-              <Link to="/hive" className="inline-block py-10">
+              <Link
+                to="/hive"
+                className="inline-block py-10"
+                style={{
+                  textDecoration: isOpen3 ? "underline" : "none",
+                }}
+              >
                 Air Systems
               </Link>
               <button
@@ -526,7 +547,7 @@ export default function Header() {
                 <li className="px-4 py-3">
                   <Link
                     to="/hive/submenu1"
-                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                    className="text-white hover:underline cursor-pointer"
                   >
                     Ghost
                   </Link>
@@ -534,7 +555,7 @@ export default function Header() {
                 <li className="px-4 py-3">
                   <Link
                     to="/hive/submenu2"
-                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                    className="text-white hover:underline cursor-pointer"
                   >
                     ALTIUS
                   </Link>
@@ -550,12 +571,18 @@ export default function Header() {
               setIsOpen4(true);
             }}
             onMouseLeave={() => {
-              const id = setTimeout(() => setIsOpen4(false), 600);
+              const id = setTimeout(() => setIsOpen4(false), 700);
               setTimeoutId4(id);
             }}
           >
             <p className="flex justify-center">
-              <Link to="/hive" className="inline-block py-10">
+              <Link
+                to="/hive"
+                className="inline-block py-10"
+                style={{
+                  textDecoration: isOpen4 ? "underline" : "none",
+                }}
+              >
                 Underwater Vehicles
               </Link>
               <button
@@ -590,7 +617,7 @@ export default function Header() {
                 <li className="px-4 py-3">
                   <Link
                     to="/hive/submenu1"
-                    className="text-gray-700 hover:text-gray-900 cursor-pointer"
+                    className="text-white hover:underline cursor-pointer"
                   >
                     Dive-LD
                   </Link>
