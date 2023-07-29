@@ -332,14 +332,14 @@ export default function Header() {
         {/* We need this <div> above for the responsiveness */}
         {/* This will show on laptops and desktops */}
         <ul
-          className={`z-10 relative flex justify-between border-b-2 border-r-2 border-l-2 text-white ${
+          className={`z-10 relative flex justify-between border-b-2 border-r-2 border-l-2 text-lg font-semibold text-white ${
             isOpen || isOpen2 || isOpen3 || isOpen4
               ? "bg-black"
               : "bg-transparent"
           }`}
         >
           {/* The <ul> above is the parent for the <li>Logo</li> and other <li>Links</li> */}
-          <li className="text-lg font-bold uppercase border-r-2 self-center p-10 py-10 transition-all duration-500 ease-in transform hover:bg-gray-400 cursor-pointer">
+          <li className="text-xl font-bold uppercase border-r-2 self-center p-10 py-10 transition-all duration-500 ease-in transform hover:bg-gray-400 cursor-pointer">
             <Link to="/">Anduril</Link>
           </li>
           <li
