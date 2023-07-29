@@ -35,7 +35,7 @@ export default function Header() {
           }`}
         >
           <p className="text-white">
-            <Link to="/" className="text-4xl">
+            <Link to="/" className="text-xl font-semibold">
               Anduril
             </Link>
           </p>
@@ -78,7 +78,7 @@ export default function Header() {
                   }`}
                 >
                   <div>
-                    <p className="text-xl">Lattice Solutions</p>
+                    <p className="text-lg">Lattice Solutions</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenuOpen
@@ -86,8 +86,8 @@ export default function Header() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li className="mb-4">Command & Control</li>
-                      <li className="mb-4">Mission Autonomy</li>
+                      <li className="mb-4 text-sm">Command & Control</li>
+                      <li className="mb-4 text-sm">Mission Autonomy</li>
                     </ul>
                   </div>
                   <button
@@ -124,7 +124,7 @@ export default function Header() {
                   }`}
                 >
                   <div>
-                    <p className="text-xl">Force Protection</p>
+                    <p className="text-lg">Force Protection</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenu2Open
@@ -132,9 +132,11 @@ export default function Header() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li className="mb-4">Counter UAS</li>
-                      <li className="mb-4">Counter Intrusion</li>
-                      <li className="mb-4">Maritime Counter Intrusion</li>
+                      <li className="mb-4 text-sm">Counter UAS</li>
+                      <li className="mb-4 text-sm">Counter Intrusion</li>
+                      <li className="mb-4 text-sm">
+                        Maritime Counter Intrusion
+                      </li>
                     </ul>
                   </div>
                   <button
@@ -171,7 +173,7 @@ export default function Header() {
                   }`}
                 >
                   <div>
-                    <p className="text-xl">Air Systems</p>
+                    <p className="text-lg">Air Systems</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenu3Open
@@ -179,8 +181,8 @@ export default function Header() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li className="mb-4">Ghost</li>
-                      <li className="mb-4">ALTIUS</li>
+                      <li className="mb-4 text-sm">Ghost</li>
+                      <li className="mb-4 text-sm">ALTIUS</li>
                     </ul>
                   </div>
                   <button
@@ -217,7 +219,7 @@ export default function Header() {
                   }`}
                 >
                   <div>
-                    <p className="text-xl">Underwater Vehicles</p>
+                    <p className="text-lg">Underwater Vehicles</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenu4Open
@@ -225,7 +227,7 @@ export default function Header() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li className="mb-4">Dive-LD</li>
+                      <li className="mb-4 text-sm">Dive-LD</li>
                     </ul>
                   </div>
                   <button
@@ -262,7 +264,7 @@ export default function Header() {
                   }`}
                 >
                   <div>
-                    <p className="text-xl">We're Hiring</p>
+                    <p className="text-lg">We're Hiring</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenu5Open
@@ -270,8 +272,8 @@ export default function Header() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li className="mb-4">Careers</li>
-                      <li className="mb-4">Open Positions</li>
+                      <li className="mb-4 text-sm">Careers</li>
+                      <li className="mb-4 text-sm">Open Positions</li>
                     </ul>
                   </div>
                   <button
@@ -304,21 +306,21 @@ export default function Header() {
                 {/* Start of div 6 for Mission sections */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">
-                    <p className="text-xl">Mission</p>
+                    <p className="text-lg">Mission</p>
                   </li>
                 </div>
                 {/* End of div 6 for Mission */}
                 {/* Start of div 7 for Newsroom */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">
-                    <p className="text-xl">Newsroom</p>
+                    <p className="text-lg">Newsroom</p>
                   </li>
                 </div>
                 {/* End of div 7 for newsroom */}
                 {/* End of div 8 for media */}
                 <div className="z-10 flex justify-between">
                   <li className="p-4 border-b border-gray-500">
-                    <p className="text-xl">Media</p>
+                    <p className="text-lg">Media</p>
                   </li>
                 </div>
               </ul>
