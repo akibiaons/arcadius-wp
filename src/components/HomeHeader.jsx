@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function HomeHeader() {
   {
     /*Below is the state and substates for desktop and larger screens */
   }
@@ -31,7 +31,7 @@ export default function Header() {
           className={`flex justify-between items-center relative z-10 p-4 ${
             isOpen
               ? "bg-black ease-in-out transition"
-              : "bg-transparent ease-in-out transition"
+              : "bg-black ease-in-out transition"
           }`}
         >
           <p className="text-white">
@@ -328,16 +328,24 @@ export default function Header() {
             {/* THE END OF THE SUB MENU DROP DOWNS ON MOBILE */}
           </div>
         </div>
+        <div className="w-full h-screen">
+          {/*className="absolute top-0 left-0 w-screen h-screen overflow-hidden" */}
+          <video
+            src="https://cdn.sanity.io/files/z5s3oquj/production/b7f8f4a89e564305b8c810113d7bf71d445b1419.mp4"
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
       {/* Below is the start of the navbar menu for desktop and larger thn tablet screens */}
       <div className="hidden lg:block">
         {/* We need this <div> above for the responsiveness */}
         {/* This will show on laptops and desktops */}
         <ul
-          className={`z-10 relative flex justify-between border-b-2 border-r-2 border-l-2 text-lg font-semibold text-white ${
-            isOpen || isOpen2 || isOpen3 || isOpen4
-              ? "bg-black"
-              : "bg-transparent"
+          className={`relative flex justify-between border-b-2 border-r-2 border-l-2 text-lg font-semibold text-white ${
+            isOpen || isOpen2 || isOpen3 || isOpen4 ? "bg-black" : "bg-black"
           }`}
         >
           {/* The <ul> above is the parent for the <li>Logo</li> and other <li>Links</li> */}
@@ -645,6 +653,16 @@ export default function Header() {
             </Link>
           </li>
         </ul>
+        <div className="w-full h-screen relative z-0">
+          {/*className="absolute top-0 left-0 w-screen h-screen overflow-hidden" */}
+          <video
+            src="https://cdn.sanity.io/files/z5s3oquj/production/b7f8f4a89e564305b8c810113d7bf71d445b1419.mp4"
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover absolute top-0 left-0"
+          />
+        </div>
       </div>
     </div>
   );
