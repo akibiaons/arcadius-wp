@@ -8,7 +8,7 @@ function Home() {
       {/* Homepage section 1 will be going here...*/}
       <div className="block lg:hidden">
         <div className="flex flex-col items-center">
-          <div className="container text-left mb-4 max-w-lg mx-auto px-4">
+          <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
             <h1 className="text-lg mb-4 font-medium">Our Mission</h1>
             <p className="font-semibold text-xl">
               Transforming defense capabilities with advanced technology.
@@ -32,6 +32,7 @@ function Home() {
             {/* Need to add an arrow right icon that is in a circle */}
           </div>
         </div>
+        {/* Section two will be going below this comment...*/}
       </div>
     </>
   );
