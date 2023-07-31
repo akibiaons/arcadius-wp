@@ -42,6 +42,7 @@ function Home() {
         >
           <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 text-white">
             <p className="text-lg mb-4 font-medium">Lattice OS</p>
+            <p className="font-semibold text-xl">Autonomy for Every Mission</p>
           </div>
           <div className="mb-4 max-w-lg mx-auto px-4 text-white">
             <p className="">
@@ -57,6 +58,21 @@ function Home() {
             <p className="underline mb-4">Learn More about Command & Control</p>
             <p className="underline">Learn More about Mission Autonomy</p>
             {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
+          </div>
+        </div>
+        {/* Section 3 will have <p> bold <p>descriptive small</p>  and a carousel that opens based onClick */}
+        <div className="flex flex-col items-center mt-4">
+          <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
+            <p className="font-semibold text-xl">
+              Autonomous All Domain Force Protection
+            </p>
+          </div>
+          <div className="mb-4 max-w-lg mx-auto px-4 text-black">
+            <p>
+              A family of autonomous systems, powered by Lattice, that provide
+              integrated, persistent awareness and security across land, sea and
+              air, all at the tactical edge.
+            </p>
           </div>
         </div>
       </div>
