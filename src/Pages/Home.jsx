@@ -5,6 +5,7 @@ function Home() {
   return (
     <>
       <HomeHeader />
+      {/* Homepage section 1 will be going here...*/}
       <div className="block lg:hidden">
         <div className="flex flex-col items-center">
           <div className="container text-left mb-4 max-w-lg mx-auto px-4">
