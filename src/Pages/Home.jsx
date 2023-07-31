@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeHeader from "../components/HomeHeader";
+import { Link } from "react-router-dom";
 
 function Home() {
+  const [isCounterOpen, setIsCounterOpen] = useState(false);
+  const [isIntrusionOpen, setIsIntrusionOpen] = useState(false);
+  const [isMaritimeOpen, setIsMaritimeOpen] = useState(false);
+
   return (
     <>
       <HomeHeader />
@@ -73,6 +78,45 @@ function Home() {
               integrated, persistent awareness and security across land, sea and
               air, all at the tactical edge.
             </p>
+          </div>
+        </div>
+        {/* Below is the carousel which will useState and open onClick */}
+        <div className="mt-10">
+          <div className="flex flex-col mt-4">
+            <div className="grid grid-cols-3 gap-4">
+              <p>
+                <Link
+                  onClick={() => setIsCounterOpen(!isCounterOpen)}
+                  className="underline"
+                >
+                  Counter UAS
+                </Link>
+              </p>
+              <p>
+                <Link className="underline">Counter Intrusion</Link>
+              </p>
+              <p>
+                <Link className="underline">Maritime Intrusion</Link>
+              </p>
+            </div>
+            {isCounterOpen && (
+              <>
+                <video
+                  src="https://cdn.sanity.io/files/z5s3oquj/production/3daa068ad9d0b2c81c4340637447b135cc0ec7c8.mp4"
+                  autoPlay
+                  loop
+                  muted
+                ></video>
+                <div className="flex flex-col items-center mt-4">
+                  <p className="font-medium text-md">Counter UAS</p>
+                  <p className="mb-4 max-w-lg mx-auto px-4 text-black">
+                    No threat goes unseen. Anduril’s open Counter UAS system is
+                    built to detect, track and intercept unmanned aircraft and
+                    autonomous drone systems.
+                  </p>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
