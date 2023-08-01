@@ -84,7 +84,7 @@ function Home() {
         {/* Below is the carousel which will useState and open onClick */}
         <div className="mt-10">
           <div className="flex flex-col mt-4">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 mb-8">
               <p>
                 <Link
                   onClick={() =>
@@ -117,22 +117,24 @@ function Home() {
               </p>
             </div>
             {openItem === "first" && (
-              <>
-                <video
-                  src="https://cdn.sanity.io/files/z5s3oquj/production/3daa068ad9d0b2c81c4340637447b135cc0ec7c8.mp4"
-                  autoPlay
-                  loop
-                  muted
-                ></video>
-                <div className="flex flex-col items-center mt-4">
-                  <p className="font-medium text-md">Counter UAS</p>
-                  <p className="mb-4 max-w-lg mx-auto px-4 text-black">
-                    No threat goes unseen. Anduril’s open Counter UAS system is
-                    built to detect, track and intercept unmanned aircraft and
-                    autonomous drone systems.
-                  </p>
+              <div className="flex flex-col items-center mt-4">
+                <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
+                  <video
+                    src="https://cdn.sanity.io/files/z5s3oquj/production/3daa068ad9d0b2c81c4340637447b135cc0ec7c8.mp4"
+                    autoPlay
+                    loop
+                    muted
+                  ></video>
+                  <div className="mb-4 max-w-lg mx-auto px-4 text-black">
+                    <p className="font-medium text-md mb-4">Counter UAS</p>
+                    <p className="mb-4 max-w-lg mx-auto px-4 text-black">
+                      No threat goes unseen. Anduril’s open Counter UAS system
+                      is built to detect, track and intercept unmanned aircraft
+                      and autonomous drone systems.
+                    </p>
+                  </div>
                 </div>
-              </>
+              </div>
             )}
             {openItem === "second" && (
               <>
@@ -143,7 +145,9 @@ function Home() {
                   muted
                 ></video>
                 <div className="flex flex-col items-center mt-4">
-                  <p className="font-medium text-md">Counter Intrusion</p>
+                  <p className="font-medium text-md mb-4 text-left">
+                    Counter Intrusion
+                  </p>
                   <p className="mb-4 max-w-lg mx-auto px-4 text-black">
                     Lattice automates the protection of both domestic and
                     forward operating bases. Our family of systems saves crucial
@@ -162,7 +166,7 @@ function Home() {
                   muted
                 ></video>
                 <div className="flex flex-col items-center mt-4">
-                  <p className="font-medium text-md">
+                  <p className="font-medium text-md mb-4">
                     Maritime Counter Intrusion
                   </p>
                   <p className="mb-4 max-w-lg mx-auto px-4 text-black">
@@ -175,6 +179,28 @@ function Home() {
                 </div>
               </>
             )}
+          </div>
+          {/* The DIV below will contain autonomous air systems section*/}
+          <div className="border-t-2 border-black">
+            <div className="flex flex-col items-center mt-4">
+              <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
+                <video
+                  src="https://cdn.sanity.io/files/z5s3oquj/production/72980bbd2350f1ed002addec0a68e2cdff22ebae.mp4"
+                  autoPlay
+                  loop
+                  muted
+                ></video>
+                <p className="font-semibold text-xl">Autonomous Air Systems</p>
+                <div className="mb-4 max-w-lg mx-auto px-4 text-black">
+                  <p className="">
+                    Autonomous air systems that are all tasked, connected, and
+                    controlled by Lattice. Together, they enable a variety of
+                    intelligence, surveillance, reconnaissance, and targeting
+                    mission profiles.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
