@@ -8,6 +8,7 @@ import Hive from "./components/Hive";
 import AirSecurity from "./components/AirSecurity";
 import MaritimeSecurity from "./components/MaritimeSecurity";
 import Hiring from "./Pages/Hiring";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/maritime-security" element={<MaritimeSecurity />} />
         <Route path="/hiring" element={<Hiring />} />
       </Routes>
+      <Footer />
     </>
   );
 }
