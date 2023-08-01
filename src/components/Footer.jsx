@@ -16,12 +16,12 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="text-white">
-                  Ghost 4
+                  Ghost
                 </a>
               </li>
               <li>
                 <a href="#" className="text-white">
-                  Anvil
+                  ALTIUS
                 </a>
               </li>
             </ul>
