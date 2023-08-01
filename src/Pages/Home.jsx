@@ -181,7 +181,7 @@ function Home() {
             )}
           </div>
           {/* The DIV below will contain autonomous air systems section*/}
-          <div className="border-t-2 border-black">
+          <div className="border-t-2 border-black bg-orange-50">
             <div className="flex flex-col items-center mt-4">
               <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
                 <video
@@ -190,8 +190,10 @@ function Home() {
                   loop
                   muted
                 ></video>
-                <p className="font-semibold text-xl">Autonomous Air Systems</p>
-                <div className="mb-4 max-w-lg mx-auto px-4 text-black">
+                <p className="font-semibold text-xl pt-4">
+                  Autonomous Air Systems
+                </p>
+                <div className="mb-4 max-w-lg mx-auto pt-4 text-black">
                   <p className="">
                     Autonomous air systems that are all tasked, connected, and
                     controlled by Lattice. Together, they enable a variety of
@@ -199,9 +201,85 @@ function Home() {
                     mission profiles.
                   </p>
                 </div>
+                <div className="max-w-lg mx-auto px-4 text-black mt-4 pb-10">
+                  <p className="underline mb-4">Learn More about Ghost</p>
+                  <p className="underline">Learn More about ALTIUS</p>
+                  {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
+                </div>
               </div>
             </div>
           </div>
+          {/* Below is the autonomous underwater vehicle section */}
+          <div
+            style={{
+              backgroundImage:
+                "url(https://cdn.sanity.io/images/z5s3oquj/production/dc07b33729dac4732968a880edfe34a8bf3c641d-1373x720.png?w=750&q=75&fit=max)",
+            }}
+          >
+            <div className="flex flex-col items-center pb-20">
+              <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
+                <p className="font-semibold text-xl text-white">
+                  Autonomous Underwater Vehicles
+                </p>
+                <div className="mb-4 max-w-lg mx-auto pt-8 text-white">
+                  <p className="text-white">
+                    Autonomous air systems that are all tasked, connected, and
+                    controlled by Lattice. Together, they enable a variety of
+                    intelligence, surveillance, reconnaissance, and targeting
+                    mission profiles.
+                  </p>
+                </div>
+                <div className="max-w-lg mx-auto pt-4 text-black mt-4 pb-10">
+                  <p className="underline text-white">
+                    Learn More about Dive-LD
+                  </p>
+                  {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Below is the section for careers... */}
+          <div>
+            <div className="flex flex-col items-center border-b-2">
+              <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
+                <p className="font-semibold text-xl pb-4">Careers</p>
+                <p className="font-semibold text-2xl">
+                  Join us in creating the future of defense
+                </p>
+                <div className="mb-4 max-w-lg mx-auto pt-8">
+                  <p>
+                    From light bulb to functional prototype in a week. An
+                    engineer’s playground where we make what we feel is right
+                    and needs to exist. A dedicated team rallying around a
+                    shared intention to make a positive impact by creating a
+                    safer world. That’s life at Anduril.
+                  </p>
+                </div>
+                <div className="max-w-lg mx-auto text-black mt-4 pb-10">
+                  <p className="underline">Learn More</p>
+                  {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
+                </div>
+                <div className="max-w-lg mx-auto text-black mt-4 pb-10">
+                  <div className="grid grid-rows-2 grid-cols-2 gap-1">
+                    <img
+                      className="col-span-2"
+                      src="https://cdn.sanity.io/images/z5s3oquj/production/8916f3bfece4c71e1aa614a29ceb83d1f7374df5-1295x864.jpg?w=640&q=75&fit=max"
+                      alt="arcadius-careers"
+                    />
+                    <img
+                      src="https://cdn.sanity.io/images/z5s3oquj/production/c048a05d8247342eb35979a644df0c67db77af87-1204x804.png?w=640&q=75&fit=max"
+                      alt="arcadius-engineers"
+                    />
+                    <img
+                      src="https://cdn.sanity.io/images/z5s3oquj/production/76eb58c86a72ede47b80f8ad1667bbb7fca2d267-1129x753.jpg?w=750&q=75&fit=max"
+                      alt="join us in creating the future of defense"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* */}
         </div>
       </div>
     </>
