@@ -3,7 +3,7 @@ import HomeHeader from "../components/HomeHeader";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const [openItem, setOpenItem] = useState("");
+  const [openItem, setOpenItem] = useState("first");
   {
     /* This will be the single state for the accordian style carousel */
   }
