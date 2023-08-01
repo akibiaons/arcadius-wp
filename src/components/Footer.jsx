@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-8 px-6">
       <div className="container mx-auto">
+        <p className="text-xl font-semibold pb-8">Anduril</p>
         <div className="grid grid-cols-3 gap-8">
-          <p className="text-xl font-semibold">Anduril</p>
           <div>
             <h3 className="font-semibold text-lg mb-4">Products</h3>
             <ul>
