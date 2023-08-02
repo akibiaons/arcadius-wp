@@ -661,6 +661,7 @@ export default function HomeHeader() {
             loop
             muted
             playsInline
+            style={{ objectFit: "cover" }}
             className="w-full h-full object-cover absolute top-0 left-0"
           />
         </div>

@@ -125,6 +125,7 @@ function Home() {
                     loop
                     muted
                     playsInline
+                    style={{ objectFit: "cover" }}
                   ></video>
                   <div className="mb-4 max-w-lg mx-auto px-4 text-black">
                     <p className="font-medium text-md mb-4">Counter UAS</p>
@@ -145,6 +146,7 @@ function Home() {
                   loop
                   muted
                   playsInline
+                  style={{ objectFit: "cover" }}
                 ></video>
                 <div className="flex flex-col items-center mt-4">
                   <p className="font-medium text-md mb-4 text-left">
@@ -167,6 +169,7 @@ function Home() {
                   loop
                   muted
                   playsInline
+                  style={{ objectFit: "cover" }}
                 ></video>
                 <div className="flex flex-col items-center mt-4">
                   <p className="font-medium text-md mb-4">
@@ -193,6 +196,7 @@ function Home() {
                   loop
                   muted
                   playsInline
+                  style={{ objectFit: "cover" }}
                 ></video>
                 <p className="font-semibold text-xl pt-4">
                   Autonomous Air Systems
