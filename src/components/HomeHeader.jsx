@@ -36,7 +36,7 @@ export default function HomeHeader() {
         >
           <p className="text-white">
             <Link to="/" className="text-xl font-semibold">
-              Anduril
+              Arcadius INC
             </Link>
           </p>
           <div className="text-white flex justify-end">
@@ -350,7 +350,7 @@ export default function HomeHeader() {
         >
           {/* The <ul> above is the parent for the <li>Logo</li> and other <li>Links</li> */}
           <li className="text-xl font-bold uppercase border-r-2 self-center p-10 py-10 transition-all duration-500 ease-in transform hover:bg-gray-400 cursor-pointer">
-            <Link to="/">Anduril</Link>
+            <Link to="/">Arcadius INC</Link>
           </li>
           <li
             className="relative group"
