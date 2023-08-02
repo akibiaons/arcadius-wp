@@ -11,7 +11,7 @@ export default function Footer() {
             <ul>
               <li>
                 <a href="#" className="text-white">
-                  Lattice
+                  Riptide
                 </a>
               </li>
               <li>
