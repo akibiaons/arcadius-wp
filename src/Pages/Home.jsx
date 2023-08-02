@@ -114,11 +114,11 @@ function Home() {
         {/* Section 3 will have <p> bold <p>descriptive small</p>  and a carousel that opens based onClick */}
         <div className="flex flex-col items-center mt-4">
           <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
-            <p className="font-semibold text-xl">
+            <p className="font-semibold text-lg">
               Autonomous All Domain Force Protection
             </p>
           </div>
-          <div className="mb-4 max-w-lg mx-auto px-4 text-black">
+          <div className="mb-4 max-w-lg mx-auto px-4 text-black font-light">
             <p>
               A family of autonomous systems, powered by Lattice, that provide
               integrated, persistent awareness and security across land, sea and
@@ -129,7 +129,7 @@ function Home() {
         {/* Below is the carousel which will useState and open onClick */}
         <div className="mt-10">
           <div className="flex flex-col mt-4">
-            <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-3 gap-3 mb-8 font-light">
               <p>
                 <Link
                   onClick={() =>
