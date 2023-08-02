@@ -50,7 +50,7 @@ function Home() {
             </svg>
           </div>
         </div>
-        {/* Section two Lattice OS will be going below this comment... need to add a bkg with overlay*/}
+        {/* Section two Riptide OS will be going below this comment... need to add a bkg with overlay*/}
         <div
           className="flex flex-col items-center"
           style={{
@@ -59,14 +59,14 @@ function Home() {
           }}
         >
           <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 text-white">
-            <p className="text-md mb-4 font-medium">Lattice OS</p>
+            <p className="text-md mb-4 font-medium">Riptide OS</p>
             <p className="font-semibold text-lg">Autonomy for Every Mission</p>
           </div>
           <div className="max-w-lg mx-auto px-4 text-white mb-8">
             <p className="text-sm font-light">
-              Arcadius family of systems is powered by Lattice OS, an
+              Arcadius family of systems is powered by Riptide OS, an
               AI-powered, open operating system that brings autonomy to
-              defense's toughest missions. Lattice connects autonomous
+              defense's toughest missions. Riptide connects autonomous
               sensemaking and command & control capabilities with open, modular,
               and scalable hardware components for a layered family of systems
               approach.
@@ -120,7 +120,7 @@ function Home() {
           </div>
           <div className="mb-4 max-w-lg mx-auto px-4 text-black text-sm font-light">
             <p>
-              A family of autonomous systems, powered by Lattice, that provide
+              A family of autonomous systems, powered by Riptide, that provide
               integrated, persistent awareness and security across land, sea and
               air, all at the tactical edge.
             </p>
@@ -198,7 +198,7 @@ function Home() {
                     Counter Intrusion
                   </p>
                   <p className="mb-4 max-w-lg mx-auto px-4 text-black text-sm font-light">
-                    Lattice automates the protection of both domestic and
+                    Riptide automates the protection of both domestic and
                     forward operating bases. Our family of systems saves crucial
                     time by autonomously identifying and surfacing threats,
                     freeing our personnel to do what they do best.
@@ -224,7 +224,7 @@ function Home() {
                     Maritime security and awareness is critical to shoreline
                     safety, security, law enforcement, border control and
                     environmental protection. Arcadius family of systems,
-                    powered by Lattice, brings autonomous, accurate & persistent
+                    powered by Riptide, brings autonomous, accurate & persistent
                     security to the seaside.
                   </p>
                 </div>
@@ -249,7 +249,7 @@ function Home() {
                 <div className="mb-4 max-w-lg mx-auto pt-4 text-black">
                   <p className="text-sm font-normal pb-4">
                     Autonomous air systems that are all tasked, connected, and
-                    controlled by Lattice. Together, they enable a variety of
+                    controlled by Riptide. Together, they enable a variety of
                     intelligence, surveillance, reconnaissance, and targeting
                     mission profiles.
                   </p>
@@ -306,7 +306,7 @@ function Home() {
                 <div className="mb-4 max-w-lg mx-auto pt-8 text-white">
                   <p className="text-white text-sm font-normal">
                     Autonomous air systems that are all tasked, connected, and
-                    controlled by Lattice. Together, they enable a variety of
+                    controlled by Riptide. Together, they enable a variety of
                     intelligence, surveillance, reconnaissance, and targeting
                     mission profiles.
                   </p>

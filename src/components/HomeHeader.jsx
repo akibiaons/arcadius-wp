@@ -78,7 +78,7 @@ export default function HomeHeader() {
                   }`}
                 >
                   <div>
-                    <p className="text-lg">Lattice Solutions</p>
+                    <p className="text-lg">Riptide OS Solutions</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenuOpen
@@ -116,7 +116,7 @@ export default function HomeHeader() {
                     </svg>
                   </button>
                 </div>
-                {/*End of div 1 lattice solutions */}
+                {/*End of div 1 Riptide solutions */}
                 {/* Start of div 2 Force Protections */}
                 <div
                   className={`flex justify-between items-center p-4 border-b border-gray-500 relative ${
@@ -373,7 +373,7 @@ export default function HomeHeader() {
                   textDecoration: isOpen ? "underline" : "none",
                 }}
               >
-                Lattice Solutions
+                Riptide OS Solutions
               </Link>
               <button
                 type="button"
