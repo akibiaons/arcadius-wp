@@ -403,113 +403,130 @@ function Home() {
       </div>
       {/* Below is the desktop version ============================================================!!!!!!!!!*/}
       <div className="hidden lg:block">
-        <div className="grid grid-cols-2 grid-rows-3 mx-auto">
-          {" "}
-          {/* Am trying to use grid or flex */}
-          <div className="">
-            <p className="text-lg font-normal">Our Mission</p>
-            <p className="text-xl font-semibold">
-              Transforming defense capabilities with advanced technology.
-            </p>
-          </div>
-          <div className="font-normal text-lg">
-            <p className="">
-              The battlefield has changed. How we deter & defend needs to change
-              too.
-            </p>
-            <p className="">
-              Security threats are evolving at machine speed. To keep pace,
-              Arcadius puts products ahead of process and builds technology to
-              bring the United States and partners quantum leaps ahead in
-              capability.
-            </p>
-          </div>
-          <div className="">
-            <p className="">Learn More About Our Mission</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 ml-3"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
+        <div className="max-w-[100%] 2xl:max-w-6xl mx-auto py-40 bg-orange-50">
+          <div className="grid grid-cols-8">
+            {/* Am trying to use grid or flex */}
+            <div className="col-start-2 col-end-5">
+              <p className="text-2xl font-normal pb-8">Our Mission</p>
+              <p className="text-4xl font-semibold">
+                Transforming defense capabilities with advanced technology.
+              </p>
+            </div>
+            <div className="font-normal text-lg col-start-5 col-end-8">
+              <p className="pb-8">
+                The battlefield has changed. How we deter & defend needs to
+                change too.
+              </p>
+              <p className="pb-4">
+                Security threats are evolving at machine speed. To keep pace,
+                Arcadius puts products ahead of process and builds technology to
+                bring the United States and partners quantum leaps ahead in
+                capability.
+              </p>
+            </div>
+            <div className="flex col-start-5 col-end-8">
+              <p className="underline">Learn More About Our Mission</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 ml-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
           </div>
         </div>
         {/* Section two Riptide OS will be going below this comment... need to add a bkg with overlay*/}
         <div
-          className=""
+          className="text-white max-w-[100%] 2xl:max-w-6xl mx-auto py-32"
           style={{
             backgroundImage:
-              "url(https://cdn.sanity.io/images/z5s3oquj/production/6f8ffbfe0c2b4e62a9921b2fb0b5dce454dc93ec-2103x1321.png?w=828&q=75&fit=max)",
+              "url(https://cdn.sanity.io/images/z5s3oquj/production/6f8ffbfe0c2b4e62a9921b2fb0b5dce454dc93ec-2103x1321.png?w=828)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
-          <div className="">
-            <p className="">Riptide OS</p>
-            <p className="">Autonomy for Every Mission</p>
-          </div>
-          <div className="">
-            <p className="">
-              Arcadius family of systems is powered by Riptide OS, an
-              AI-powered, open operating system that brings autonomy to
-              defense's toughest missions. Riptide connects autonomous
-              sensemaking and command & control capabilities with open, modular,
-              and scalable hardware components for a layered family of systems
-              approach.
-            </p>
-          </div>
-          <div className="">
-            <p className="">Learn More About Command & Control</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 ml-3"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="#ffffff"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </div>
-          <div className="">
-            <p className="">Learn More About Mission Autonomy</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 ml-3"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="#ffffff"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
+          <div className="max-w-[100%] 2xl:max-w-6xl mx-auto py-32">
+            <div className="grid grid-cols-8">
+              {/* Am trying to use grid or flex */}
+              <div className="col-start-2 col-end-5">
+                <p className="text-2xl font-normal pb-8">Riptide OS</p>
+                <p className="text-4xl font-semibold">
+                  Autonomy for Every Mission.
+                </p>
+              </div>
+              <div className="font-normal text-lg col-start-5 col-end-8">
+                <p className="pb-8">
+                  Arcadius family of systems is powered by Lattice OS, an
+                  AI-powered, open operating system that brings autonomy to
+                  defense's toughest missions. Lattice connects autonomous
+                  sensemaking and command & control capabilities with open,
+                  modular, and scalable hardware components for a layered family
+                  of systems approach.
+                </p>
+              </div>
+              <div className="flex col-start-5 col-end-8 mb-8">
+                <p className="underline">
+                  Learn More About Command and Control
+                </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 ml-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </div>
+              <div className="flex col-start-5 col-end-8">
+                <p className="underline">Learn More About Mission Autonomy</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 ml-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
         {/* Section 3 will have <p> bold <p>descriptive small</p>  and a carousel that opens based onClick */}
-        <div className="">
-          <div className=" ">
-            <p className="">Autonomous All Domain Force Protection</p>
-          </div>
-          <div className="">
-            <p>
-              A family of autonomous systems, powered by Riptide, that provide
-              integrated, persistent awareness and security across land, sea and
-              air, all at the tactical edge.
-            </p>
+        <div className="max-w-[100%] 2xl:max-w-6xl mx-auto py-32">
+          <div className="grid grid-cols-8 gap-6">
+            <div className="col-start-2 col-end-5">
+              <p className="text-4xl font-semibold pb-8">
+                Autonomous All Domain Force Protection
+              </p>
+            </div>
+            <div className="font-normal text-lg col-start-5 col-end-8">
+              <p>
+                A family of autonomous systems, powered by Riptide, that provide
+                integrated, persistent awareness and security across land, sea
+                and air, all at the tactical edge.
+              </p>
+            </div>
           </div>
         </div>
         {/* Below is the carousel which will useState and open onClick */}
