@@ -13,29 +13,41 @@ function Home() {
       <HomeHeader />
       {/* Homepage section 1 will be going here...*/}
       <div className="block lg:hidden">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mt-8">
           <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
-            <p className="text-lg mb-4 font-medium">Our Mission</p>
-            <p className="font-semibold text-xl">
+            <p className="text-md mb-4 font-medium">Our Mission</p>
+            <p className="font-semibold text-lg">
               Transforming defense capabilities with advanced technology.
             </p>
           </div>
           <div className="mb-4 max-w-lg mx-auto px-4">
-            <p className="">
+            <p className="text-sm pb-4">
               The battlefield has changed. How we deter & defend needs to change
               too.
             </p>
-            <p className="">
+            <p className="text-sm pb-4">
               Security threats are evolving at machine speed. To keep pace,
               Anduril puts products ahead of process and builds technology to
               bring the United States and partners quantum leaps ahead in
               capability.
             </p>
           </div>
-          <div className="max-w-lg mx-auto px-4">
-            <p className="underline">Learn More About Our Mission</p>
-            <button></button>
-            {/* Need to add an arrow right icon that is in a circle */}
+          <div className="max-w-lg mx-auto flex items-center">
+            <p className="underline text-md">Learn More About Our Mission</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 ml-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
           </div>
         </div>
         {/* Section two Lattice OS will be going below this comment... need to add a bkg with overlay*/}
