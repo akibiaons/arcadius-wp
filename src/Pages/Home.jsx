@@ -27,7 +27,7 @@ function Home() {
             </p>
             <p className="text-sm pb-4 font-light">
               Security threats are evolving at machine speed. To keep pace,
-              Anduril puts products ahead of process and builds technology to
+              Arcadius puts products ahead of process and builds technology to
               bring the United States and partners quantum leaps ahead in
               capability.
             </p>
@@ -64,7 +64,7 @@ function Home() {
           </div>
           <div className="max-w-lg mx-auto px-4 text-white mb-8">
             <p className="text-sm font-light">
-              Anduril's family of systems is powered by Lattice OS, an
+              Arcadius family of systems is powered by Lattice OS, an
               AI-powered, open operating system that brings autonomy to
               defense's toughest missions. Lattice connects autonomous
               sensemaking and command & control capabilities with open, modular,
@@ -118,7 +118,7 @@ function Home() {
               Autonomous All Domain Force Protection
             </p>
           </div>
-          <div className="mb-4 max-w-lg mx-auto px-4 text-black font-light">
+          <div className="mb-4 max-w-lg mx-auto px-4 text-black text-sm font-light">
             <p>
               A family of autonomous systems, powered by Lattice, that provide
               integrated, persistent awareness and security across land, sea and
@@ -129,7 +129,7 @@ function Home() {
         {/* Below is the carousel which will useState and open onClick */}
         <div className="mt-10">
           <div className="flex flex-col mt-4">
-            <div className="grid grid-cols-3 gap-3 mb-8 font-light">
+            <div className="grid grid-cols-3 gap-3 mb-8 font-light text-sm">
               <p>
                 <Link
                   onClick={() =>
@@ -162,26 +162,26 @@ function Home() {
               </p>
             </div>
             {openItem === "first" && (
-              <div className="flex flex-col items-center mt-4">
-                <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
-                  <video
-                    src="https://cdn.sanity.io/files/z5s3oquj/production/3daa068ad9d0b2c81c4340637447b135cc0ec7c8.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ objectFit: "cover" }}
-                  ></video>
-                  <div className="mb-4 max-w-lg mx-auto px-4 text-black">
-                    <p className="font-medium text-md mb-4">Counter UAS</p>
-                    <p className="mb-4 max-w-lg mx-auto px-4 text-black">
-                      No threat goes unseen. Anduril’s open Counter UAS system
-                      is built to detect, track and intercept unmanned aircraft
-                      and autonomous drone systems.
-                    </p>
-                  </div>
+              <>
+                <video
+                  src="https://cdn.sanity.io/files/z5s3oquj/production/3daa068ad9d0b2c81c4340637447b135cc0ec7c8.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  style={{ objectFit: "cover" }}
+                ></video>
+                <div className="flex flex-col items-center mt-4">
+                  <p className="font-medium text-md mb-4 text-left">
+                    Counter UAS
+                  </p>
+                  <p className="mb-4 max-w-lg mx-auto px-4 text-black text-sm font-light">
+                    No threat goes unseen. Arcadius open Counter UAS system is
+                    built to detect, track and intercept unmanned aircraft and
+                    autonomous drone systems.
+                  </p>
                 </div>
-              </div>
+              </>
             )}
             {openItem === "second" && (
               <>
@@ -197,7 +197,7 @@ function Home() {
                   <p className="font-medium text-md mb-4 text-left">
                     Counter Intrusion
                   </p>
-                  <p className="mb-4 max-w-lg mx-auto px-4 text-black">
+                  <p className="mb-4 max-w-lg mx-auto px-4 text-black text-sm font-light">
                     Lattice automates the protection of both domestic and
                     forward operating bases. Our family of systems saves crucial
                     time by autonomously identifying and surfacing threats,
@@ -220,10 +220,10 @@ function Home() {
                   <p className="font-medium text-md mb-4">
                     Maritime Counter Intrusion
                   </p>
-                  <p className="mb-4 max-w-lg mx-auto px-4 text-black">
+                  <p className="mb-4 max-w-lg mx-auto px-4 text-black text-sm font-light">
                     Maritime security and awareness is critical to shoreline
                     safety, security, law enforcement, border control and
-                    environmental protection. Anduril’s family of systems,
+                    environmental protection. Arcadius family of systems,
                     powered by Lattice, brings autonomous, accurate & persistent
                     security to the seaside.
                   </p>
@@ -243,21 +243,50 @@ function Home() {
                   playsInline
                   style={{ objectFit: "cover" }}
                 ></video>
-                <p className="font-semibold text-xl pt-4">
+                <p className="font-semibold text-lg pt-8">
                   Autonomous Air Systems
                 </p>
                 <div className="mb-4 max-w-lg mx-auto pt-4 text-black">
-                  <p className="">
+                  <p className="text-sm font-normal pb-4">
                     Autonomous air systems that are all tasked, connected, and
                     controlled by Lattice. Together, they enable a variety of
                     intelligence, surveillance, reconnaissance, and targeting
                     mission profiles.
                   </p>
                 </div>
-                <div className="max-w-lg mx-auto px-4 text-black mt-4 pb-10">
-                  <p className="underline mb-4">Learn More about Ghost</p>
+                <div className="max-w-lg mx-auto flex items-center mt-4 mb-6">
+                  <p className="underline">Learn More about Ghost</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 ml-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </div>
+                <div className="max-w-lg mx-auto flex items-center mt-4 mb-6">
                   <p className="underline">Learn More about ALTIUS</p>
-                  {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 ml-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -305,7 +334,7 @@ function Home() {
                     engineer’s playground where we make what we feel is right
                     and needs to exist. A dedicated team rallying around a
                     shared intention to make a positive impact by creating a
-                    safer world. That’s life at Anduril.
+                    safer world. That’s life at Arcadius INC.
                   </p>
                 </div>
                 <div className="max-w-lg mx-auto text-black mt-4 pb-10">
