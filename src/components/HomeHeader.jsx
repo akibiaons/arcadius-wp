@@ -660,6 +660,7 @@ export default function HomeHeader() {
             autoPlay
             loop
             muted
+            playsInline
             className="w-full h-full object-cover absolute top-0 left-0"
           />
         </div>
