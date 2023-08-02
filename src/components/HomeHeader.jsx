@@ -337,7 +337,7 @@ export default function HomeHeader() {
             muted
             style={{ objectFit: "cover" }}
             className="w-full h-full object-cover"
-          />
+          ></video>
         </div>
       </div>
       {/* Below is the start of the navbar menu for desktop and larger thn tablet screens */}
