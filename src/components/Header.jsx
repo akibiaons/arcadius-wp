@@ -31,7 +31,7 @@ export default function Header() {
           className={`flex justify-between items-center relative z-10 p-4 ${
             isOpen
               ? "bg-black ease-in-out transition"
-              : "bg-transparent ease-in-out transition"
+              : "bg-black ease-in-out transition"
           }`}
         >
           <p className="text-white">
@@ -335,9 +335,7 @@ export default function Header() {
         {/* This will show on laptops and desktops */}
         <ul
           className={`z-10 relative flex justify-between border-b-2 border-r-2 border-l-2 text-lg font-semibold text-white ${
-            isOpen || isOpen2 || isOpen3 || isOpen4
-              ? "bg-black"
-              : "bg-transparent"
+            isOpen || isOpen2 || isOpen3 || isOpen4 ? "bg-black" : "bg-black"
           }`}
         >
           {/* The <ul> above is the parent for the <li>Logo</li> and other <li>Links</li> */}

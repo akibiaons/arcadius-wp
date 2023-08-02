@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import HomeHeader from "../components/HomeHeader";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -10,7 +9,18 @@ function Home() {
 
   return (
     <>
-      <HomeHeader />
+      <div className="w-full h-screen bg-black">
+        {/*className="absolute top-0 left-0 w-screen h-screen overflow-hidden" */}
+        <video
+          src="https://cdn.sanity.io/files/z5s3oquj/production/b7f8f4a89e564305b8c810113d7bf71d445b1419.mp4"
+          autoPlay
+          loop
+          muted
+          style={{ objectFit: "cover" }}
+          className="w-full h-full object-cover z-50"
+          allow="autoplay"
+        ></video>
+      </div>
       {/* Homepage section 1 will be going here...*/}
       <div className="block lg:hidden">
         <div className="flex flex-col items-center mt-8">
@@ -391,6 +401,8 @@ function Home() {
           {/* */}
         </div>
       </div>
+      {/* Below is the desktop version */}
+      <div className="hidden lg:block"></div>
     </>
   );
 }
