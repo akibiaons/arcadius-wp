@@ -300,21 +300,35 @@ function Home() {
           >
             <div className="flex flex-col items-center pb-20">
               <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
-                <p className="font-semibold text-xl text-white">
+                <p className="font-semibold text-lg text-white">
                   Autonomous Underwater Vehicles
                 </p>
                 <div className="mb-4 max-w-lg mx-auto pt-8 text-white">
-                  <p className="text-white">
+                  <p className="text-white text-sm font-normal">
                     Autonomous air systems that are all tasked, connected, and
                     controlled by Lattice. Together, they enable a variety of
                     intelligence, surveillance, reconnaissance, and targeting
                     mission profiles.
                   </p>
                 </div>
-                <div className="max-w-lg mx-auto pt-4 text-black mt-4 pb-10">
+                <div className="max-w-lg mx-auto flex items-center pt-4 text-black mt-4 pb-10">
                   <p className="underline text-white">
                     Learn More about Dive-LD
                   </p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 ml-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="#ffffff"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
                   {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
                 </div>
               </div>
@@ -324,12 +338,12 @@ function Home() {
           <div>
             <div className="flex flex-col items-center border-b-2">
               <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
-                <p className="font-semibold text-xl pb-4">Careers</p>
-                <p className="font-semibold text-2xl">
+                <p className="fonfont-semibold text-lg pb-4">Careers</p>
+                <p className="font-semibold text-lg">
                   Join us in creating the future of defense
                 </p>
                 <div className="mb-4 max-w-lg mx-auto pt-8">
-                  <p>
+                  <p className="text-sm font-normal">
                     From light bulb to functional prototype in a week. An
                     engineer’s playground where we make what we feel is right
                     and needs to exist. A dedicated team rallying around a
@@ -337,9 +351,22 @@ function Home() {
                     safer world. That’s life at Arcadius INC.
                   </p>
                 </div>
-                <div className="max-w-lg mx-auto text-black mt-4 pb-10">
+                <div className="max-w-lg mx-auto flex items-center text-black mt-8 pb-10">
                   <p className="underline">Learn More</p>
-                  {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 ml-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
                 </div>
                 <div className="max-w-lg mx-auto text-black mt-4 pb-10">
                   <div className="grid grid-rows-2 grid-cols-2 gap-1">
