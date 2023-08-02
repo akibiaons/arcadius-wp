@@ -21,18 +21,18 @@ function Home() {
             </p>
           </div>
           <div className="mb-4 max-w-lg mx-auto px-4">
-            <p className="text-sm pb-4">
+            <p className="text-sm pb-4 font-light">
               The battlefield has changed. How we deter & defend needs to change
               too.
             </p>
-            <p className="text-sm pb-4">
+            <p className="text-sm pb-4 font-light">
               Security threats are evolving at machine speed. To keep pace,
               Anduril puts products ahead of process and builds technology to
               bring the United States and partners quantum leaps ahead in
               capability.
             </p>
           </div>
-          <div className="max-w-lg mx-auto flex items-center">
+          <div className="max-w-lg mx-auto flex items-center pb-14">
             <p className="underline text-md">Learn More About Our Mission</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,11 +59,11 @@ function Home() {
           }}
         >
           <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 text-white">
-            <p className="text-lg mb-4 font-medium">Lattice OS</p>
-            <p className="font-semibold text-xl">Autonomy for Every Mission</p>
+            <p className="text-md mb-4 font-medium">Lattice OS</p>
+            <p className="font-semibold text-lg">Autonomy for Every Mission</p>
           </div>
-          <div className="mb-4 max-w-lg mx-auto px-4 text-white">
-            <p className="">
+          <div className="max-w-lg mx-auto px-4 text-white mb-8">
+            <p className="text-sm font-light">
               Anduril's family of systems is powered by Lattice OS, an
               AI-powered, open operating system that brings autonomy to
               defense's toughest missions. Lattice connects autonomous
@@ -72,10 +72,43 @@ function Home() {
               approach.
             </p>
           </div>
-          <div className="max-w-lg mx-auto px-4 text-white mt-4 pb-10">
-            <p className="underline mb-4">Learn More about Command & Control</p>
-            <p className="underline">Learn More about Mission Autonomy</p>
-            {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
+          <div className="max-w-lg mx-auto flex items-center pb-10">
+            <p className="underline text-md text-white">
+              Learn More About Command & Control
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 ml-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#ffffff"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </div>
+          <div className="max-w-lg mx-auto flex items-center pb-14">
+            <p className="underline text-md text-white">
+              Learn More About Mission Autonomy
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 ml-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#ffffff"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
           </div>
         </div>
         {/* Section 3 will have <p> bold <p>descriptive small</p>  and a carousel that opens based onClick */}
