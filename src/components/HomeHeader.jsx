@@ -336,7 +336,7 @@ export default function HomeHeader() {
             loop
             muted
             style={{ objectFit: "cover" }}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover z-50"
             allow="autoplay"
           ></video>
         </div>
