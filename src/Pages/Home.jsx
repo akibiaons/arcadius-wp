@@ -406,18 +406,18 @@ function Home() {
         <div className="max-w-[100%] mx-auto py-40 bg-orange-50">
           <div className="grid grid-cols-8">
             {/* Am trying to use grid or flex */}
-            <div className="col-start-2 col-end-5">
-              <p className="text-2xl font-normal pb-8">Our Mission</p>
+            <div className="col-start-2 col-end-4">
+              <p className="text-3xl font-normal pb-8">Our Mission</p>
               <p className="text-4xl font-semibold">
                 Transforming defense capabilities with advanced technology.
               </p>
             </div>
             <div className="font-normal text-lg col-start-5 col-end-8">
-              <p className="pb-8">
+              <p className="pb-8 text-xl">
                 The battlefield has changed. How we deter & defend needs to
                 change too.
               </p>
-              <p className="pb-4">
+              <p className="pb-4 text-xl">
                 Security threats are evolving at machine speed. To keep pace,
                 Arcadius puts products ahead of process and builds technology to
                 bring the United States and partners quantum leaps ahead in
@@ -458,13 +458,13 @@ function Home() {
             <div className="grid grid-cols-8">
               {/* Am trying to use grid or flex */}
               <div className="col-start-2 col-end-5">
-                <p className="text-2xl font-normal pb-8">Riptide OS</p>
+                <p className="text-3xl font-normal pb-8">Riptide OS</p>
                 <p className="text-4xl font-semibold">
                   Autonomy for Every Mission.
                 </p>
               </div>
               <div className="font-normal text-lg col-start-5 col-end-8">
-                <p className="pb-8">
+                <p className="pb-8 text-xl">
                   Arcadius family of systems is powered by Lattice OS, an
                   AI-powered, open operating system that brings autonomy to
                   defense's toughest missions. Lattice connects autonomous
@@ -520,7 +520,7 @@ function Home() {
                 Autonomous All Domain Force Protection
               </p>
             </div>
-            <div className="font-normal text-lg col-start-5 col-end-8">
+            <div className="font-normal col-start-5 col-end-8 text-xl">
               <p>
                 A family of autonomous systems, powered by Riptide, that provide
                 integrated, persistent awareness and security across land, sea
@@ -549,7 +549,7 @@ function Home() {
                     <p className="pb-4 underline underline-offset-8 decoration-1">
                       Counter UAS
                     </p>
-                    <p className="pb-8">
+                    <p className="pb-8 text-xl">
                       No threat goes unseen. Arcadius open Counter UAS system is
                       built to detect, track and intercept unmanned aircraft and
                       autonomous drone systems.
@@ -589,7 +589,7 @@ function Home() {
                     <p className="pb-4 underline underline-offset-8 decoration-1">
                       Counter Intrusion
                     </p>
-                    <p className="pb-8">
+                    <p className="pb-8 text-xl">
                       Riptide automates the protection of both domestic and
                       forward operating bases. Our family of systems saves
                       crucial time by autonomously identifying and surfacing
@@ -630,7 +630,7 @@ function Home() {
                     <p className="pb-4 underline underline-offset-8 decoration-1">
                       Maritime Counter Intrusion
                     </p>
-                    <p className="pb-8">
+                    <p className="pb-8 text-xl">
                       Maritime security and awareness is critical to shoreline
                       safety, security, law enforcement, border control and
                       environmental protection. Arcadius family of systems,
@@ -696,10 +696,11 @@ function Home() {
           <div className="col-start-3 col-end-7"></div>
         </div>
         {/* The DIV below will contain autonomous air systems section*/}
-        <div className="">
-          <div className="">
-            <div className="">
+        <div className="max-w-[100%] mx-auto py-32 bg-orange-50">
+          <div className="grid grid-cols-8">
+            <div className="col-start-2 col-end-5 self-stretch">
               <video
+                className="w-full h-[600px] object-contain"
                 src="https://cdn.sanity.io/files/z5s3oquj/production/72980bbd2350f1ed002addec0a68e2cdff22ebae.mp4"
                 autoPlay
                 loop
@@ -707,16 +708,18 @@ function Home() {
                 playsInline
                 style={{ objectFit: "cover" }}
               ></video>
-              <p className="">Autonomous Air Systems</p>
-              <div className="">
-                <p className="">
-                  Autonomous air systems that are all tasked, connected, and
-                  controlled by Riptide. Together, they enable a variety of
-                  intelligence, surveillance, reconnaissance, and targeting
-                  mission profiles.
-                </p>
-              </div>
-              <div className="">
+            </div>
+            <div className="col-start-6 col-end-8">
+              <p className="text-4xl font-semibold pb-10">
+                Autonomous Air Systems
+              </p>
+              <p className="font-normal text-xl pb-10">
+                Autonomous air systems that are all tasked, connected, and
+                controlled by Riptide. Together, they enable a variety of
+                intelligence, surveillance, reconnaissance, and targeting
+                mission profiles.
+              </p>
+              <div className="flex">
                 <p className="underline">Learn More about Ghost</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -733,7 +736,7 @@ function Home() {
                   />
                 </svg>
               </div>
-              <div className="">
+              <div className="flex pt-10">
                 <p className="underline">Learn More about ALTIUS</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
