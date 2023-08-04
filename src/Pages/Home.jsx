@@ -46,7 +46,7 @@ function Home() {
             <p className="underline text-md">Learn More About Our Mission</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 ml-3"
+              className="h-6 w-6 ml-3 hover:cursor-pointer"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -88,7 +88,7 @@ function Home() {
             </p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 ml-3"
+              className="h-6 w-6 ml-3 hover:cursor-pointer"
               fill="none"
               viewBox="0 0 24 24"
               stroke="#ffffff"
@@ -107,7 +107,7 @@ function Home() {
             </p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 ml-3"
+              className="h-6 w-6 ml-3 hover:cursor-pointer"
               fill="none"
               viewBox="0 0 24 24"
               stroke="#ffffff"
@@ -268,7 +268,7 @@ function Home() {
                   <p className="underline">Learn More about Ghost</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 ml-3"
+                    className="h-6 w-6 ml-3 hover:cursor-pointer"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -327,7 +327,7 @@ function Home() {
                   </p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 ml-3"
+                    className="h-6 w-6 ml-3 hover:cursor-pointer"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="#ffffff"
@@ -365,7 +365,7 @@ function Home() {
                   <p className="underline">Learn More</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 ml-3"
+                    className="h-6 w-6 ml-3 hover:cursor-pointer"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -425,10 +425,12 @@ function Home() {
               </p>
             </div>
             <div className="flex col-start-5 col-end-8">
-              <p className="underline">Learn More About Our Mission</p>
+              <p className="underline hover:cursor-pointer">
+                Learn More About Our Mission
+              </p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 ml-3"
+                className="h-6 w-6 ml-3 hover:cursor-pointer"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -474,12 +476,12 @@ function Home() {
                 </p>
               </div>
               <div className="flex col-start-5 col-end-8 mb-8">
-                <p className="underline">
+                <p className="underline hover:cursor-pointer">
                   Learn More About Command and Control
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-3"
+                  className="h-6 w-6 ml-3 hover:cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -493,10 +495,12 @@ function Home() {
                 </svg>
               </div>
               <div className="flex col-start-5 col-end-8">
-                <p className="underline">Learn More About Mission Autonomy</p>
+                <p className="underline hover:cursor-pointer">
+                  Learn More About Mission Autonomy
+                </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-3"
+                  className="h-6 w-6 ml-3 hover:cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -720,10 +724,12 @@ function Home() {
                 mission profiles.
               </p>
               <div className="flex">
-                <p className="underline">Learn More about Ghost</p>
+                <p className="underline hover:cursor-pointer">
+                  Learn More about Ghost
+                </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-3"
+                  className="h-6 w-6 ml-3 hover:cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -737,10 +743,12 @@ function Home() {
                 </svg>
               </div>
               <div className="flex pt-10">
-                <p className="underline">Learn More about ALTIUS</p>
+                <p className="underline hover:cursor-pointer">
+                  Learn More about ALTIUS
+                </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-3"
+                  className="h-6 w-6 ml-3 hover:cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -761,60 +769,69 @@ function Home() {
           style={{
             backgroundImage:
               "url(https://cdn.sanity.io/images/z5s3oquj/production/dc07b33729dac4732968a880edfe34a8bf3c641d-1373x720.png?w=750&q=75&fit=max)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
-          <div className="">
-            <div className="">
-              <p className="">Autonomous Underwater Vehicles</p>
-              <div className="">
-                <p className="">
-                  Autonomous air systems that are all tasked, connected, and
-                  controlled by Riptide. Together, they enable a variety of
-                  intelligence, surveillance, reconnaissance, and targeting
-                  mission profiles.
+          <div className="max-w-[100%] mx-auto py-32">
+            <div className="grid grid-cols-8">
+              <div className="col-start-2 col-end-4 text-white">
+                <p className="text-4xl font-semibold pb-8">
+                  Autonomous Underwater Vehicles
                 </p>
-              </div>
-              <div className="">
-                <p className="underline text-white">Learn More about Dive-LD</p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="#ffffff"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
+                <div className="text-xl font-normal pb-8">
+                  <p>
+                    Autonomous air systems that are all tasked, connected, and
+                    controlled by Riptide. Together, they enable a variety of
+                    intelligence, surveillance, reconnaissance, and targeting
+                    mission profiles.
+                  </p>
+                </div>
+                <div className="flex">
+                  <p className="underline text-white hover:cursor-pointer">
+                    Learn More about Dive-LD
+                  </p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 ml-3 hover:cursor-pointer"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="#ffffff"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </div>
                 {/* DONT FORGET TO ADD ARROW BTN / ICONS to these two <p> above */}
               </div>
             </div>
           </div>
         </div>
         {/* Below is the section for careers... */}
-        <div>
-          <div className="">
-            <div className="">
-              <p className="">Careers</p>
-              <p className="">Join us in creating the future of defense</p>
-              <div className="">
-                <p className="">
-                  From light bulb to functional prototype in a week. An
-                  engineer’s playground where we make what we feel is right and
-                  needs to exist. A dedicated team rallying around a shared
-                  intention to make a positive impact by creating a safer world.
-                  That’s life at Arcadius INC.
-                </p>
-              </div>
-              <div className="">
-                <p className="underline">Learn More</p>
+        <div className="max-w-[100%] mx-auto pt-32">
+          <div className="grid grid-cols-8">
+            <div className="col-start-2 col-end-4">
+              <p className="pb-8 text-3xl font-normal">Careers</p>
+              <p className="text-4xl font-semibold pb-8">
+                Join us in creating the future of defense
+              </p>
+              <p className="text-xl font-normal">
+                From light bulb to functional prototype in a week. An engineer’s
+                playground where we make what we feel is right and needs to
+                exist. A dedicated team rallying around a shared intention to
+                make a positive impact by creating a safer world. That’s life at
+                Arcadius INC.
+              </p>
+              <div className="flex pt-8">
+                <p className="underline hover:cursor-pointer">Learn More</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-3"
+                  className="h-6 w-6 ml-3 hover:cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -827,22 +844,24 @@ function Home() {
                   />
                 </svg>
               </div>
-              <div className="">
-                <div className="">
-                  <img
-                    className=""
-                    src="https://cdn.sanity.io/images/z5s3oquj/production/8916f3bfece4c71e1aa614a29ceb83d1f7374df5-1295x864.jpg?w=640&q=75&fit=max"
-                    alt="arcadius-careers"
-                  />
-                  <img
-                    src="https://cdn.sanity.io/images/z5s3oquj/production/c048a05d8247342eb35979a644df0c67db77af87-1204x804.png?w=640&q=75&fit=max"
-                    alt="arcadius-engineers"
-                  />
-                  <img
-                    src="https://cdn.sanity.io/images/z5s3oquj/production/76eb58c86a72ede47b80f8ad1667bbb7fca2d267-1129x753.jpg?w=750&q=75&fit=max"
-                    alt="join us in creating the future of defense"
-                  />
-                </div>
+            </div>
+            <div className="col-start-5 col-end-9">
+              <div className="grid grid-cols-3 grid-rows-2 gap-4">
+                <img
+                  className="col-start-1 col-end-3"
+                  src="https://cdn.sanity.io/images/z5s3oquj/production/8916f3bfece4c71e1aa614a29ceb83d1f7374df5-1295x864.jpg?w=640&q=75&fit=max"
+                  alt="arcadius-careers"
+                />
+                <img
+                  className="row-start-2"
+                  src="https://cdn.sanity.io/images/z5s3oquj/production/c048a05d8247342eb35979a644df0c67db77af87-1204x804.png?w=640&q=75&fit=max"
+                  alt="arcadius-engineers"
+                />
+                <img
+                  className="row-start-2"
+                  src="https://cdn.sanity.io/images/z5s3oquj/production/76eb58c86a72ede47b80f8ad1667bbb7fca2d267-1129x753.jpg?w=750&q=75&fit=max"
+                  alt="join us in creating the future of defense"
+                />
               </div>
             </div>
           </div>
