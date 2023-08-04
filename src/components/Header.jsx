@@ -78,7 +78,7 @@ export default function Header() {
                   }`}
                 >
                   <div>
-                    <p className="text-lg">Lattice Solutions</p>
+                    <p className="text-lg">Riptide Solutions</p>
                     <ul
                       className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
                         isSubMenuOpen
@@ -362,7 +362,7 @@ export default function Header() {
                   textDecoration: isOpen ? "underline" : "none",
                 }}
               >
-                Lattice Solutions
+                Riptide Solutions
               </Link>
               <button
                 type="button"
