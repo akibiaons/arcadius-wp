@@ -9,6 +9,7 @@ import AirSecurity from "./components/AirSecurity";
 import MaritimeSecurity from "./components/MaritimeSecurity";
 import Hiring from "./Pages/Hiring";
 import Footer from "./components/Footer";
+import CommadAndControl from "./Pages/CommadAndControl";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/air-security" element={<AirSecurity />} />
         <Route path="/maritime-security" element={<MaritimeSecurity />} />
         <Route path="/hiring" element={<Hiring />} />
+        <Route path="/commandandcontrol" element={<CommadAndControl />} />
       </Routes>
       <Footer />
     </>
