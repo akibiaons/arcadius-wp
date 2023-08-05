@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Carousel from "../components/CmdCtrlCarousel";
 
 export default function CommadAndControl() {
   const [openItem, setOpenItem] = useState("");
@@ -220,6 +221,10 @@ export default function CommadAndControl() {
               </div>
             </div>
           </div>
+        </div>
+        {/* Below is the carousel component */}
+        <div className="flex flex-col items-center bg-black text-white py-4">
+          <Carousel />
         </div>
       </div>
     </>
