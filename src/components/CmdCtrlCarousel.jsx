@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 
 const Carousel = () => {
   const reviews = [
-    "Lattice is the eyes in the back of my head.",
-    "Lattice helps us react better and more efficiently use the little bit of manpower we have… We need it and it’s critically important… vitally important to control intrusions to protect this airspace. ",
+    "Riptide is the eyes in the back of my head.",
+    "Riptide helps us react better and more efficiently use the little bit of manpower we have… We need it and it’s critically important… vitally important to control intrusions to protect this airspace. ",
     "The artificial intelligence at the heart of this system has great potential to protect our people and sites.",
-    "Anduril’s integrated security system is novel, powerful and, if successfully implemented and realized, could be as transformational for the character and conduct of war as the emergence of mechanization, flight and wireless communication",
-    "I believe that the Lattice system, when positioned in key areas, dramatically outpaces our current observation capabilities within the restricted area.",
+    "Arcadius integrated security system is novel, powerful and, if successfully implemented and realized, could be as transformational for the character and conduct of war as the emergence of mechanization, flight and wireless communication",
+    "I believe that the Riptide system, when positioned in key areas, dramatically outpaces our current observation capabilities within the restricted area.",
   ];
 
   const reviwers = [
@@ -30,9 +30,9 @@ const Carousel = () => {
   }, [reviews.length]);
 
   return (
-    <div className="relative flex flex-col items-center bg-black text-white py-4">
-      <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 min-h-[300px]">
-        <p className="text-xl">{reviews[activeSlide]}</p>
+    <div className="relative flex flex-col items-center bg-black text-white py-4 border-b border-white">
+      <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4 min-h-[300px]">
+        <p className="text-2xl">{reviews[activeSlide]}</p>
         <p className="text-md pt-8 font-mono">{reviwers[activeSlide]}</p>
       </div>
       <div className="flex justify-center mt-4">
