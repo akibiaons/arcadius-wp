@@ -3,7 +3,7 @@ import Carousel from "../components/CmdCtrlCarousel";
 import Carousel2 from "../components/CmdCtrlCarousel2";
 
 export default function CommadAndControl() {
-  const [openItem, setOpenItem] = useState("");
+  const [openItem, setOpenItem] = useState("first");
   {
     /* Will useState hook for the carousel U, D, A */
   }
@@ -230,6 +230,176 @@ export default function CommadAndControl() {
         <div className="flex flex-col items-center bg-black text-white py-4">
           <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
             <Carousel2 />
+          </div>
+        </div>
+      </div>
+      {/* Below is the desktop and big screen version */}
+      <div className="hidden lg:block">
+        <div className="max-w-[100%] mx-auto py-32 bg-black">
+          <div className="grid grid-cols-8 text-white">
+            <div className="col-start-2 col-end-4">
+              <p className="font-normal text-lg">
+                Lattice for Command & Control
+              </p>
+              <p className="font-semibold text-2xl pt-8">
+                Lattice accelerates complex kill chains by orchestrating
+                machine-to-machine tasks at scales and speeds beyond human
+                capacity
+              </p>
+            </div>
+            <div className="col-start-5 col-end-8">
+              <p>
+                It enables men and women in uniform to move with machine speed,
+                unparalleled confidence, and military-grade security by turning
+                data into information, information into decisions, and decisions
+                into actions across tactical and strategic operations.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Below is the three option modal */}
+        <div className="max-w-[100%] mx-auto py-32 bg-black">
+          <div className="flex items-center bg-black text-white">
+            <div className="container text-left mb-4  mx-auto px-4 pt-4 pb-4 border-b">
+              <div className="flex text-center justify-around text-white border border-white py-10">
+                {/* Will add text-white if certain state is open */}
+                <p
+                  className={`underline text-lg hover:cursor-pointer ${
+                    openItem === "first" ? "underline text-gray-500" : ""
+                  }`}
+                  onClick={() =>
+                    setOpenItem(openItem !== "first" ? "first" : "")
+                  }
+                >
+                  Understand
+                </p>
+                <p
+                  className={`underline text-lg hover:cursor-pointer ${
+                    openItem === "second" ? "underline text-gray-500" : ""
+                  }`}
+                  onClick={() =>
+                    setOpenItem(openItem !== "second" ? "second" : "")
+                  }
+                >
+                  Decide
+                </p>
+                <p
+                  className={`underline text-lg hover:cursor-pointer ${
+                    openItem === "third" ? "underline text-gray-500" : ""
+                  }`}
+                  onClick={() =>
+                    setOpenItem(openItem !== "third" ? "third" : "")
+                  }
+                >
+                  Act
+                </p>
+              </div>
+
+              {/* The first slide/option */}
+              {openItem === "first" && (
+                <>
+                  <div className="flex pt-10">
+                    <div className="flex-grow">
+                      <video
+                        className="w-full"
+                        src="https://cdn.sanity.io/files/z5s3oquj/production/704753f75198730ea699c4474482ddaec1ffe783.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{ objectFit: "cover" }}
+                      ></video>
+                    </div>
+                    <div className="flex flex-col items-center mt-8">
+                      <p className="font-semibold text-3xl mb-4 text-left">
+                        Real Time Understanding
+                      </p>
+                      <p className="mb-4 mx-auto px-4 text-white text-sm font-light">
+                        Riptide cuts through the noise and creates a shared
+                        real-time understanding of the battlespace. It
+                        autonomously parses data from thousands of sensors &
+                        data sources into an intelligent common operating
+                        picture in a single pane of glass.
+                      </p>
+                      <p className="mb-4 mx-auto px-4 text-white text-sm font-light">
+                        Riptide uses technologies like sensor fusion, computer
+                        vision, edge computing, and machine learning and
+                        artificial intelligence to detect, track, and classify
+                        every object of interest in an operator's vicinity.
+                      </p>
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* The second slide/option which shows the decision making process behind command and control */}
+              {openItem === "second" && (
+                <>
+                  <div className="flex pt-10">
+                    <div className="flex-grow">
+                      <video
+                        className="w-full h-[500px]"
+                        src="https://cdn.sanity.io/files/z5s3oquj/production/34663f34d18a61b9ae0aa531e95667e353e83531.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{ objectFit: "cover" }}
+                      ></video>
+                    </div>
+                    <div className="flex flex-col items-center mt-8">
+                      <p className="font-semibold text-3xl mb-4 text-left">
+                        Automated Decision Advantage
+                      </p>
+                      <p className="mb-4 max-w-lg mx-auto px-4 text-white text-sm font-light">
+                        Riptide is made for high-stakes and dynamic environments
+                        where decisions must be made quickly.
+                      </p>
+                      <p className="mb-4 max-w-lg mx-auto px-4 text-white text-sm font-light">
+                        Riptide streamlines the complexity of the
+                        decision-making process by presenting decision points --
+                        not noise-- and using deep learning models to present
+                        recommended decision support to operators.
+                      </p>
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* This below is the third slide/option */}
+              {openItem === "third" && (
+                <>
+                  <div className="flex pt-10">
+                    <div className="flex-grow">
+                      <video
+                        className="w-full h-[500px]"
+                        src="https://cdn.sanity.io/files/z5s3oquj/production/51363f974468b9c2688eb6635707d814272a135c.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{ objectFit: "cover" }}
+                      ></video>
+                    </div>
+                    <div className="flex flex-col items-center mt-8">
+                      <p className="font-semibold text-2xl mb-4 text-left">
+                        Automated Decision Advantage
+                      </p>
+                      <p className="mb-4 max-w-lg mx-auto px-4 text-white text-sm font-light">
+                        Riptide turns decisions into action in seconds, not
+                        minutes or hours.
+                      </p>
+                      <p className="mb-4 max-w-lg mx-auto px-4 text-white text-sm font-light">
+                        Riptide enables real-time command and control over
+                        manned and unmanned assets across multiple domains,
+                        distributed geographies, and in contested communications
+                        environments.
+                      </p>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
