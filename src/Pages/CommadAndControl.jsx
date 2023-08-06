@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "../components/CmdCtrlCarousel";
+import Carousel2 from "../components/CmdCtrlCarousel2";
 
 export default function CommadAndControl() {
   const [openItem, setOpenItem] = useState("");
