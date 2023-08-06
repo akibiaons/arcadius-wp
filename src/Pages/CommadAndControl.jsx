@@ -226,6 +226,11 @@ export default function CommadAndControl() {
         <div className="flex flex-col items-center bg-black text-white py-4">
           <Carousel />
         </div>
+        <div className="flex flex-col items-center bg-black text-white py-4">
+          <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
+            <Carousel2 />
+          </div>
+        </div>
       </div>
     </>
   );
