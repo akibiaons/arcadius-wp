@@ -10,6 +10,7 @@ import MaritimeSecurity from "./components/MaritimeSecurity";
 import Hiring from "./Pages/Hiring";
 import Footer from "./components/Footer";
 import CommadAndControl from "./Pages/CommadAndControl";
+import MissionAutonomy from "./Pages/MissionAutonomy";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/maritime-security" element={<MaritimeSecurity />} />
         <Route path="/hiring" element={<Hiring />} />
         <Route path="/commandandcontrol" element={<CommadAndControl />} />
+        <Route path="/missionautonomy" element={<MissionAutonomy />} />
       </Routes>
       <Footer />
     </>

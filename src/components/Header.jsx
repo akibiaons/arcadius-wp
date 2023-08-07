@@ -89,7 +89,9 @@ export default function Header() {
                       <li className="mb-4 text-sm">
                         <Link to="/commandandcontrol">Command & Control</Link>
                       </li>
-                      <li className="mb-4 text-sm">Mission Autonomy</li>
+                      <li className="mb-4 text-sm">
+                        <Link to="/missionautonomy">Mission Autonomy</Link>
+                      </li>
                     </ul>
                   </div>
                   <button
@@ -406,7 +408,7 @@ export default function Header() {
                   </li>
                   <li className="px-4 py-8 mb-4">
                     <Link
-                      to=""
+                      to="/missionautonomy"
                       className="text-white text-xl hover:underline cursor-pointer"
                     >
                       Mission Autonomy
