@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MissonCycles from "../components/MissionAutoCarousel";
 
 export default function MissionAutonomy() {
   const [openItem, setOpenItem] = useState("first");
@@ -229,6 +230,9 @@ export default function MissionAutonomy() {
           </div>
         </div>
         {/* Section 4 will have the Mission Cycles Section which, shows a carousel of 4 items (wont fit as boxes) */}
+        <div className="flex flex-col items-center bg-black text-white py-4">
+          <MissonCycles />
+        </div>
       </div>
     </>
   );
