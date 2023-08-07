@@ -233,6 +233,7 @@ export default function CommadAndControl() {
           </div>
         </div>
       </div>
+
       {/* Below is the desktop and big screen version */}
       <div className="hidden lg:block">
         <div className="max-w-[100%] mx-auto py-32 bg-black">
@@ -321,7 +322,7 @@ export default function CommadAndControl() {
                         data sources into an intelligent common operating
                         picture in a single pane of glass.
                       </p>
-                      <p className="mb-4 mx-auto px-4 text-white text-sm font-light">
+                      <p className="mx-auto px-4 text-white text-sm font-light">
                         Riptide uses technologies like sensor fusion, computer
                         vision, edge computing, and machine learning and
                         artificial intelligence to detect, track, and classify
@@ -355,7 +356,7 @@ export default function CommadAndControl() {
                         Riptide is made for high-stakes and dynamic environments
                         where decisions must be made quickly.
                       </p>
-                      <p className="mb-4 max-w-lg mx-auto px-4 text-white text-sm font-light">
+                      <p className=" max-w-lg mx-auto px-4 text-white text-sm font-light">
                         Riptide streamlines the complexity of the
                         decision-making process by presenting decision points --
                         not noise-- and using deep learning models to present
@@ -389,7 +390,7 @@ export default function CommadAndControl() {
                         Riptide turns decisions into action in seconds, not
                         minutes or hours.
                       </p>
-                      <p className="mb-4 max-w-lg mx-auto px-4 text-white text-sm font-light">
+                      <p className="max-w-lg mx-auto px-4 text-white text-sm font-light">
                         Riptide enables real-time command and control over
                         manned and unmanned assets across multiple domains,
                         distributed geographies, and in contested communications
@@ -402,6 +403,86 @@ export default function CommadAndControl() {
             </div>
           </div>
         </div>
+        {/* Below will be the Riptide OS benefits */}
+        <div className="max-w-[100%] mx-auto py-26 bg-black">
+          <div className="grid grid-cols-8 text-white">
+            <div className="col-start-2 col-end-4">
+              <p className="font-semibold text-2xl pt-8">
+                Riptide OS for JADC2
+              </p>
+            </div>
+            <div className="col-start-5 col-end-8">
+              <p>
+                Joint All-Domain Command and Control (JADC2) is one of the most
+                important modernization priorities to confront challenges posed
+                by strategic competition.
+              </p>
+              <p className="pt-8">
+                Leveraging Riptide, we've approached JADC2 by building an open
+                operating system for defense that is simple, scalable,
+                extensible, and ultimately leverages machine intelligence to
+                accelerate the closing of complex kill chains.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Section 4 Features Cards */}
+        <div className="max-w-[100%] mx-auto py-40 bg-black">
+          <div className="grid grid-cols-8">
+            <p className="text-white mb-12 col-start-2 col-end-4 text-3xl">
+              Features
+            </p>
+          </div>
+          <div className="grid grid-cols-9 pb-32 text-white align-baseline border-b border-white">
+            <div className="col-start-2 col-end-3 self-start">
+              <img src="https://cdn.sanity.io/images/z5s3oquj/production/72804cc160d39ecef0558d95bce1cc07c716a1de-500x501.png?w=3840&q=75&fit=max" />
+              <p className="border-b font-semibold text-xl">
+                Built for Strategic Scale
+              </p>
+              <p className="pt-4">
+                Riptide can scale to integrate thousands of sensors and
+                effectors globally across multi-domains.
+              </p>
+            </div>
+            <div className="col-start-4 col-end-5 self-start">
+              <img src="https://cdn.sanity.io/images/z5s3oquj/production/3ce23a389e0a10cf884c7438767cb2572a28c8fe-501x501.png?w=3840&q=75&fit=max" />
+              <p className="border-b font-semibold text-xl">All-Domain</p>
+              <p className="pt-4">
+                Riptide integrates and operates across land, sea, air, and space
+                to provide a comprehensive all-domain mission engine
+              </p>
+            </div>
+            <div className="col-start-6 col-end-7 self-start">
+              <img src="https://cdn.sanity.io/images/z5s3oquj/production/68e9e50eacb8d6122d763e046728ee2fdfe89fa8-2084x2084.png?w=3840&q=75&fit=max" />
+              <p className="border-b font-semibold text-xl">Open Ecosystem</p>
+              <p className="pt-4">
+                Riptide is an open ecosystem that enables system integration of
+                existing systems and services to enable transmission of key data
+                and improve workflow.
+              </p>
+            </div>
+            <div className="col-start-8 col-end-9 self-start">
+              <img src="https://cdn.sanity.io/images/z5s3oquj/production/f64eb42b83f52ee34d3e2a99b1ae98eb2a8f3d1c-501x501.png?w=3840&q=75&fit=max" />
+              <p className="border-b font-semibold text-xl">
+                Real-World Experiences
+              </p>
+              <p className="pt-4">
+                Riptide for JADC2 has been built through real-world experiences
+                and exercises
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Section 5 Multi-Slider Reviews */}
+        <div className="max-w-[100%] mx-auto bg-black">
+          <Carousel />
+        </div>
+      </div>
+      <div className="max-w-[100%] mx-auto bg-black">
+        <img
+          src="https://cdn.sanity.io/images/z5s3oquj/production/d16e206b7a49820dbeda2c93490a3c18783c73fa-3397x1961.png?w=3840&q=75&fit=max"
+          alt="arcadius systems inc"
+        />
       </div>
     </>
   );
