@@ -35,7 +35,7 @@ const MissionCycles = () => {
           src={images[activeSlide]}
           alt={`Slide ${activeSlide + 1}`}
         />
-        <p className="text-md pt-8 font-mono">{desc[activeSlide]}</p>
+        <p className="text-sm pt-8 font-mono">{desc[activeSlide]}</p>
       </div>
       <div className="flex justify-center mt-4">
         {images.map((_, index) => (

@@ -233,6 +233,9 @@ export default function MissionAutonomy() {
         <div className="flex flex-col items-center bg-black text-white py-4">
           <MissonCycles />
         </div>
+        <div className="flex flex-col items-center bg-black text-white py-4">
+          <div></div>
+        </div>
       </div>
     </>
   );
