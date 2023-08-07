@@ -234,7 +234,9 @@ export default function MissionAutonomy() {
           <MissonCycles />
         </div>
         <div className="flex flex-col items-center bg-black text-white py-4">
-          <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 border-b border-white pb-12"></div>
+          <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 pb-12">
+            <video src="" />
+          </div>
         </div>
       </div>
     </>
