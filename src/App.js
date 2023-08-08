@@ -11,6 +11,7 @@ import Hiring from "./Pages/Hiring";
 import Footer from "./components/Footer";
 import CommadAndControl from "./Pages/CommadAndControl";
 import MissionAutonomy from "./Pages/MissionAutonomy";
+import CounterUas from "./Pages/CounterUas";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/hiring" element={<Hiring />} />
         <Route path="/commandandcontrol" element={<CommadAndControl />} />
         <Route path="/missionautonomy" element={<MissionAutonomy />} />
+        <Route path="/counteruas" element={<CounterUas />} />
       </Routes>
       <Footer />
     </>

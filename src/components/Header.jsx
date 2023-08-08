@@ -136,7 +136,9 @@ export default function Header() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li className="mb-4 text-sm">Counter UAS</li>
+                      <li className="mb-4 text-sm">
+                        <Link to="/counteruas">Counter UAS</Link>
+                      </li>
                       <li className="mb-4 text-sm">Counter Intrusion</li>
                       <li className="mb-4 text-sm">
                         Maritime Counter Intrusion
@@ -473,7 +475,7 @@ export default function Header() {
                 <div className="border-r-2 flex flex-col items-start ml-10">
                   <li className="px-4 py-10">
                     <Link
-                      to=""
+                      to="/counteruas"
                       className="text-white text-xl hover:underline cursor-pointer"
                     >
                       Counter UAS
