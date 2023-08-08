@@ -342,26 +342,31 @@ export default function MissionAutonomy() {
             {/* The second slide/option which shows the decision making process behind command and control */}
             {openItem === "second" && (
               <>
-                <div className="relative h-80 md:h-96">
-                  <video
-                    className="absolute top-5 left-0 w-full h-full"
-                    src="https://cdn.sanity.io/files/z5s3oquj/production/08e5c5bfe73299477a465533b93cb474599b8ab9.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ objectFit: "cover" }}
-                  ></video>
-                </div>
-                <div className="flex flex-col items-center mt-8">
-                  <p className="font-semibold text-lg mb-4 text-left">
-                    Integrated Systems
-                  </p>
-                  <p className="mb-4 max-w-lg mx-auto px-4 text-white text-sm font-light">
-                    Mission Autonomy integrates and orchestrates the platforms,
-                    piloting, sensors, and payloads to deliver autonomous teams
-                    capable of accomplishing complex missions.
-                  </p>
+                <div className="grid grid-cols-8">
+                  <div className="col-start-1 col-end-5 relative h-80 md:h-96">
+                    <video
+                      className="absolute top-5 left-0 w-full h-full"
+                      src="https://cdn.sanity.io/files/z5s3oquj/production/08e5c5bfe73299477a465533b93cb474599b8ab9.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      style={{ objectFit: "cover" }}
+                    ></video>
+                  </div>
+                  <div className="col-start-5 col-end-9">
+                    <div className="flex flex-col items-center mt-12">
+                      <p className="font-semibold text-4xl mb-4 text-left">
+                        Integrated Systems
+                      </p>
+                      <p className="mb-4 max-w-lg mx-auto px-4 text-white text-lg font-light">
+                        Mission Autonomy integrates and orchestrates the
+                        platforms, piloting, sensors, and payloads to deliver
+                        autonomous teams capable of accomplishing complex
+                        missions.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </>
             )}
@@ -369,29 +374,34 @@ export default function MissionAutonomy() {
             {/* This below is the third slide/option */}
             {openItem === "third" && (
               <>
-                <div className="relative h-80 md:h-96">
-                  <video
-                    className="absolute top-5 left-0 w-full h-full"
-                    src="https://cdn.sanity.io/files/z5s3oquj/production/4e42fd5a2a5aa75174def825fac5578a91f2ef53.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ objectFit: "cover" }}
-                  ></video>
-                </div>
-                <div className="flex flex-col items-center mt-8">
-                  <p className="font-semibold text-lg mb-4 text-left">
-                    Multi-Domain
-                  </p>
-                  <p className="mb-4 max-w-lg mx-auto px-4 text-white text-sm font-light">
-                    Riptide for Mission Autonomy defense and commercial
-                    applications extend across air, land, and sea by leveraging
-                    platforms such as collaborative combat aircraft, robotic
-                    combat vehicles and autonomous underwater vehicles to
-                    conduct missions like ISR, defensive counter air, seafloor
-                    mapping, critical infrastructure surveillance and more.
-                  </p>
+                <div className="grid grid-cols-8">
+                  <div className="col-start-1 col-end-5 relative h-80 md:h-96">
+                    <video
+                      className="absolute top-5 left-0 w-full h-full"
+                      src="https://cdn.sanity.io/files/z5s3oquj/production/4e42fd5a2a5aa75174def825fac5578a91f2ef53.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      style={{ objectFit: "cover" }}
+                    ></video>
+                  </div>
+                  <div className="col-start-5 col-end-9">
+                    <div className="flex flex-col items-center mt-12">
+                      <p className="font-semibold text-4xl mb-4 text-left">
+                        Multi-Domain
+                      </p>
+                      <p className="mb-4 max-w-lg mx-auto px-4 text-white text-lg font-light">
+                        Riptide for Mission Autonomy defense and commercial
+                        applications extend across air, land, and sea by
+                        leveraging platforms such as collaborative combat
+                        aircraft, robotic combat vehicles and autonomous
+                        underwater vehicles to conduct missions like ISR,
+                        defensive counter air, seafloor mapping, critical
+                        infrastructure surveillance and more.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </>
             )}
