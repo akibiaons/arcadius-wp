@@ -240,7 +240,7 @@ export default function MissionAutonomy() {
         </div>
       </div>
       {/* Below will be the div that starts the Desktop Version, I need to widen the containers by adding max-w-lg */}
-      <div className="lg:block hidden">
+      <div className="lg:block hidden bg-black">
         {/* Below is the gif section or Section 1 of desktop*/}
         <div className="max-w-[100%] mx-auto bg-black py-20">
           <div className="grid grid-cols-8 text-white">
@@ -408,12 +408,12 @@ export default function MissionAutonomy() {
           </div>
         </div>
         {/* Section 3 will have the 4 cards similar to the command and control page */}
-        <div className="flex flex-col items-center bg-black text-white py-4">
-          <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 border-b border-white pb-12">
-            <p className="text-md pb-8 font-light">
+        <div className="max-w-[100%] mx-auto items-center bg-black text-white py-4">
+          <div className="text-left mb-4 mt-20 mx-auto pb-20 max-w-[70%]">
+            <p className="text-3xl pb-8 font-normal">
               Distributed Autonomy at the Edge
             </p>
-            <div className="grid grid-cols-3 grid-rows-1 pb-12">
+            <div className="grid grid-cols-8 pt-20">
               <div className="col-start-1 col-end-2">
                 <img
                   src="https://cdn.sanity.io/images/z5s3oquj/production/3c1936ba423b3cce06040f0a2f1d88e410d8799e-2085x2084.png?w=3840&q=75&fit=max"
@@ -442,9 +442,7 @@ export default function MissionAutonomy() {
                   target in real-time​.
                 </p>
               </div>
-            </div>
-            <div className="grid grid-cols-3 grid-rows-1">
-              <div className="col-start-1 col-end-2">
+              <div className="col-start-5 col-end-6">
                 <img
                   src="https://cdn.sanity.io/images/z5s3oquj/production/6a1040d0c7fc7f10e9e421b08bcc7c559efae8ea-2084x2084.png?w=2048&q=75&fit=max"
                   className="w-[50px] h-[50px]"
@@ -457,7 +455,7 @@ export default function MissionAutonomy() {
                   execute missions.​ ​ ​ ​
                 </p>
               </div>
-              <div className="col-start-3 col-end-4">
+              <div className="col-start-7 col-end-8">
                 <img
                   src="https://cdn.sanity.io/images/z5s3oquj/production/6fbbfab265752c426f9a70a5c0ffa20e412926d7-2084x2084.png?w=828&q=75&fit=max"
                   className="w-[50px] h-[50px]"
@@ -475,7 +473,12 @@ export default function MissionAutonomy() {
           </div>
         </div>
         {/* Section 4 will have the Mission Cycles Section which, shows a carousel of 4 items (wont fit as boxes) */}
-        <div className="flex flex-col items-center bg-black text-white py-4">
+        <div className="max-w-[100%] bg-black text-white">
+          <div className="grid grid-cols-8">
+            <div className="col-start-2 col-end-2 text-3xl font-semibold">
+              <p>Mission Cycles</p>
+            </div>
+          </div>
           <MissonCycles />
         </div>
         <div className="flex flex-col items-center bg-black text-white py-4">

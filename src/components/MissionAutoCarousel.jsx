@@ -28,26 +28,54 @@ const MissionCycles = () => {
   }, [images.length]);
 
   return (
-    <div className="relative flex flex-col items-center bg-black text-white py-4 ">
-      <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4 min-h-[300px]">
-        <img
-          className="text-2xl"
-          src={images[activeSlide]}
-          alt={`Slide ${activeSlide + 1}`}
-        />
-        <p className="text-sm pt-8 font-mono">{desc[activeSlide]}</p>
+    <>
+      <div className="block lg:hidden bg-black">
+        <div className="relative flex flex-col items-center bg-black text-white py-4 ">
+          <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4 min-h-[300px]">
+            <img
+              className="text-2xl"
+              src={images[activeSlide]}
+              alt={`Slide ${activeSlide + 1}`}
+            />
+            <p className="text-sm pt-8 font-mono">{desc[activeSlide]}</p>
+          </div>
+          <div className="flex justify-center mt-4">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                className={`h-2 w-2 mx-1 rounded-full ${
+                  index === activeSlide ? "bg-gray-300" : "bg-white"
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="flex justify-center mt-4">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            className={`h-2 w-2 mx-1 rounded-full ${
-              index === activeSlide ? "bg-gray-300" : "bg-white"
-            }`}
-          ></div>
-        ))}
+      <div className="hidden lg:block bg-black">
+        <div className="max-w-[100%] bg-black">
+          <div className=" text-left mb-10 mt-8 max-w-[60%] mx-auto px-4 min-h-[300px]">
+            <img
+              className="text-2xl"
+              src={images[activeSlide]}
+              alt={`Slide ${activeSlide + 1}`}
+            />
+            <p className="text-xl text-white pt-8 font-normal">
+              {desc[activeSlide]}
+            </p>
+          </div>
+          <div className="flex justify-center mt-4">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                className={`h-2 w-2 mx-1 rounded-full ${
+                  index === activeSlide ? "bg-gray-300" : "bg-white"
+                }`}
+              ></div>
+            ))}
+          </div>{" "}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
