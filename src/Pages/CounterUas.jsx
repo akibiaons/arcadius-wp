@@ -1,55 +1,56 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function CounterUas() {
-  const [products, setProducts] = useState([]);
-  const specificProductId = 5; // Change this to the ID of the product you want to display
-  const [specificProduct, setSpecificProduct] = useState(null);
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1337/api/product-models?populate=*"
+          "http://localhost:1337/api/product-models/5?populate=*"
         );
-        setProducts(response.data.data);
-
-        {
-          /* Below is the new shit that was added that I need to figure out the concept of...*/
-        }
-
-        const foundProduct = products.find(
-          (product) => product.id === specificProductId
-        );
-        setSpecificProduct(foundProduct);
+        setProduct(response.data.data);
       } catch (error) {
         console.error("Error fetching product data", error);
       }
     };
 
-    fetchProducts();
+    fetchProduct();
   }, []);
 
   return (
     <>
-      <div className="lg:hidden block bg-black text-white">
-        <div className="flex flex-col items-center bg-black text-white">
-          <div className="container text-left mt-4 max-w-lg mx-auto px-4"></div>
+      <div>
+        <div className="w-full h-screen bg-black">
+          <video
+            src="https://cdn.sanity.io/files/z5s3oquj/production/d12c7f229c69b2dd1c36920470b2cc3b916ea19e.mp4"
+            autoPlay
+            loop
+            muted
+            style={{ objectFit: "cover" }}
+            className="w-full h-full object-cover z-50"
+            allow="autoplay"
+            alt="arcadius systems INC"
+          ></video>
         </div>
       </div>
+      {/* Below is the mobile version */}
+      <div className="lg:hidden block">
+        {product ? (
+          <div>
+            <h1>{product.attributes.title}</h1>
+            <p>{product.attributes.description}</p>
+            <img
+              src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`}
+              alt={product.attributes.title}
+            />
+            <p>Price: ${product.attributes.price}</p>
+          </div>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
     </>
-    /* Below is the layout for a single product import
-    <div className="h-screen">
-      {specificProduct && (
-        <div key={specificProduct.id}>
-          <img
-            src={`http://localhost:1337${specificProduct.attributes.image.data[0].attributes.url}`}
-            alt="warfare"
-            className="h-[50%]"
-          />
-        </div>
-      )}
-    </div>
-    */
   );
 }
