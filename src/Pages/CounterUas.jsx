@@ -54,6 +54,10 @@ export default function CounterUas() {
                 </p>
                 <p>Price: ${product.attributes.price}</p>
               </div>
+              {/* Below will be the button to buy now and add to cart...*/}
+              <div className="border mt-10 p-5 text-center rounded-lg hover:cursor-pointer">
+                <button>Add to Cart</button>
+              </div>
             </div>
           </div>
         ) : (
