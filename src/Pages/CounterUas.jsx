@@ -36,16 +36,25 @@ export default function CounterUas() {
         </div>
       </div>
       {/* Below is the mobile version */}
-      <div className="lg:hidden block">
+      <div className="lg:hidden block bg-black text-white">
         {product ? (
-          <div>
-            <h1>{product.attributes.title}</h1>
-            <p>{product.attributes.description}</p>
-            <img
-              src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`}
-              alt={product.attributes.title}
-            />
-            <p>Price: ${product.attributes.price}</p>
+          <div className="flex flex-col items-center">
+            <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
+              <img
+                className="pt-20"
+                src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`}
+                alt={product.attributes.title}
+              />
+              <div className="pt-10">
+                <h1 className="text-center pb-10 font-semibold text-xl">
+                  {product.attributes.title}
+                </h1>
+                <p className="text-sm font-light pb-10">
+                  {product.attributes.description}
+                </p>
+                <p>Price: ${product.attributes.price}</p>
+              </div>
+            </div>
           </div>
         ) : (
           <p>Loading...</p>
