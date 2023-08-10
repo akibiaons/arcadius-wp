@@ -89,7 +89,7 @@ export default function CounterUas() {
               any environment, day or night
             </p>
           </div>
-          <div className="">
+          <div className="pt-8 pb-4">
             <video
               src="https://cdn.sanity.io/files/z5s3oquj/production/beef9bab80ebb7aecb7848d5c10dfafc3c53a82a.mp4"
               style={{ objectFit: "cover" }}
