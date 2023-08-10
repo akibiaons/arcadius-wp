@@ -16,7 +16,7 @@ export default function CounterIntrusion() {
         ></video>
       </div>
       <div className="lg:hidden block">
-        <div className="">something</div>
+        <div className="flex flex-col items-center py-20 bg-white text-black"></div>
       </div>
     </>
   );
