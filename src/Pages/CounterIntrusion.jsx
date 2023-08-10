@@ -35,7 +35,24 @@ export default function CounterIntrusion() {
       </div>
       {/* Below is the mobile version */}
       <div className="lg:hidden block">
-        <div className="flex flex-col items-center py-20 bg-white text-black"></div>
+        {product ? (
+          <div className="flex flex-col items-center py-16 bg-white text-black">
+            <div className="container text-left mb-4 max-w-lg mx-auto px-4">
+              <h1 className="text-center pb-10 font-semibold text-xl">
+                {product.attributes.title}
+              </h1>
+              <p className="text-sm font-light pb-10">
+                {product.attributes.description}
+              </p>
+              <p className=""></p>
+            </div>
+            <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
+              {/* Here I will add a slide/carousel to showcase the item (it will be a component) */}
+            </div>
+          </div>
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </>
   );

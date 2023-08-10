@@ -40,7 +40,7 @@ export default function CounterUas() {
         <div className="border-b border-white pb-10">
           {product ? (
             <div className="flex flex-col items-center">
-              <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 ">
+              <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
                 <img
                   className="pt-20"
                   src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`}
