@@ -107,7 +107,7 @@ export default function CounterUas() {
           {product ? (
             <div className="max-w-[100%] mx-auto bg-black py-20">
               <div className="grid grid-cols-8">
-                <div className="col-start-2 col-end-5 pr-8">
+                <div className="col-start-1 col-end-5 pr-8 pl-8">
                   <img
                     src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`}
                     alt={product.attributes.title}
@@ -117,12 +117,14 @@ export default function CounterUas() {
                   <h1 className="text-center pb-10 font-semibold text-xl">
                     {product.attributes.title}
                   </h1>
-                  <p className="text-sm font-light pb-10">
+                  <p className="text-lg font-light pb-10">
                     {product.attributes.description}
                   </p>
-                  <p>Price: ${product.attributes.price}</p>
+                  <p className="text-xl font-semibold">
+                    Price: ${product.attributes.price}
+                  </p>
                   <div className="mt-10 text-center hover:cursor-pointer text-black">
-                    <button className="relative font-thin text-xl">
+                    <button className="relative font-thin text-xl hover:cursor-pointer">
                       <div className="">
                         <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
                           Add to Cart
@@ -142,15 +144,15 @@ export default function CounterUas() {
         <div className="max-w-[100%] mx-auto bg-black py-20">
           <div className="grid grid-cols-8">
             <div className="col-start-2 col-end-4">
-              <p className="font-normal text-xl pb-8">
+              <p className="font-normal text-2xl pb-8">
                 Autonomous Aerial Defense
               </p>
-              <p className="font-semibold text-2xl ">
+              <p className="font-semibold text-3xl ">
                 Real-time threat identification meets actionable response.
               </p>
             </div>
             <div className="col-start-5 col-end-8">
-              <p className="font-light">
+              <p className="text-lg font-light">
                 Commercial, off the shelf drones continue to evolve in
                 complexity and threaten military and civilian safety & disrupt
                 operations. Anduril’s end-to-end cUAS system supports the entire
@@ -160,11 +162,10 @@ export default function CounterUas() {
               </p>
             </div>
           </div>
-          <div className="pt-16 pb-4">
+          <div className="max-w-[50%] mx-auto bg-black py-40">
             <video
               src="https://cdn.sanity.io/files/z5s3oquj/production/beef9bab80ebb7aecb7848d5c10dfafc3c53a82a.mp4"
-              style={{ objectFit: "cover" }}
-              className="w-full h-full object-cover z-50"
+              className=""
               alt="counter UAS benefits"
               controls
             ></video>
