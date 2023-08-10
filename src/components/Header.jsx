@@ -186,7 +186,9 @@ export default function Header() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li className="mb-4 text-sm">Ghost</li>
+                      <li className="mb-4 text-sm">
+                        <Link to="/ghost">Ghost</Link>
+                      </li>
                       <li className="mb-4 text-sm">ALTIUS</li>
                     </ul>
                   </div>
@@ -547,7 +549,7 @@ export default function Header() {
                 <div className="border-r-2 flex flex-col items-start pl-10">
                   <li className="px-4 py-10">
                     <Link
-                      to=""
+                      to="/ghost"
                       className="text-white text-xl hover:underline cursor-pointer"
                     >
                       Ghost

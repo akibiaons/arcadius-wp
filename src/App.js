@@ -14,6 +14,7 @@ import MissionAutonomy from "./Pages/MissionAutonomy";
 import CounterUas from "./Pages/CounterUas";
 import CounterIntrusion from "./Pages/CounterIntrusion";
 import ScrollToTop from "./components/ScrollToTop";
+import Ghost from "./Pages/Ghost";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/missionautonomy" element={<MissionAutonomy />} />
         <Route path="/counteruas" element={<CounterUas />} />
         <Route path="/counterintrusion" element={<CounterIntrusion />} />
+        <Route path="/ghost" element={<Ghost />} />
       </Routes>
       <Footer />
     </>
