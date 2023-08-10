@@ -30,7 +30,7 @@ function App() {
         <Route path="/commandandcontrol" element={<CommadAndControl />} />
         <Route path="/missionautonomy" element={<MissionAutonomy />} />
         <Route path="/counteruas" element={<CounterUas />} />
-        <Route path="/counterintrution" element={<CounterIntrusion />} />
+        <Route path="/counterintrusion" element={<CounterIntrusion />} />
       </Routes>
       <Footer />
     </>
