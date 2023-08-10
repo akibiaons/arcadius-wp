@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function CounterIntrusion() {
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:1337/api/product-models/?populate=*"
+        );
+        setProduct(response.data.data);
+      } catch (error) {
+        console.error("Error fetching product data", error);
+      }
+    };
+
+    fetchProduct();
+  }, []);
+
   return (
     <>
       <div className="w-full h-screen bg-black">
