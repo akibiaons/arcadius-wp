@@ -102,17 +102,18 @@ export default function CounterUas() {
       </div>
       {/*========================================================================================================================================================== */}
       {/* Below is the desktop section...========================================================================================*/}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block bg-black text-white">
         <div className="border-b border-white pb-10">
           {product ? (
-            <div className="flex flex-col items-center">
-              <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4 ">
-                <img
-                  className="pt-20"
-                  src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`}
-                  alt={product.attributes.title}
-                />
-                <div className="pt-10">
+            <div className="max-w-[100%] mx-auto bg-black py-20">
+              <div className="grid grid-cols-8">
+                <div className="col-start-2 col-end-5 pr-8">
+                  <img
+                    src={`http://localhost:1337${product.attributes.image.data[0].attributes.url}`}
+                    alt={product.attributes.title}
+                  />
+                </div>
+                <div className="col-start-5 col-end-8">
                   <h1 className="text-center pb-10 font-semibold text-xl">
                     {product.attributes.title}
                   </h1>
@@ -120,17 +121,17 @@ export default function CounterUas() {
                     {product.attributes.description}
                   </p>
                   <p>Price: ${product.attributes.price}</p>
+                  <div className="mt-10 text-center hover:cursor-pointer text-black">
+                    <button className="relative font-thin text-xl">
+                      <div className="">
+                        <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
+                          Add to Cart
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                 </div>
                 {/* Below will be the button to buy now and add to cart...*/}
-                <div className="mt-10 text-center hover:cursor-pointer text-black">
-                  <button className="relative font-thin text-xl">
-                    <div className="">
-                      <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
-                        Add to Cart
-                      </div>
-                    </div>
-                  </button>
-                </div>
               </div>
             </div>
           ) : (
