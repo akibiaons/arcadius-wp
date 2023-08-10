@@ -31,7 +31,7 @@ export default function () {
               muted
             />
           ) : (
-            <img src={img[activeSlide]} className="h-full w-full" />
+            <img src={img[activeSlide]} className="w-[60%]" />
           )}
         </div>
         <div className="flex justify-center mt-4">

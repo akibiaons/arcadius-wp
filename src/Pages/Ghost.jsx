@@ -68,6 +68,44 @@ export default function Ghost() {
           )}
         </div>
       </div>
+      {/*========================================================================================================================================================== */}
+      {/* Below is the mobile version */}
+      <div className="hidden lg:block bg-black text-white">
+        <div className="border-b border-black pb-10">
+          {product ? (
+            <div className="max-w-[100%] mx-auto bg-black py-20">
+              <div className="grid grid-cols-8">
+                <div className="col-start-1 col-end-5 pr-8 pl-8">
+                  <GhostCarousel />
+                </div>
+                <div className="col-start-5 col-end-8">
+                  <h1 className="text-center pb-10 font-semibold text-xl">
+                    {product.attributes.title}
+                  </h1>
+                  <p className="text-lg font-light pb-10">
+                    {product.attributes.description}
+                  </p>
+                  <p className="text-xl font-semibold">
+                    Price: ${product.attributes.price}
+                  </p>
+                  <div className="mt-10 text-center hover:cursor-pointer text-black">
+                    <button className="relative font-thin text-xl hover:cursor-pointer">
+                      <div className="">
+                        <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
+                          Add to Cart
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                {/* Below will be the button to buy now and add to cart...*/}
+              </div>
+            </div>
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
+      </div>
     </>
   );
 }
