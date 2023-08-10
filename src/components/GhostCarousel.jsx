@@ -25,13 +25,13 @@ export default function () {
         <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4 min-h-[300px]">
           {activeSlide === 1 || activeSlide === 2 ? (
             <video
-              className="h-[300px]"
+              className="h-full w-full"
               src={img[activeSlide]}
               autoPlay
               muted
             />
           ) : (
-            <img src={img[activeSlide]} className="w-[60%]" />
+            <img src={img[activeSlide]} className="w-full h-full" />
           )}
         </div>
         <div className="flex justify-center mt-4">
@@ -44,7 +44,7 @@ export default function () {
             ></div>
           ))}
         </div>
-      </div>{" "}
+      </div>
     </>
   );
 }
