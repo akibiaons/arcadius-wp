@@ -139,24 +139,28 @@ export default function CounterUas() {
           )}
         </div>
         {/* Explanation section desktop...*/}
-        <div className="flex flex-col items-center bg-black text-white py-4">
-          <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
-            <p className="font-normal text-lg pb-8">
-              Autonomous Aerial Defense
-            </p>
-            <p className="font-semibold text-2xl pb-8">
-              Real-time threat identification meets actionable response.
-            </p>
-            <p className="text-sm font-light">
-              Commercial, off the shelf drones continue to evolve in complexity
-              and threaten military and civilian safety & disrupt operations.
-              Anduril’s end-to-end cUAS system supports the entire kill chain in
-              one, easy to use interface with precision, accuracy and
-              reliability. Rogue drones are identified, tracked, and disabled in
-              any environment, day or night
-            </p>
+        <div className="max-w-[100%] mx-auto bg-black py-20">
+          <div className="grid grid-cols-8">
+            <div className="col-start-2 col-end-4">
+              <p className="font-normal text-xl pb-8">
+                Autonomous Aerial Defense
+              </p>
+              <p className="font-semibold text-2xl ">
+                Real-time threat identification meets actionable response.
+              </p>
+            </div>
+            <div className="col-start-5 col-end-8">
+              <p className="font-light">
+                Commercial, off the shelf drones continue to evolve in
+                complexity and threaten military and civilian safety & disrupt
+                operations. Anduril’s end-to-end cUAS system supports the entire
+                kill chain in one, easy to use interface with precision,
+                accuracy and reliability. Rogue drones are identified, tracked,
+                and disabled in any environment, day or night
+              </p>
+            </div>
           </div>
-          <div className="pt-8 pb-4">
+          <div className="pt-16 pb-4">
             <video
               src="https://cdn.sanity.io/files/z5s3oquj/production/beef9bab80ebb7aecb7848d5c10dfafc3c53a82a.mp4"
               style={{ objectFit: "cover" }}
