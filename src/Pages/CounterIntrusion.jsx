@@ -42,13 +42,27 @@ export default function CounterIntrusion() {
               <h1 className="text-center pb-10 font-semibold text-xl">
                 {product.attributes.title}
               </h1>
-              <p className="text-sm font-light pb-10">
+              <p className="text-md font-light pb-10">
                 {product.attributes.description}
               </p>
               <p className=""></p>
             </div>
             <div className="px-4">
               <CounterIntrusionImg />
+            </div>
+            <div className="container text-left mb-4 max-w-lg mx-auto px-4">
+              <p className="text-black mt-8 text-lg">
+                Price: ${product.attributes.price}
+              </p>
+              <div className="mt-10 text-center hover:cursor-pointer text-black">
+                <button className="relative font-thin text-xl">
+                  <div className="">
+                    <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
+                      Add to Cart
+                    </div>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         ) : (
