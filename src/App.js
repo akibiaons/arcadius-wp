@@ -12,11 +12,14 @@ import Footer from "./components/Footer";
 import CommadAndControl from "./Pages/CommadAndControl";
 import MissionAutonomy from "./Pages/MissionAutonomy";
 import CounterUas from "./Pages/CounterUas";
+import CounterIntrusion from "./Pages/CounterIntrusion";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
@@ -27,6 +30,7 @@ function App() {
         <Route path="/commandandcontrol" element={<CommadAndControl />} />
         <Route path="/missionautonomy" element={<MissionAutonomy />} />
         <Route path="/counteruas" element={<CounterUas />} />
+        <Route path="/counterintrution" element={<CounterIntrusion />} />
       </Routes>
       <Footer />
     </>

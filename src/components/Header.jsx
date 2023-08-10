@@ -139,7 +139,9 @@ export default function Header() {
                       <li className="mb-4 text-sm">
                         <Link to="/counteruas">Counter UAS</Link>
                       </li>
-                      <li className="mb-4 text-sm">Counter Intrusion</li>
+                      <li className="mb-4 text-sm">
+                        <Link to="/counterintrusion">Counter Intrusion</Link>
+                      </li>
                       <li className="mb-4 text-sm">
                         Maritime Counter Intrusion
                       </li>
@@ -483,7 +485,7 @@ export default function Header() {
                   </li>
                   <li className="px-4 py-8 mb-4">
                     <Link
-                      to=""
+                      to="/counterintrusion"
                       className="text-white text-xl hover:underline cursor-pointer"
                     >
                       Counter Intrusion
