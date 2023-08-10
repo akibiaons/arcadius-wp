@@ -8,7 +8,7 @@ export default function CounterIntrusion() {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1337/api/product-models/?populate=*"
+          "http://localhost:1337/api/product-models/6?populate=*"
         );
         setProduct(response.data.data);
       } catch (error) {
@@ -33,6 +33,7 @@ export default function CounterIntrusion() {
           alt="arcadius systems INC"
         ></video>
       </div>
+      {/* Below is the mobile version */}
       <div className="lg:hidden block">
         <div className="flex flex-col items-center py-20 bg-white text-black"></div>
       </div>
