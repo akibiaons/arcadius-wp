@@ -25,7 +25,7 @@ export default function CounterIntrusionImg() {
 
   return (
     <>
-      <div className="relative flex flex-col items-center bg-black text-white py-4 border-b border-white">
+      <div className="relative flex flex-col items-center bg-black pb-4">
         <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4 min-h-[300px]">
           {activeSlide === 1 || activeSlide === 2 ? (
             <video

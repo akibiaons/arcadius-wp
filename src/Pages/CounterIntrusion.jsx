@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CounterIntrusionImg from "../components/CounterIntrusionImg";
 
 export default function CounterIntrusion() {
   const [product, setProduct] = useState(null);
@@ -46,8 +47,8 @@ export default function CounterIntrusion() {
               </p>
               <p className=""></p>
             </div>
-            <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
-              {/* Here I will add a slide/carousel to showcase the item (it will be a component) */}
+            <div className="px-4">
+              <CounterIntrusionImg />
             </div>
           </div>
         ) : (
