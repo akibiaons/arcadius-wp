@@ -69,7 +69,7 @@ export default function Ghost() {
         </div>
       </div>
       {/*========================================================================================================================================================== */}
-      {/* Below is the mobile version */}
+      {/* Below is the Desktop version */}
       <div className="hidden lg:block bg-black text-white">
         <div className="border-b border-black pb-10">
           {product ? (
