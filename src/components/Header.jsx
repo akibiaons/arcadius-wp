@@ -236,7 +236,9 @@ export default function Header() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <li className="mb-4 text-sm">Dive-LD</li>
+                      <li className="mb-4 text-sm">
+                        <Link to="/diveld">Dive-LD</Link>
+                      </li>
                     </ul>
                   </div>
                   <button
@@ -624,7 +626,7 @@ export default function Header() {
                 <div className="border-r-2 flex flex-col items-start pl-10">
                   <li className="px-4 py-10">
                     <Link
-                      to=""
+                      to="/diveld"
                       className="text-white text-xl hover:underline cursor-pointer"
                     >
                       Dive-LD
