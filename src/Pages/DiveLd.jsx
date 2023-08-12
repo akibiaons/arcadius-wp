@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import DiveCarousel from "../components/DiveCarousel";
 
 export default function DiveLd() {
   const [product, setProduct] = useState(null);
@@ -40,7 +41,7 @@ export default function DiveLd() {
           {product ? (
             <div className="flex flex-col items-center">
               <div className="container text-left mb-4 mt-8 max-w-lg mx-auto px-4">
-                {/* PUT THE DIVECAROUSEL HERE */}
+                <DiveCarousel />
                 <div className="pt-10">
                   <h1 className="text-center pb-10 font-semibold text-xl">
                     {product.attributes.title}
@@ -75,7 +76,7 @@ export default function DiveLd() {
             <div className="max-w-[100%] mx-auto bg-black py-20">
               <div className="grid grid-cols-8">
                 <div className="col-start-1 col-end-5 pr-8 pl-8">
-                  {/* PUT THE DIVECAROUSEL HERE */}
+                  <DiveCarousel />
                 </div>
                 <div className="col-start-5 col-end-8">
                   <h1 className="text-center pb-10 font-semibold text-xl">
