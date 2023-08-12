@@ -16,6 +16,7 @@ import CounterIntrusion from "./Pages/CounterIntrusion";
 import ScrollToTop from "./components/ScrollToTop";
 import Ghost from "./Pages/Ghost";
 import Altius from "./Pages/Altius";
+import DiveLd from "./Pages/DiveLd";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/counterintrusion" element={<CounterIntrusion />} />
         <Route path="/ghost" element={<Ghost />} />
         <Route path="/altius" element={<Altius />} />
+        <Route path="/diveld" element={<DiveLd />} />
       </Routes>
       <Footer />
     </>
