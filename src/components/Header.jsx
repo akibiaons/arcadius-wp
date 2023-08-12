@@ -189,7 +189,9 @@ export default function Header() {
                       <li className="mb-4 text-sm">
                         <Link to="/ghost">Ghost</Link>
                       </li>
-                      <li className="mb-4 text-sm">ALTIUS</li>
+                      <li className="mb-4 text-sm">
+                        <Link to="/altius">ALTIUS</Link>
+                      </li>
                     </ul>
                   </div>
                   <button
@@ -557,7 +559,7 @@ export default function Header() {
                   </li>
                   <li className="px-4 py-8 mb-4">
                     <Link
-                      to=""
+                      to="/altius"
                       className="text-white text-xl hover:underline cursor-pointer"
                     >
                       ALTIUS

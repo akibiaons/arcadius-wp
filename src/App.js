@@ -15,6 +15,7 @@ import CounterUas from "./Pages/CounterUas";
 import CounterIntrusion from "./Pages/CounterIntrusion";
 import ScrollToTop from "./components/ScrollToTop";
 import Ghost from "./Pages/Ghost";
+import Altius from "./Pages/Altius";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/counteruas" element={<CounterUas />} />
         <Route path="/counterintrusion" element={<CounterIntrusion />} />
         <Route path="/ghost" element={<Ghost />} />
+        <Route path="/altius" element={<Altius />} />
       </Routes>
       <Footer />
     </>
