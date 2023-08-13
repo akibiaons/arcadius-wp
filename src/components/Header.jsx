@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 export default function Header() {
   {
@@ -22,6 +23,9 @@ export default function Header() {
   const [isSubMenu3Open, setIsSubMenu3Open] = useState(false);
   const [isSubMenu4Open, setIsSubMenu4Open] = useState(false);
   const [isSubMenu5Open, setIsSubMenu5Open] = useState(false);
+
+  // Below is the state for the cart
+  const { cartItems } = useCart();
 
   return (
     <div className="z-50">
@@ -275,43 +279,10 @@ export default function Header() {
                   }`}
                 >
                   <div>
-                    <p className="text-lg">We're Hiring</p>
-                    <ul
-                      className={`absolute left-0 w-full transition-all duration-300 ease-in-out transform bg-black text-white overflow-hidden ${
-                        isSubMenu5Open
-                          ? "flex flex-col max-h-[600px] opacity-100 border-b border-gray-500 mt-4 pl-4"
-                          : "max-h-0 opacity-0"
-                      }`}
-                    >
-                      <li className="mb-4 text-sm">Careers</li>
-                      <li className="mb-4 text-sm">Open Positions</li>
-                    </ul>
+                    <div className="cart-icon">
+                      <span>Cart Items: {cartItems.length}</span>
+                    </div>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => setIsSubMenu5Open(!isSubMenu5Open)}
-                    className="text-white p-2 z-10 relative transform transition-transform duration-500"
-                    style={{
-                      transform: isSubMenu5Open
-                        ? "rotate(45deg)"
-                        : "rotate(0deg)",
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      className="h-8 w-8"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      />
-                    </svg>
-                  </button>
                 </div>
                 {/* End of div 5 for we're hiring */}
                 {/* Start of div 6 for Mission sections */}
