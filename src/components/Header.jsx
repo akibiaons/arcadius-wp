@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { atom, useAtom } from "jotai";
-import Altius from "../Pages/Altius";
-
-// Below is jotai useState (atom)
-export const cartAtom = atom(0);
 
 export default function Header() {
   {
@@ -30,20 +24,6 @@ export default function Header() {
   const [isSubMenu3Open, setIsSubMenu3Open] = useState(false);
   const [isSubMenu4Open, setIsSubMenu4Open] = useState(false);
   const [isSubMenu5Open, setIsSubMenu5Open] = useState(false);
-
-  // Below is the state for the cart
-  const { cartItems } = useCart();
-
-  const [altius] = useAtom(cartAtom);
-
-  useEffect(() => {
-    setTotal(altius);
-    console.log(total);
-    console.log(altius);
-    console.log(cartItems);
-  }, [altius]);
-
-  const [total, setTotal] = useState(altius);
 
   return (
     <div className="z-50">
@@ -302,9 +282,7 @@ export default function Header() {
                         icon={faCartShopping}
                         style={{ color: "#ffffff" }}
                       />
-                      <span className="hover:cursor-pointer">
-                        Cart Items: {cartItems.length}
-                      </span>
+                      <span className="hover:cursor-pointer">Cart Items:</span>
                     </div>
                   </div>
                 </div>
@@ -640,7 +618,7 @@ export default function Header() {
               style={{ color: "#ffffff" }}
               className="hover:cursor-pointer"
             />
-            <span className="hover:cursor-pointer">Cart Items: {total}</span>
+            <span className="hover:cursor-pointer">Cart Items:</span>
           </li>
         </ul>
       </div>
