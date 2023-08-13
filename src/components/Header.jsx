@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   {
@@ -280,6 +282,10 @@ export default function Header() {
                 >
                   <div>
                     <div className="cart-icon">
+                      <FontAwesomeIcon
+                        icon={faCartShopping}
+                        style={{ color: "#ffffff" }}
+                      />
                       <span>Cart Items: {cartItems.length}</span>
                     </div>
                   </div>
@@ -608,13 +614,14 @@ export default function Header() {
               </ul>
             )}
           </li>
-          <li>
-            <Link
-              to=""
-              className="inline-block p-10 py-10 border-l-2 self-center transition-all duration-500 ease-in transform hover:underline hover:bg-black"
-            >
-              We're Hiring
-            </Link>
+          {/*
+           */}
+          <li className="inline-block p-10 py-10 border-l-2 self-center transition-all duration-500 ease-in transform hover:underline hover:bg-black">
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              style={{ color: "#ffffff" }}
+            />
+            <span>Cart Items: {cartItems.length}</span>
           </li>
         </ul>
       </div>
