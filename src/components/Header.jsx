@@ -286,7 +286,9 @@ export default function Header() {
                         icon={faCartShopping}
                         style={{ color: "#ffffff" }}
                       />
-                      <span>Cart Items: {cartItems.length}</span>
+                      <span className="hover:cursor-pointer">
+                        Cart Items: {cartItems.length}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -616,12 +618,15 @@ export default function Header() {
           </li>
           {/*
            */}
-          <li className="inline-block p-10 py-10 border-l-2 self-center transition-all duration-500 ease-in transform hover:underline hover:bg-black">
+          <li className="inline-block p-10 py-10 border-l-2 self-center transition-all duration-500 ease-in transform hover:underline hover:bg-black hover:cursor-pointer">
             <FontAwesomeIcon
               icon={faCartShopping}
               style={{ color: "#ffffff" }}
+              className="hover:cursor-pointer"
             />
-            <span>Cart Items: {cartItems.length}</span>
+            <span className="hover:cursor-pointer">
+              Cart Items: {cartItems.length}
+            </span>
           </li>
         </ul>
       </div>
