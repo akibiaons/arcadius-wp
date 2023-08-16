@@ -277,7 +277,7 @@ export default function Header() {
                   }`}
                 >
                   <div>
-                    <div className="cart-icon">
+                    <div className="cart-icon bg-red-50">
                       <FontAwesomeIcon
                         icon={faCartShopping}
                         style={{ color: "#ffffff" }}
@@ -612,13 +612,34 @@ export default function Header() {
           </li>
           {/*
            */}
-          <li className="inline-block p-10 py-10 border-l-2 self-center transition-all duration-500 ease-in transform hover:underline hover:bg-black hover:cursor-pointer">
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              style={{ color: "#ffffff" }}
-              className="hover:cursor-pointer"
-            />
-            <span className="hover:cursor-pointer">Cart Items:</span>
+          <li className="p-12 py-8">
+            <div
+              className="flex items-center justify-center bg-slate-500 hover:bg-blue-500 rounded-full"
+              style={{
+                width: "2.5rem",
+                height: "2.5rem",
+                transform: "translate(25%, 25%)",
+              }}
+            >
+              <FontAwesomeIcon
+                icon={faCartShopping}
+                style={{
+                  color: "white",
+                  width: "1.6rem",
+                  height: "1.6rem",
+                }}
+                className="hover:cursor-pointer rounded-full"
+              />
+              <span
+                className="absolute -bottom-2 -right-2 flex items-center justify-center text-white text-xs font-bold bg-red-500 rounded-full"
+                style={{
+                  width: "1rem",
+                  height: "1rem",
+                }}
+              >
+                5 {/* Replace this with dynamic value */}
+              </span>
+            </div>
           </li>
         </ul>
       </div>
