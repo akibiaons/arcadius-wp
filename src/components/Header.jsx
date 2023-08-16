@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export default function Header() {
   {
@@ -24,6 +25,9 @@ export default function Header() {
   const [isSubMenu3Open, setIsSubMenu3Open] = useState(false);
   const [isSubMenu4Open, setIsSubMenu4Open] = useState(false);
   const [isSubMenu5Open, setIsSubMenu5Open] = useState(false);
+
+  // Below is state for cart
+  const { openCart, cartQuantity } = useShoppingCart();
 
   return (
     <div className="z-50">
@@ -286,6 +290,7 @@ export default function Header() {
                       }}
                     >
                       <FontAwesomeIcon
+                        onClick={openCart}
                         icon={faCartShopping}
                         style={{
                           color: "white",
@@ -301,7 +306,7 @@ export default function Header() {
                           height: "1rem",
                         }}
                       >
-                        5 {/* Replace this with dynamic value */}
+                        {cartQuantity}
                       </span>
                     </div>
                     <span className="hover:cursor-pointer mt-3 underline underline-offset-4">
@@ -643,6 +648,7 @@ export default function Header() {
               }}
             >
               <FontAwesomeIcon
+                onClick={openCart}
                 icon={faCartShopping}
                 style={{
                   color: "white",
@@ -658,7 +664,7 @@ export default function Header() {
                   height: "1rem",
                 }}
               >
-                5 {/* Replace this with dynamic value */}
+                {cartQuantity}
               </span>
             </div>
           </li>
