@@ -276,14 +276,37 @@ export default function Header() {
                     isSubMenu5Open ? "mb-16" : ""
                   }`}
                 >
-                  <div>
-                    <div className="cart-icon bg-red-50">
+                  <div className="grid grid-cols-4">
+                    <div
+                      className="flex items-center justify-center bg-slate-500 hover:bg-blue-500 rounded-full"
+                      style={{
+                        width: "2rem",
+                        height: "2rem",
+                        transform: "translate(25%, 25%)",
+                      }}
+                    >
                       <FontAwesomeIcon
                         icon={faCartShopping}
-                        style={{ color: "#ffffff" }}
+                        style={{
+                          color: "white",
+                          width: "1.5rem",
+                          height: "1.5rem",
+                        }}
+                        className="hover:cursor-pointer rounded-full"
                       />
-                      <span className="hover:cursor-pointer">Cart Items:</span>
+                      <span
+                        className="absolute -bottom-2 -right-2 flex items-center justify-center text-white text-xs font-bold bg-red-500 rounded-full"
+                        style={{
+                          width: "1rem",
+                          height: "1rem",
+                        }}
+                      >
+                        5 {/* Replace this with dynamic value */}
+                      </span>
                     </div>
+                    <span className="hover:cursor-pointer mt-3 underline underline-offset-4">
+                      View Cart
+                    </span>
                   </div>
                 </div>
                 {/* End of div 5 for we're hiring */}
