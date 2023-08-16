@@ -610,8 +610,6 @@ export default function Header() {
               </ul>
             )}
           </li>
-          {/*
-           */}
           <li className="p-12 py-8">
             <div
               className="flex items-center justify-center bg-slate-500 hover:bg-blue-500 rounded-full"
