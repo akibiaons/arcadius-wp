@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+import { ShoppingCart } from "./ShoppingCart";
 
 export default function Header() {
   {
@@ -28,6 +29,9 @@ export default function Header() {
 
   // Below is state for cart
   const { openCart, cartQuantity } = useShoppingCart();
+
+  // Below is state for modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="z-50">
@@ -289,16 +293,19 @@ export default function Header() {
                         transform: "translate(25%, 25%)",
                       }}
                     >
-                      <FontAwesomeIcon
-                        onClick={openCart}
-                        icon={faCartShopping}
-                        style={{
-                          color: "white",
-                          width: "1.5rem",
-                          height: "1.5rem",
-                        }}
-                        className="hover:cursor-pointer rounded-full"
-                      />
+                      <button onClick={() => setIsModalOpen(true)}>
+                        <FontAwesomeIcon
+                          onClick={openCart}
+                          icon={faCartShopping}
+                          style={{
+                            color: "white",
+                            width: "1.4rem",
+                            height: "1.18rem",
+                          }}
+                          className="hover:cursor-pointer rounded-full"
+                        />
+                      </button>
+
                       <span
                         className="absolute -bottom-2 -right-2 flex items-center justify-center text-white text-xs font-bold bg-red-500 rounded-full"
                         style={{
@@ -309,7 +316,10 @@ export default function Header() {
                         {cartQuantity}
                       </span>
                     </div>
-                    <span className="hover:cursor-pointer mt-3 underline underline-offset-4">
+                    <span
+                      className="hover:cursor-pointer mt-3 underline underline-offset-4"
+                      onClick={() => setIsModalOpen(true)}
+                    >
                       View Cart
                     </span>
                   </div>
@@ -643,33 +653,37 @@ export default function Header() {
               className="flex items-center justify-center bg-slate-500 hover:bg-blue-500 rounded-full"
               style={{
                 width: "2.5rem",
-                height: "2.5rem",
+                height: "2.2rem",
                 transform: "translate(25%, 25%)",
               }}
             >
-              <FontAwesomeIcon
-                onClick={openCart}
-                icon={faCartShopping}
-                style={{
-                  color: "white",
-                  width: "1.6rem",
-                  height: "1.6rem",
-                }}
-                className="hover:cursor-pointer rounded-full"
-              />
-              <span
-                className="absolute -bottom-2 -right-2 flex items-center justify-center text-white text-xs font-bold bg-red-500 rounded-full"
-                style={{
-                  width: "1rem",
-                  height: "1rem",
-                }}
-              >
-                {cartQuantity}
-              </span>
+              <button onClick={() => setIsModalOpen(true)}>
+                <FontAwesomeIcon
+                  onClick={openCart}
+                  icon={faCartShopping}
+                  style={{
+                    color: "white",
+                    width: "1.6rem",
+                    height: "1.3rem",
+                  }}
+                  className="hover:cursor-pointer rounded-full"
+                />
+                <span
+                  className="absolute -bottom-2 -right-2 flex items-center justify-center text-white text-xs font-bold bg-red-500 rounded-full"
+                  style={{
+                    width: "1rem",
+                    height: "1rem",
+                  }}
+                >
+                  {cartQuantity}
+                </span>
+              </button>
             </div>
           </li>
         </ul>
       </div>
+      {/* Below is the isModalOpen true component to get rendered */}
+      {isModalOpen && <ShoppingCart onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 }
