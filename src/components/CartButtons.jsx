@@ -15,17 +15,17 @@ export default function CartButtons() {
             <div>
               <div className="lg:flex items-center space-x-5 lg:space-x-10">
                 <div className="flex items-center space-x-5 lg:space-x-10">
-                  <button className="bg-blue-200 rounded-md text-4xl px-4">
+                  <button className="bg-blue-200 rounded-md text-4xl px-4 text-black">
                     -
                   </button>
                   <div className="ml-10 mr-10 text-2xl">
                     <span>{quantity}</span> in cart
                   </div>
-                  <button className="bg-blue-200 rounded-md text-4xl px-4">
+                  <button className="bg-blue-200 rounded-md text-4xl px-4 text-black">
                     +
                   </button>
                 </div>
-                <button className="bg-red-600 rounded-md text-xl p-2 px-4 mt-8 lg:mt-0">
+                <button className="bg-red-600 rounded-md text-xl p-2 px-4 mt-8 lg:mt-0 text-black">
                   Remove
                 </button>
               </div>
