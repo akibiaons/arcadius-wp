@@ -59,7 +59,7 @@ export default function CounterUas() {
                 {/* Below will be the button to buy now and add to cart...*/}
                 <div className="mt-10 text-center hover:cursor-pointer text-black">
                   <button className="relative font-thin text-xl">
-                    <CartButtons />
+                    <CartButtons id={product.id} />
                   </button>
                 </div>
               </div>
@@ -121,7 +121,7 @@ export default function CounterUas() {
                     Price: ${product.attributes.price}
                   </p>
                   <div className="mt-10 text-center text-black">
-                    <CartButtons />
+                    <CartButtons id={product.id} />
                   </div>
                 </div>
                 {/* Below will be the button to buy now and add to cart...*/}
