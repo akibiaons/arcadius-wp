@@ -1,28 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AltiusCarousel from "../components/AltiusCarousel";
-import { cartAtom } from "../components/Header";
-import { useAtom } from "jotai";
-//import { useCart } from "../context/CartContext";
+import CartButtons from "../components/CartButtons";
 
 export default function Altius() {
+  // useState for import below..
   const [product, setProduct] = useState(null);
-
-  const [yes, setYes] = useAtom(cartAtom);
-
-  /* 
-  Below are the cart functions
-  const { addToCart } = useCart();
-  const handleAddToCart = () => {
-    addToCart(product); // Pass the selected product to the addToCart function...
-    console.log(handleAddToCart);
-  };
-  */
-
-  const handleAddToCart = (value) => {
-    setYes(value);
-    console.log(`Question 2 ${value}% current stage `);
-  };
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -72,11 +55,7 @@ export default function Altius() {
                 {/* Below will be the button to buy now and add to cart...*/}
                 <div className="mt-10 text-center hover:cursor-pointer text-black">
                   <button className="relative font-thin text-xl">
-                    <div className="">
-                      <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
-                        Add to Cart
-                      </div>
-                    </div>
+                    <CartButtons id={product.id} />
                   </button>
                 </div>
               </div>
@@ -106,17 +85,8 @@ export default function Altius() {
                   <p className="text-xl font-semibold">
                     Price: ${product.attributes.price}
                   </p>
-                  <div className="mt-10 text-center hover:cursor-pointer text-black">
-                    <button
-                      className="relative font-thin text-xl hover:cursor-pointer"
-                      onClick={() => handleAddToCart(1)}
-                    >
-                      <div className="">
-                        <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
-                          Add to Cart
-                        </div>
-                      </div>
-                    </button>
+                  <div className="mt-10 text-center text-black">
+                    <CartButtons id={product.id} />
                   </div>
                 </div>
                 {/* Below will be the button to buy now and add to cart...*/}

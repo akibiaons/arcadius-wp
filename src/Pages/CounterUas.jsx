@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CartButtons from "../components/CartButtons";
 
 export default function CounterUas() {
   const [product, setProduct] = useState(null);
@@ -58,11 +59,7 @@ export default function CounterUas() {
                 {/* Below will be the button to buy now and add to cart...*/}
                 <div className="mt-10 text-center hover:cursor-pointer text-black">
                   <button className="relative font-thin text-xl">
-                    <div className="">
-                      <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
-                        Add to Cart
-                      </div>
-                    </div>
+                    <CartButtons id={product.id} />
                   </button>
                 </div>
               </div>
@@ -123,14 +120,8 @@ export default function CounterUas() {
                   <p className="text-xl font-semibold">
                     Price: ${product.attributes.price}
                   </p>
-                  <div className="mt-10 text-center hover:cursor-pointer text-black">
-                    <button className="relative font-thin text-xl hover:cursor-pointer">
-                      <div className="">
-                        <div className="bg-gray-300 border border-black rounded-lg py-3 px-10 transition transform duration-200 hover:translate-y-2">
-                          Add to Cart
-                        </div>
-                      </div>
-                    </button>
+                  <div className="mt-10 text-center text-black">
+                    <CartButtons id={product.id} />
                   </div>
                 </div>
                 {/* Below will be the button to buy now and add to cart...*/}

@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { atom, useAtom } from "jotai";
-import Altius from "../Pages/Altius";
-
-// Below is jotai useState (atom)
-export const cartAtom = atom(0);
+import { useShoppingCart } from "../context/ShoppingCartContext";
+import { ShoppingCart } from "./ShoppingCart";
 
 export default function Header() {
   {
@@ -31,19 +27,11 @@ export default function Header() {
   const [isSubMenu4Open, setIsSubMenu4Open] = useState(false);
   const [isSubMenu5Open, setIsSubMenu5Open] = useState(false);
 
-  // Below is the state for the cart
-  const { cartItems } = useCart();
+  // Below is state for cart
+  const { openCart, cartQuantity } = useShoppingCart();
 
-  const [altius] = useAtom(cartAtom);
-
-  useEffect(() => {
-    setTotal(altius);
-    console.log(total);
-    console.log(altius);
-    console.log(cartItems);
-  }, [altius]);
-
-  const [total, setTotal] = useState(altius);
+  // Below is state for modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="z-50">
@@ -296,16 +284,44 @@ export default function Header() {
                     isSubMenu5Open ? "mb-16" : ""
                   }`}
                 >
-                  <div>
-                    <div className="cart-icon">
-                      <FontAwesomeIcon
-                        icon={faCartShopping}
-                        style={{ color: "#ffffff" }}
-                      />
-                      <span className="hover:cursor-pointer">
-                        Cart Items: {cartItems.length}
+                  <div className="grid grid-cols-4">
+                    <div
+                      className="flex items-center justify-center bg-slate-500 hover:bg-blue-500 rounded-full"
+                      style={{
+                        width: "2rem",
+                        height: "2rem",
+                        transform: "translate(25%, 25%)",
+                      }}
+                    >
+                      <button onClick={() => setIsModalOpen(true)}>
+                        <FontAwesomeIcon
+                          onClick={openCart}
+                          icon={faCartShopping}
+                          style={{
+                            color: "white",
+                            width: "1.4rem",
+                            height: "1.18rem",
+                          }}
+                          className="hover:cursor-pointer rounded-full"
+                        />
+                      </button>
+
+                      <span
+                        className="absolute -bottom-2 -right-2 flex items-center justify-center text-white text-xs font-bold bg-red-500 rounded-full"
+                        style={{
+                          width: "1rem",
+                          height: "1rem",
+                        }}
+                      >
+                        {cartQuantity}
                       </span>
                     </div>
+                    <span
+                      className="hover:cursor-pointer mt-3 underline underline-offset-4"
+                      onClick={() => setIsModalOpen(true)}
+                    >
+                      View Cart
+                    </span>
                   </div>
                 </div>
                 {/* End of div 5 for we're hiring */}
@@ -632,18 +648,42 @@ export default function Header() {
               </ul>
             )}
           </li>
-          {/*
-           */}
-          <li className="inline-block p-10 py-10 border-l-2 self-center transition-all duration-500 ease-in transform hover:underline hover:bg-black hover:cursor-pointer">
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              style={{ color: "#ffffff" }}
-              className="hover:cursor-pointer"
-            />
-            <span className="hover:cursor-pointer">Cart Items: {total}</span>
+          <li className="p-12 py-8">
+            <div
+              className="flex items-center justify-center bg-slate-500 hover:bg-blue-500 rounded-full"
+              style={{
+                width: "2.5rem",
+                height: "2.2rem",
+                transform: "translate(25%, 25%)",
+              }}
+            >
+              <button onClick={() => setIsModalOpen(true)}>
+                <FontAwesomeIcon
+                  onClick={openCart}
+                  icon={faCartShopping}
+                  style={{
+                    color: "white",
+                    width: "1.6rem",
+                    height: "1.3rem",
+                  }}
+                  className="hover:cursor-pointer rounded-full"
+                />
+                <span
+                  className="absolute -bottom-2 -right-2 flex items-center justify-center text-white text-xs font-bold bg-red-500 rounded-full"
+                  style={{
+                    width: "1rem",
+                    height: "1rem",
+                  }}
+                >
+                  {cartQuantity}
+                </span>
+              </button>
+            </div>
           </li>
         </ul>
       </div>
+      {/* Below is the isModalOpen true component to get rendered */}
+      {isModalOpen && <ShoppingCart onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 }

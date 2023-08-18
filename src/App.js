@@ -17,28 +17,31 @@ import ScrollToTop from "./components/ScrollToTop";
 import Ghost from "./Pages/Ghost";
 import Altius from "./Pages/Altius";
 import DiveLd from "./Pages/DiveLd";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 function App() {
   return (
     <>
-      <Header />
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/hive" element={<Hive />} />
-        <Route path="/air-security" element={<AirSecurity />} />
-        <Route path="/maritime-security" element={<MaritimeSecurity />} />
-        <Route path="/hiring" element={<Hiring />} />
-        <Route path="/commandandcontrol" element={<CommadAndControl />} />
-        <Route path="/missionautonomy" element={<MissionAutonomy />} />
-        <Route path="/counteruas" element={<CounterUas />} />
-        <Route path="/counterintrusion" element={<CounterIntrusion />} />
-        <Route path="/ghost" element={<Ghost />} />
-        <Route path="/altius" element={<Altius />} />
-        <Route path="/diveld" element={<DiveLd />} />
-      </Routes>
-      <Footer />
+      <ShoppingCartProvider>
+        <Header />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/hive" element={<Hive />} />
+          <Route path="/air-security" element={<AirSecurity />} />
+          <Route path="/maritime-security" element={<MaritimeSecurity />} />
+          <Route path="/hiring" element={<Hiring />} />
+          <Route path="/commandandcontrol" element={<CommadAndControl />} />
+          <Route path="/missionautonomy" element={<MissionAutonomy />} />
+          <Route path="/counteruas" element={<CounterUas />} />
+          <Route path="/counterintrusion" element={<CounterIntrusion />} />
+          <Route path="/ghost" element={<Ghost />} />
+          <Route path="/altius" element={<Altius />} />
+          <Route path="/diveld" element={<DiveLd />} />
+        </Routes>
+        <Footer />
+      </ShoppingCartProvider>
     </>
   );
 }
